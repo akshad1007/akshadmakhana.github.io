@@ -1,0 +1,54 @@
+# License for Personal Website Template
+
+---
+
+**Template Name:** Luther  
+**Created By:** Akshad Viresh Makhana  
+**Current Date:** 🗓️ Wednesday, January 15, 2025, 11 AM IST  
+
+---
+
+## Overview
+
+This license outlines the terms and conditions for using the Luther template, a modern personal website template designed for creative individuals and professionals. By using this template, you agree to adhere to the following rights, prohibitions, and attribution requirements.
+
+## Rights
+
+- **Usage:** You are permitted to use this template in an unlimited number of personal and commercial projects for yourself or clients. 📂
+- **Modification:** You may modify the template to suit your needs and incorporate it into your projects. ✏️
+- **Attribution Requirement:** Appropriate credit must be provided by including a link to [styleshout.com](https://www.styleshout.com) on your website. 🔗
+
+## Prohibitions
+
+- **Redistribution:** You are not allowed to resell or redistribute the template "as is" without prior consent from the creator. 🚫
+- **Direct Links:** When promoting this resource on your site, you must link back to the appropriate resource page on styleshout.com instead of linking directly to the download file. 🔒
+
+## Attribution Guidelines
+
+- **Credit Placement:** You must include a credit link to Styleshout somewhere on your site. The preferred location is in the footer, but you may choose another location if necessary. 📌
+
+## Credit Removal Option
+
+If you wish to use the template without the attribution requirement, you can pay a credit removal fee of $10 USD via PayPal. This allows you to use the template on one domain name without including an attribution link. Payment can be sent to ealigam@gmail.com. 💵
+
+### Important Note:
+Please retain your PayPal receipt as proof of payment and provide the URL of the site where the template will be used. 📝
+
+## Support Information
+
+As this template is provided for free, no support is offered. The template has been designed according to current web standards, making it user-friendly and easy to modify. 
+
+For those who may need additional assistance with web development, consider exploring these resources:
+- [Marksheet.io](https://marksheet.io/) 📚
+- [Shay Howe's HTML & CSS](http://learn.shayhowe.com/html-css/) 🎓
+
+For JavaScript learning resources:
+- [Codecademy - Introduction to JavaScript](https://www.codecademy.com/learn/introduction-to-javascript) 💻
+- [JavaScript.info](https://javascript.info/) 🌐
+
+---
+
+Thank you for using the Luther template! Your adherence to these terms ensures that we can continue providing quality resources for everyone. 🙏
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/37596942/9af9bd5d-3ee1-4dfa-995f-59e1757e4457/index.html
