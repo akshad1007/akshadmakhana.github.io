@@ -599,52 +599,30 @@
             alert('📊 MAP Record exported successfully!\n\nIncludes:\n• Progress summary\n• Category breakdown\n• File count: ' + mapData.uploadedFiles.length + '\n• Export date: ' + new Date().toLocaleDateString());
         };
 
-        // Show activity form modal
-        window.showActivityForm = function() {
-            alert('🎯 Quick Activity Addition\n\nChoose a category to add your activity:\n\nA - Technical Skills (Paper presentation, Certifications, Workshops)\nB - Sports & Cultural (Sports events, Cultural activities)\nC - Community Outreach (Social service, NGO work)\nD - Innovation/IPR (Hackathons, Patents, Startups)\nE - Leadership (Club activities, Management roles)\n\nClick "+ Add Activity" button in any category to get started!');
-        };
-
         // View detailed breakdown
         window.viewDetailedBreakdown = function() {
             const totalPoints = calculateTotalPoints();
             let breakdown = `📊 MAP DETAILED BREAKDOWN - Akshad Makhana\n`;
             breakdown += `====================================================\n\n`;
-            breakdown += `🎯 Overall Progress: ${totalPoints}/100 points (${(totalPoints/100*100).toFixed(1)}%)\n`;
+            breakdown += `🎯 Overall Progress: ${totalPoints}/${mapData.totalPoints} points (${(totalPoints/mapData.totalPoints*100).toFixed(1)}%)\n`;
             breakdown += `📚 Program: B.Tech AI & Data Science (2024-28)\n`;
-            breakdown += `📅 Current Year: First Year (Target: 20 points)\n\n`;
+            breakdown += `📅 Current Year: First Year (Target: 20 points)\n`;
+            breakdown += `� Files Uploaded: ${mapData.uploadedFiles.length}\n\n`;
             
-            const categoryNames = {
-                categoryA: '🔧 Technical Skills',
-                categoryB: '🏆 Sports & Cultural',
-                categoryC: '🤝 Community Outreach',
-                categoryD: '💡 Innovation/IPR/Entrepreneurship',
-                categoryE: '👥 Leadership/Management'
-            };
-            
-            Object.keys(mapData).forEach(categoryKey => {
-                const category = mapData[categoryKey];
-                const categoryName = categoryNames[categoryKey];
-                const percentage = category.required > 0 ? (category.current / category.required * 100).toFixed(1) : 0;
+            Object.keys(mapData.categories).forEach(categoryKey => {
+                const category = mapData.categories[categoryKey];
+                const percentage = category.total > 0 ? (category.earned / category.total * 100).toFixed(1) : 0;
                 
-                breakdown += `${categoryName}\n`;
-                breakdown += `Progress: ${category.current}/${category.required} (${percentage}%)\n`;
-                
-                if (category.activities.length > 0) {
-                    breakdown += `Activities:\n`;
-                    category.activities.forEach(activity => {
-                        breakdown += `  • ${activity.name}: +${activity.points} points (${activity.date})\n`;
-                    });
-                } else {
-                    breakdown += `No activities recorded yet.\n`;
-                }
-                breakdown += '\n';
+                breakdown += `${category.name}\n`;
+                breakdown += `Progress: ${category.earned}/${category.total} (${percentage}%)\n`;
+                breakdown += `Status: ${category.earned > 0 ? '✅ In Progress' : '⏳ Not Started'}\n\n`;
             });
 
-            breakdown += `\n📝 Next Steps:\n`;
-            breakdown += `• Complete remaining ${20 - Math.min(totalPoints, 20)} points for First Year\n`;
+            breakdown += `📝 Next Steps:\n`;
+            breakdown += `• Complete remaining ${Math.max(0, 20 - totalPoints)} points for First Year\n`;
+            breakdown += `• Upload certificates and documents\n`;
             breakdown += `• Focus on categories with 0 points\n`;
-            breakdown += `• Upload certificates to ERP before semester end\n`;
-            breakdown += `• Maintain physical and digital records\n`;
+            breakdown += `• Submit to ERP before semester end\n`;
 
             alert(breakdown);
         };
@@ -652,7 +630,6 @@
         // Generate ERP Report
         window.generateERPReport = function() {
             const totalPoints = calculateTotalPoints();
-            const totalActivities = Object.values(mapData).reduce((sum, cat) => sum + cat.activities.length, 0);
             
             const report = {
                 studentInfo: {
@@ -663,11 +640,12 @@
                 },
                 mapSummary: {
                     totalPoints: totalPoints,
-                    requiredPoints: 100,
-                    completionPercentage: (totalPoints / 100 * 100).toFixed(1),
-                    totalActivities: totalActivities
+                    requiredPoints: mapData.totalPoints,
+                    completionPercentage: (totalPoints / mapData.totalPoints * 100).toFixed(1),
+                    uploadedFiles: mapData.uploadedFiles.length
                 },
-                categoryBreakdown: mapData,
+                categoryBreakdown: mapData.categories,
+                uploadedFiles: mapData.uploadedFiles,
                 submissionReady: totalPoints >= 15,
                 generatedOn: new Date().toISOString()
             };
@@ -681,13 +659,17 @@
             link.download = 'MAP_Report_Akshad_Makhana_' + new Date().toISOString().split('T')[0] + '.json';
             link.click();
 
-            alert('📊 MAP Report Generated!\n\nReport includes:\n✅ Student information\n✅ MAP points breakdown\n✅ Category-wise activities\n✅ Progress summary\n\nFile downloaded successfully!');
+            alert('📊 MAP Report Generated!\n\nReport includes:\n✅ Student information\n✅ MAP points breakdown\n✅ Category-wise progress\n✅ Uploaded files (' + mapData.uploadedFiles.length + ')\n✅ Progress summary\n\nFile downloaded successfully!');
         };
 
-        // Toggle section functionality
-        window.toggleSection = function(sectionId) {
-            const content = document.getElementById(sectionId + '-content');
-            const icon = document.querySelector(`[onclick="toggleSection('${sectionId}')"] .toggle-icon`);
+        // Initialize MAP tracking
+        function init() {
+            initializeFileUpload();
+            updateProgressDisplay();
+        }
+
+        // Initialize on load
+        init();
             
             if (content && icon) {
                 content.classList.toggle('collapsed');
@@ -754,26 +736,7 @@
                 });
             });
 
-            // Update stats
-            const totalActivities = Object.values(mapData).reduce((sum, cat) => sum + cat.activities.length, 0);
-            const statNumbers = document.querySelectorAll('.stat-number');
-            if (statNumbers[0]) statNumbers[0].textContent = totalActivities;
-            if (statNumbers[1]) statNumbers[1].textContent = '3'; // Projects completed
-            if (statNumbers[2]) statNumbers[2].textContent = 100 - calculateTotalPoints(); // Points remaining
-        }
 
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', function() {
-                updateProgressBars();
-                initializeSections();
-                updateActivityDisplay();
-            });
-        } else {
-            updateProgressBars();
-            initializeSections();
-            updateActivityDisplay();
-        }
 
     }; // end ssMapTracking
 

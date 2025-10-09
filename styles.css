@@ -4318,23 +4318,23 @@
 }
 
 .map-disclaimer {
-    background: rgba(255, 193, 7, 0.1);
-    border: 1px solid rgba(255, 193, 7, 0.3);
+    background: var(--color-notice);
+    border: 1px solid var(--color-1-light);
     border-radius: 0.6rem;
     padding: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .map-disclaimer p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-notice-content);
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 0;
 }
 
 .map-main-card {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-gray-19);
+    border: 1px solid var(--color-gray-9);
     border-radius: 1rem;
     padding: 2.5rem;
     margin-bottom: 2rem;
@@ -4348,13 +4348,13 @@
 }
 
 .program-details h3 {
-    color: #ffffff;
+    color: var(--color-text-dark);
     font-size: 2rem;
     margin: 0 0 0.5rem 0;
 }
 
 .program-details p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text);
     font-size: 1.3rem;
     margin: 0;
 }
@@ -4369,7 +4369,7 @@
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    background: conic-gradient(#00d4ff 0deg, #00d4ff calc(var(--progress, 15) * 3.6deg), rgba(255, 255, 255, 0.1) calc(var(--progress, 15) * 3.6deg));
+    background: conic-gradient(var(--color-1) 0deg, var(--color-1) calc(var(--progress, 15) * 3.6deg), var(--color-gray-9) calc(var(--progress, 15) * 3.6deg));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4381,12 +4381,12 @@
     position: absolute;
     width: 6rem;
     height: 6rem;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--color-gray-19);
     border-radius: 50%;
 }
 
 .percentage {
-    color: #00d4ff;
+    color: var(--color-1);
     font-size: 1.4rem;
     font-weight: 700;
     z-index: 1;
@@ -4401,25 +4401,25 @@
 .stat-box {
     text-align: center;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-gray-18);
     border-radius: 0.6rem;
 }
 
 .stat-box .stat-number {
     display: block;
-    color: #00d4ff;
+    color: var(--color-1);
     font-size: 2rem;
     font-weight: 700;
 }
 
 .stat-box .stat-label {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text);
     font-size: 1.1rem;
 }
 
 .category-progress-simple {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-gray-19);
+    border: 1px solid var(--color-gray-9);
     border-radius: 0.8rem;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -4431,7 +4431,7 @@
     gap: 1rem;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-gray-9);
 }
 
 .category-row:last-child {
@@ -4439,8 +4439,8 @@
 }
 
 .cat-letter {
-    background: #00d4ff;
-    color: #000;
+    background: var(--color-1);
+    color: var(--color-black);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -4452,42 +4452,42 @@
 }
 
 .cat-title {
-    color: #ffffff;
+    color: var(--color-text-dark);
     font-size: 1.3rem;
     font-weight: 500;
 }
 
 .cat-bar {
     height: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-gray-9);
     border-radius: 0.4rem;
     overflow: hidden;
 }
 
 .cat-fill {
     height: 100%;
-    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    background: linear-gradient(45deg, var(--color-1), var(--color-1-dark));
     border-radius: 0.4rem;
     transition: width 0.3s ease;
 }
 
 .cat-score {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text);
     font-size: 1.1rem;
     font-weight: 600;
     text-align: right;
 }
 
 .file-management {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-gray-19);
+    border: 1px solid var(--color-gray-9);
     border-radius: 0.8rem;
     padding: 2rem;
     margin-bottom: 2rem;
 }
 
 .file-management h3 {
-    color: #ffffff;
+    color: var(--color-text-dark);
     margin-bottom: 1.5rem;
     font-size: 1.6rem;
 }
@@ -4497,7 +4497,7 @@
 }
 
 .upload-zone {
-    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border: 2px dashed var(--color-gray-7);
     border-radius: 0.8rem;
     padding: 3rem 2rem;
     text-align: center;
@@ -4506,8 +4506,8 @@
 }
 
 .upload-zone:hover {
-    border-color: #00d4ff;
-    background: rgba(0, 212, 255, 0.05);
+    border-color: var(--color-1);
+    background: var(--color-gray-18);
 }
 
 .upload-icon {
@@ -4516,13 +4516,13 @@
 }
 
 .upload-zone p {
-    color: #ffffff;
+    color: var(--color-text-dark);
     font-size: 1.4rem;
     margin: 0 0 0.5rem 0;
 }
 
 .upload-zone small {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text);
     font-size: 1.1rem;
 }
 
@@ -4535,7 +4535,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-gray-18);
     border-radius: 0.6rem;
     margin-bottom: 1rem;
 }
@@ -4549,7 +4549,8 @@
 .file-icon {
     width: 3rem;
     height: 3rem;
-    background: #00d4ff;
+    background: var(--color-1);
+    color: var(--color-black);
     border-radius: 0.4rem;
     display: flex;
     align-items: center;
@@ -4563,18 +4564,18 @@
 }
 
 .file-name {
-    color: #ffffff;
+    color: var(--color-text-dark);
     font-size: 1.2rem;
     font-weight: 500;
 }
 
 .file-size {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text);
     font-size: 1rem;
 }
 
 .file-date {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-text);
     font-size: 1rem;
 }
 
