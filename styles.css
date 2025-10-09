@@ -3977,21 +3977,38 @@
          font-size   : var(--text-md);
          line-height : var(--vspace-0_875);
      }
- 
+
      .folio-list__proj-link {
          right : var(--vspace-0_5);
      }
- }
- 
- @media screen and (max-width: 500px) {
+
+     /* Force single column layout on mobile */
+     .folio-list.row.block-lg-one-half > .column,
+     .folio-list.row > .column {
+         width: 100% !important;
+         flex: none !important;
+         margin-bottom: var(--vspace-1);
+     }
+
+     .folio-list.row {
+         flex-direction: column;
+     }
+ } @media screen and (max-width: 500px) {
      .folio-list {
          --item-min-height : var(--vspace-3_5);
      }
- 
+
      .folio-list__item {
          margin-bottom : var(--vspace-0_75);
      }
- 
+
+     /* Additional mobile rules for smaller screens */
+     .folio-list.row > .column {
+         width: 100% !important;
+         max-width: 100% !important;
+         flex-basis: 100% !important;
+     }
+
      .folio-list__item-link {
          padding-left : calc(4.25 * var(--space));
      }
