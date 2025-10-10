@@ -3244,6 +3244,20 @@
  }
  
  /* --------------------------------------------------------------------
+  * ## intro CTA buttons
+  * -------------------------------------------------------------------- */
+ .intro-cta {
+     margin-top: 4.8rem;
+     display: flex;
+     gap: 1.6rem;
+     flex-wrap: wrap;
+ }
+ 
+ .intro-cta .btn {
+     min-width: auto;
+ }
+ 
+ /* --------------------------------------------------------------------
   * ## intro scrolldown
   * -------------------------------------------------------------------- */
  .intro-scrolldown {
@@ -3357,6 +3371,16 @@
  
      .intro-scrolldown {
          right : 2.4rem;
+     }
+     
+     .intro-cta {
+         flex-direction: column;
+         gap: 1.2rem;
+     }
+     
+     .intro-cta .btn {
+         width: 100%;
+         text-align: center;
      }
  }
  
