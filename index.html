@@ -115,6 +115,41 @@
                         <img src="pictures/my photo.jpg" 
                              srcset="pictures/my photo.jpg 1x, pictures/my photo@2x.jpg 2x" 
                              alt="" class="about-info__pic" data-animate-el>
+                        
+                        <!-- Quick Facts Box -->
+                        <div class="quick-facts" data-animate-el>
+                            <h4>Quick Facts</h4>
+                            <ul>
+                                <li>
+                                    <span class="fact-icon">📍</span>
+                                    <div class="fact-content">
+                                        <strong>Location</strong>
+                                        <p>Kopargaon, Maharashtra</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="fact-icon">🎓</span>
+                                    <div class="fact-content">
+                                        <strong>Degree</strong>
+                                        <p>B.Tech AI & Data Science (2024-2028)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="fact-icon">💼</span>
+                                    <div class="fact-content">
+                                        <strong>Status</strong>
+                                        <p>Student, Open to Internships</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="fact-icon">🌐</span>
+                                    <div class="fact-content">
+                                        <strong>Languages</strong>
+                                        <p>English, Hindi, Marathi</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -174,6 +209,52 @@
                         </ul>
                     </div>
                 </div> <!-- end about-skills -->
+
+                <!-- Tools & Technologies -->
+                <div class="row about-tools" data-animate-block>
+                    <div class="column lg-12">
+                        <h2 class="text-pretitle" data-animate-el>Tools & Technologies</h2>
+                        
+                        <div class="tools-grid" data-animate-el>
+                            <div class="tool-category">
+                                <h4>Development</h4>
+                                <ul class="tools-list">
+                                    <li>VS Code</li>
+                                    <li>Git & GitHub</li>
+                                    <li>Jupyter Notebook</li>
+                                </ul>
+                            </div>
+
+                            <div class="tool-category">
+                                <h4>Design</h4>
+                                <ul class="tools-list">
+                                    <li>Figma</li>
+                                    <li>FlutterFlow</li>
+                                    <li>Canva</li>
+                                </ul>
+                            </div>
+
+                            <div class="tool-category">
+                                <h4>Data Libraries</h4>
+                                <ul class="tools-list">
+                                    <li>NumPy</li>
+                                    <li>Pandas</li>
+                                    <li>Matplotlib</li>
+                                    <li>Seaborn</li>
+                                </ul>
+                            </div>
+
+                            <div class="tool-category">
+                                <h4>ML/AI</h4>
+                                <ul class="tools-list">
+                                    <li>TensorFlow</li>
+                                    <li>OpenCV</li>
+                                    <li>Scikit-learn</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end about-tools -->
 
                 <div class="row about-timelines" data-animate-block>
                     <div class="column lg-6 tab-12">
@@ -304,16 +385,25 @@
                 <div class="row works-portfolio">
                     <div class="column lg-12" data-animate-block>
                         <h2 class="text-pretitle" data-animate-el>
-                            Recent Works
+                            Recent Projects
                         </h2>
 
                         <p class="h1" data-animate-el>
                             "Check out some of the projects I've been working on."
                         </p>
 
+                        <!-- Project Filter Buttons -->
+                        <div class="project-filters" data-animate-el>
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="python">Python</button>
+                            <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                            <button class="filter-btn" data-filter="design">Design</button>
+                            <button class="filter-btn" data-filter="web">Web</button>
+                        </div>
+
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
                             <!-- Project 1: Expense Tracker -->
-                            <li class="folio-list__item column" data-animate-el>
+                            <li class="folio-list__item column" data-animate-el data-category="python">
                                 <div class="folio-list__item-link">
                                     <div class="folio-list__item-pic">
                                         <img src="pictures/expense tracker img.webp" alt="Expense Tracker">
@@ -325,6 +415,12 @@
                                         </div>
                                         <div class="folio-list__item-title">
                                             Expenses Tracker
+                                        </div>
+                                        <!-- Tech Badges -->
+                                        <div class="tech-badges">
+                                            <span class="badge">Python</span>
+                                            <span class="badge">Tkinter</span>
+                                            <span class="badge">Matplotlib</span>
                                         </div>
                                     </div>
                                 </div>
@@ -339,7 +435,7 @@
                             </li> <!-- end folio-list__item -->
 
                                 <!-- Project 2: Bus Live Location Tracking App -->
-                            <li class="folio-list__item column" data-animate-el>
+                            <li class="folio-list__item column" data-animate-el data-category="design">
                                 <div class="folio-list__item-link">
                                 <div class="folio-list__item-pic">
                                 <img src="pictures\busify img.webp" alt="">
@@ -351,6 +447,12 @@
                                 </div>
                                 <div class="folio-list__item-title">
                                 Bus Live Location Tracking App
+                                </div>
+                                <!-- Tech Badges -->
+                                <div class="tech-badges">
+                                    <span class="badge">FlutterFlow</span>
+                                    <span class="badge">Figma</span>
+                                    <span class="badge">UI/UX</span>
                                 </div>
                                 </div>
                                 </div>
@@ -365,7 +467,7 @@
                             </li> <!-- end folio-list__item -->
 
                                <!-- Project 3: UNIVERSITY HACKATHON -->
-                            <li class="folio-list__item column" data-animate-el>
+                            <li class="folio-list__item column" data-animate-el data-category="ai-ml python">
                                 <div class="folio-list__item-link">
                                     <div class="folio-list__item-pic">
                                         <img src="pictures/teamlogo.jpg" alt="">
@@ -378,6 +480,13 @@
                                         <div class="folio-list__item-title">
                                             AI Reflection: Emotion Sentiment Analysis
                                         </div>
+                                        <!-- Tech Badges -->
+                                        <div class="tech-badges">
+                                            <span class="badge">Python</span>
+                                            <span class="badge">TensorFlow</span>
+                                            <span class="badge">OpenCV</span>
+                                            <span class="badge">face-recognition</span>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -385,6 +494,39 @@
                                 <div class="project-description" style="padding-top: 10px;">
                                     <p>The AI Reflection project was developed for an industry hackathon organized by Sanjivani University, focusing on emotion sentiment analysis using text and real-time facial expressions. We aimed to create a robust model capable of classifying emotions such as happy, sad, and neutral. The project utilized TensorFlow for model training, face-recognition and OpenCV for facial expression detection, and followed a structured development process including dataset creation, model training, and testing. This project allowed us to explore and apply machine learning techniques in a practical application, enhancing our skills in AI and software development. We were also awarded an appreciation certificate for our efforts and innovation during the hackathon, representing our college in Kopargaon.</p>
                                     <a href="https://github.com/AKSHAD-MAKHANA/SU_HACKATHON.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                        View Project Link
+                                    </a>
+                                </div>
+                            </li> <!-- end folio-list__item -->
+
+                            <!-- Project 4: Portfolio Website -->
+                            <li class="folio-list__item column" data-animate-el data-category="web">
+                                <div class="folio-list__item-link">
+                                    <div class="folio-list__item-pic">
+                                        <img src="pictures/icon.jpg" alt="Portfolio Website">
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Personal Portfolio Website
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Professional Portfolio
+                                        </div>
+                                        <!-- Tech Badges -->
+                                        <div class="tech-badges">
+                                            <span class="badge">HTML</span>
+                                            <span class="badge">CSS</span>
+                                            <span class="badge">JavaScript</span>
+                                            <span class="badge">GitHub Pages</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Description and Project Link -->
+                                <div class="project-description" style="padding-top: 10px;">
+                                    <p>A responsive and modern portfolio website built to showcase my projects, skills, and achievements. The website features a clean dark theme design with smooth animations, interactive elements, and a professional layout. Built using HTML5, CSS3, and JavaScript, it demonstrates my web development capabilities and attention to detail in UI/UX design. The site is hosted on GitHub Pages and serves as my digital presence for recruiters and collaborators.</p>
+                                    <a href="https://github.com/AKSHAD-MAKHANA/akshadmakhana.github.io" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>

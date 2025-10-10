@@ -753,7 +753,42 @@
         ssAlertBoxes();
         ssMoveTo();
         ssMapTracking();
+        ssProjectFilters();
 
     })();
+    
+    
+   /* Project Filter Functionality
+    * -------------------------------------------------- */
+    const ssProjectFilters = function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.folio-list__item');
+        
+        if (!filterBtns.length || !projects.length) return;
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                projects.forEach(project => {
+                    if (filter === 'all') {
+                        project.style.display = 'block';
+                    } else {
+                        const categories = project.getAttribute('data-category');
+                        if (categories && categories.includes(filter)) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    };
 
 })(document.documentElement);
