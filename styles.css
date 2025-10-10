@@ -4478,7 +4478,7 @@
 .achievement-item {
     text-align: center;
     padding: 10px;
-    border: 2px solid var(--color-1);
+    border: 2px solid rgba(234, 190, 124, 0.3);
     border-radius: 8px;
     background-color: var(--color-gray-10); /* Match portfolio background */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -4488,7 +4488,7 @@
 .achievement-item:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-color: var(--color-1);
+    border-color: rgba(234, 190, 124, 0.5);
 }
 
 .achievement-item h4 {
