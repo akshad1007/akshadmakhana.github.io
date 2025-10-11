@@ -858,28 +858,49 @@
         /* Gallery Image Styles */
         .gallery-image-container {
             width: 100%;
-            max-width: 700px;
+            max-width: 450px;
+            max-height: 450px;
             margin: 0 auto;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(234, 190, 124, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            border: 3px solid rgba(234, 190, 124, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            background: #000;
         }
 
         .gallery-image-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(234, 190, 124, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 45px rgba(234, 190, 124, 0.3);
+            border-color: rgba(234, 190, 124, 0.6);
         }
 
         .gallery-image {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
             display: block;
             pointer-events: none; /* Prevents drag */
             user-select: none; /* Prevents selection */
             -webkit-user-drag: none; /* Prevents drag in Safari */
             -webkit-touch-callout: none; /* Prevents callout in iOS */
+        }
+        
+        /* Responsive gallery images */
+        @media screen and (max-width: 768px) {
+            .gallery-image-container {
+                max-width: 350px;
+                max-height: 350px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .gallery-image-container {
+                max-width: 280px;
+                max-height: 280px;
+                border-width: 2px;
+            }
         }
 
         /* Disable right-click on gallery images */
