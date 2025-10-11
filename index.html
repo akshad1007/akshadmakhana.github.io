@@ -592,11 +592,10 @@
                             "Moments from my learning journey"
                         </p>
 
-                        <!-- Swiper Container for Gallery Slider -->
-                        <div class="swiper-container gallery-slider" data-animate-el>
-                            <div class="swiper-wrapper">
-                                <!-- Gallery Slide 1: Hackathon -->
-                                <div class="testimonial-slider__slide swiper-slide">
+                        <!-- Grid Gallery Container -->
+                        <div class="gallery-grid-container" data-animate-el>
+                                <!-- Gallery Item 1: Hackathon -->
+                                <div class="gallery-grid-item">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -620,9 +619,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Gallery Slide 2: IKS Presentation -->
-                                <div class="testimonial-slider__slide swiper-slide">
+                                <!-- Gallery Item 2: IKS Presentation -->
+                                <div class="gallery-grid-item">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -645,9 +643,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Gallery Slide 3: Chess Championship -->
-                                <div class="testimonial-slider__slide swiper-slide">
+                                <!-- Gallery Item 3: Chess Championship -->
+                                <div class="gallery-grid-item">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -670,9 +667,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Gallery Slide 4: Volleyball Prize with Prof. Sawant -->
-                                <div class="testimonial-slider__slide swiper-slide">
+                                <!-- Gallery Item 4: Volleyball Prize with Prof. Sawant -->
+                                <div class="gallery-grid-item">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -695,35 +691,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Add more slides here with your event photos -->
-                                <!-- Template for new slides:
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
-                                        <div class="gallery-flipper">
-                                            <div class="gallery-front">
-                                                <div class="gallery-image-container">
-                                                    <img src="pictures/your-photo.jpg" 
-                                                         alt="Event Name" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
-                                                </div>
-                                            </div>
-                                            <div class="gallery-back">
-                                                <div class="gallery-back-content">
-                                                    <h3>Event Title</h3>
-                                                    <p class="event-details">Event Details | Date</p>
-                                                    <p class="event-description">Brief description</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                -->
-                            </div>
-                            <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
                         </div>
+                        <!-- End Gallery Grid -->
                     </div>
                 </div>
             </section> <!-- end gallery section -->
@@ -928,6 +897,20 @@
 
     <!-- Contact Form Modal Styles -->
     <style>
+        /* Gallery Grid Layout */
+        .gallery-grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .gallery-grid-item {
+            width: 100%;
+        }
+
         /* Gallery Image Styles */
         /* Flip Container */
         .gallery-flip-container {
@@ -941,7 +924,7 @@
         .gallery-flipper {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: 450px;
             transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
             transform-style: preserve-3d;
         }
@@ -1004,10 +987,9 @@
         }
 
         .gallery-image-container {
-            width: auto;
+            width: 100%;
             max-width: 450px;
-            height: auto;
-            max-height: 500px;
+            height: 450px;
             margin: 0 auto;
             border-radius: 15px;
             overflow: hidden;
@@ -1015,7 +997,9 @@
             border: 3px solid rgba(234, 190, 124, 0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             background: transparent;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .gallery-front {
@@ -1033,11 +1017,13 @@
         }
 
         .gallery-image {
-            width: auto;
-            height: auto;
+            width: 100%;
+            height: 100%;
             max-width: 100%;
-            max-height: 500px;
+            max-height: 450px;
             display: block;
+            object-fit: contain;
+            object-position: center;
             pointer-events: none; /* Prevents drag */
             user-select: none; /* Prevents selection */
             -webkit-user-drag: none; /* Prevents drag in Safari */
@@ -1051,10 +1037,22 @@
             transform: scale(1.02);
         }
         
-        /* Responsive gallery images */
+        /* Responsive gallery grid */
+        @media screen and (max-width: 1024px) {
+            .gallery-grid-container {
+                gap: 2rem;
+            }
+        }
+        
         @media screen and (max-width: 768px) {
+            .gallery-grid-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 1rem;
+            }
+
             .gallery-flip-container {
-                max-width: 350px;
+                max-width: 400px;
             }
             
             .gallery-flipper {
