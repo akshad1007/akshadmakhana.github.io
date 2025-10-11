@@ -719,10 +719,41 @@
 
                     <!-- Call to Action Button -->
                     <div class="column lg-4 md-12 contact-block">
-                        <a href="mailto:akshadmakhana@zohomail.in" class="mailtoui btn btn--medium u-fullwidth contact-btn">Say Hello</a>
+                        <button onclick="openContactForm()" class="btn btn--medium u-fullwidth contact-btn">Say Hello</button>
                     </div>
                 </div> <!-- end contact-bottom -->
             </section> <!-- end contact -->
+
+            <!-- Contact Form Modal -->
+            <div id="contactFormModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeContactForm()">&times;</span>
+                    <h2 style="color: var(--color-1); margin-bottom: 2rem; text-align: center;">Send Me a Message</h2>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--medium u-fullwidth" style="margin-top: 1rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </main> <!-- end s-content -->
 
         <!-- footer
@@ -748,6 +779,177 @@
     ================================================== -->
     <script src="plugins.js"></script>
     <script src="main.js"></script>
+
+    <!-- Contact Form Modal Styles -->
+    <style>
+        /* Modal Background */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #1a1a1a;
+            margin: 5% auto;
+            padding: 3rem;
+            border: 2px solid var(--color-1);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(234, 190, 124, 0.3);
+            animation: slideDown 0.4s;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Close Button */
+        .close {
+            color: var(--color-1);
+            float: right;
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #fff;
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-1);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: #2a2a2a;
+            border: 2px solid #3a3a3a;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-1);
+            box-shadow: 0 0 10px rgba(234, 190, 124, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #888;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .modal-content {
+                margin: 10% auto;
+                padding: 2rem;
+                width: 95%;
+            }
+
+            .close {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+    <!-- Contact Form Scripts -->
+    <script>
+        // Open Contact Form Modal
+        function openContactForm() {
+            document.getElementById('contactFormModal').style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        // Close Contact Form Modal
+        function closeContactForm() {
+            document.getElementById('contactFormModal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactFormModal');
+            if (event.target == modal) {
+                closeContactForm();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeContactForm();
+            }
+        });
+
+        // Handle Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link with form data
+            const mailtoLink = `mailto:akshadmakhana@zohomail.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Close modal and reset form
+            setTimeout(() => {
+                closeContactForm();
+                document.getElementById('contactForm').reset();
+            }, 500);
+        }
+    </script>
 
 </body>
 </html>
