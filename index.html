@@ -181,7 +181,7 @@
                         <h2 class="text-pretitle" data-animate-el>Libraries & Frameworks</h2>
                         
                         <div class="column lg-6 tab-12" style="float: left;">
-                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Data Science & ML (Working)</h3>
+                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Data Science & ML Foundations</h3>
                             <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
                                 <li>NumPy, Pandas</li>
                                 <li>Matplotlib, Seaborn</li>
@@ -191,7 +191,7 @@
                         </div>
 
                         <div class="column lg-6 tab-12" style="float: left;">
-                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Specialized Tools (Working)</h3>
+                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Specialized Tools Foundations</h3>
                             <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
                                 <li>OpenCV, YOLO</li>
                                 <li>ARIMA, SARIMA, Prophet</li>
@@ -582,6 +582,79 @@
                 </div> <!-- end works-portfolio -->
             </section> <!-- end works section -->
 
+            <!-- JOURNEY HIGHLIGHTS / GALLERY
+            ================================================== -->
+            <section id="gallery" class="s-testimonials target-section" style="background-color: #0f0f0f;">
+                <div class="row testimonials">
+                    <div class="column lg-12" data-animate-block>
+                        <h2 class="text-pretitle" data-animate-el>Journey Highlights</h2>
+                        <p class="h1" data-animate-el style="margin-bottom: 3rem;">
+                            "Moments from my learning journey"
+                        </p>
+
+                        <!-- Swiper Container for Gallery Slider -->
+                        <div class="swiper-container gallery-slider" data-animate-el>
+                            <div class="swiper-wrapper">
+                                <!-- Gallery Slide 1: Hackathon -->
+                                <div class="testimonial-slider__slide swiper-slide">
+                                    <div class="gallery-image-container">
+                                        <img src="pictures/teamlogo.jpg" 
+                                             alt="AI Reflection Hackathon" 
+                                             class="gallery-image"
+                                             oncontextmenu="return false;">
+                                    </div>
+                                    <div class="testimonial-slider__author" style="margin-top: 2rem;">
+                                        <cite class="testimonial-slider__cite">
+                                            <strong style="font-size: 1.3rem; color: var(--color-1);">AI Reflection Hackathon</strong>
+                                            <span>Sanjivani University Industry Hackathon | 2025</span>
+                                            <span style="margin-top: 0.5rem; display: block; font-size: 0.9rem;">Won appreciation for Emotion Sentiment Analysis project</span>
+                                        </cite>
+                                    </div>
+                                </div>
+
+                                <!-- Gallery Slide 2: Placeholder for your photos -->
+                                <div class="testimonial-slider__slide swiper-slide">
+                                    <div class="gallery-image-container">
+                                        <img src="pictures/my photo.jpg" 
+                                             alt="Tech Journey" 
+                                             class="gallery-image"
+                                             oncontextmenu="return false;">
+                                    </div>
+                                    <div class="testimonial-slider__author" style="margin-top: 2rem;">
+                                        <cite class="testimonial-slider__cite">
+                                            <strong style="font-size: 1.3rem; color: var(--color-1);">Building the Future</strong>
+                                            <span>B.Tech in AI & Data Science</span>
+                                            <span style="margin-top: 0.5rem; display: block; font-size: 0.9rem;">Passionate about solving real-world problems with AI</span>
+                                        </cite>
+                                    </div>
+                                </div>
+
+                                <!-- Add more slides here with your event photos -->
+                                <!-- Template for new slides:
+                                <div class="testimonial-slider__slide swiper-slide">
+                                    <div class="gallery-image-container">
+                                        <img src="pictures/your-photo.jpg" 
+                                             alt="Event Name" 
+                                             class="gallery-image"
+                                             oncontextmenu="return false;">
+                                    </div>
+                                    <div class="testimonial-slider__author" style="margin-top: 2rem;">
+                                        <cite class="testimonial-slider__cite">
+                                            <strong style="font-size: 1.3rem; color: var(--color-1);">Event Title</strong>
+                                            <span>Event Details | Date</span>
+                                            <span style="margin-top: 0.5rem; display: block; font-size: 0.9rem;">Brief description</span>
+                                        </cite>
+                                    </div>
+                                </div>
+                                -->
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- end gallery section -->
+
             <!-- TESTIMONIALS
             ================================================== -->
             <section id="testimonials" class="s-testimonials target-section">
@@ -782,6 +855,57 @@
 
     <!-- Contact Form Modal Styles -->
     <style>
+        /* Gallery Image Styles */
+        .gallery-image-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(234, 190, 124, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(234, 190, 124, 0.2);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            pointer-events: none; /* Prevents drag */
+            user-select: none; /* Prevents selection */
+            -webkit-user-drag: none; /* Prevents drag in Safari */
+            -webkit-touch-callout: none; /* Prevents callout in iOS */
+        }
+
+        /* Disable right-click on gallery images */
+        .gallery-slider {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Gallery section background */
+        #gallery {
+            position: relative;
+        }
+
+        #gallery::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+            z-index: -1;
+        }
+
         /* Modal Background */
         .modal {
             display: none;
