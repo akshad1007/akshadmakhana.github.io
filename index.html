@@ -693,14 +693,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Scroll Hint -->
-                            <div class="scroll-hint">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(234, 190, 124, 0.6)" stroke-width="2">
-                                    <path d="M9 18l6-6-6-6"/>
-                                </svg>
-                                <span>Scroll to see more</span>
-                            </div>
                         </div>
                         <!-- End Horizontal Scroll Gallery -->
                     </div>
@@ -979,26 +971,8 @@
             height: 100%;
             max-width: none;
             max-height: none;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
-        }
-
-        /* Scroll Hint */
-        .scroll-hint {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            color: rgba(234, 190, 124, 0.6);
-            font-size: 0.9rem;
-            opacity: 0.8;
-            animation: fadeInOut 2s infinite;
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.8; }
         }
 
         .gallery-grid-item {
@@ -1142,10 +1116,6 @@
                 padding: 1rem;
                 gap: 1rem;
             }
-
-            .scroll-hint {
-                font-size: 0.85rem;
-            }
             
             .gallery-back-content h3 {
                 font-size: 1.7rem;
@@ -1168,10 +1138,6 @@
 
             .scroll-gallery-wrapper {
                 padding: 0.5rem;
-            }
-
-            .scroll-hint {
-                display: none;
             }
             
             .gallery-back {
