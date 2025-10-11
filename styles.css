@@ -4066,7 +4066,8 @@
  }
  
  .testimonial-slider__slide:hover .testimonial-slider__avatar {
-     filter : none;
+     filter : grayscale(0%);
+     transform: scale(1.05);
  }
  
  .testimonial-slider__slide:hover .testimonial-slider__cite strong {
@@ -4094,7 +4095,7 @@
      top           : 0;
      left          : 0;
      filter        : grayscale(100%);
-     transition    : all 0.3s ease-in-out;
+     transition    : all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
  }
  
  .testimonial-slider__cite {
