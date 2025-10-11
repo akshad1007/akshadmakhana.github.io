@@ -1042,6 +1042,13 @@
             user-select: none; /* Prevents selection */
             -webkit-user-drag: none; /* Prevents drag in Safari */
             -webkit-touch-callout: none; /* Prevents callout in iOS */
+            filter: grayscale(100%);
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .gallery-flip-container:hover .gallery-image {
+            filter: grayscale(0%);
+            transform: scale(1.02);
         }
         
         /* Responsive gallery images */
