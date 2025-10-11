@@ -607,7 +607,6 @@
                                                          class="gallery-image"
                                                          oncontextmenu="return false;">
                                                 </div>
-                                                <div class="flip-hint">Click to see details</div>
                                             </div>
                                             <!-- Back Side: Description -->
                                             <div class="gallery-back">
@@ -615,7 +614,6 @@
                                                     <h3>AI Reflection Hackathon</h3>
                                                     <p class="event-details">Sanjivani University Industry Hackathon | 2025</p>
                                                     <p class="event-description">Won appreciation for Emotion Sentiment Analysis project</p>
-                                                    <div class="flip-hint-back">Click to see photo</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -634,7 +632,6 @@
                                                          class="gallery-image"
                                                          oncontextmenu="return false;">
                                                 </div>
-                                                <div class="flip-hint">Click to see details</div>
                                             </div>
                                             <!-- Back Side: Description -->
                                             <div class="gallery-back">
@@ -642,7 +639,6 @@
                                                     <h3>Building the Future</h3>
                                                     <p class="event-details">B.Tech in AI & Data Science</p>
                                                     <p class="event-description">Passionate about solving real-world problems with AI</p>
-                                                    <div class="flip-hint-back">Click to see photo</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -661,14 +657,12 @@
                                                          class="gallery-image"
                                                          oncontextmenu="return false;">
                                                 </div>
-                                                <div class="flip-hint">Click to see details</div>
                                             </div>
                                             <div class="gallery-back">
                                                 <div class="gallery-back-content">
                                                     <h3>Event Title</h3>
                                                     <p class="event-details">Event Details | Date</p>
                                                     <p class="event-description">Brief description</p>
-                                                    <div class="flip-hint-back">Click to see photo</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -957,35 +951,7 @@
             font-size: 1.05rem;
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        .flip-hint,
-        .flip-hint-back {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(234, 190, 124, 0.9);
-            color: #000;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            z-index: 10;
-            animation: pulse 2s infinite;
-        }
-
-        .flip-hint-back {
-            position: static;
-            transform: none;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.7; }
-            50% { opacity: 1; }
+            margin-bottom: 0;
         }
 
         .gallery-image-container {
@@ -1074,12 +1040,6 @@
             
             .gallery-back-content .event-description {
                 font-size: 0.85rem;
-            }
-            
-            .flip-hint,
-            .flip-hint-back {
-                font-size: 0.75rem;
-                padding: 6px 15px;
             }
         }
 
