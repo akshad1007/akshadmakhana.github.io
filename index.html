@@ -917,6 +917,7 @@
             -webkit-overflow-scrolling: touch;
             scrollbar-width: thin;
             scrollbar-color: rgba(234, 190, 124, 0.5) rgba(0, 0, 0, 0.1);
+            scroll-snap-type: x mandatory;
         }
 
         /* Custom Scrollbar for Chrome/Safari */
@@ -943,6 +944,7 @@
             height: 450px;
             position: relative;
             transition: transform 0.3s ease;
+            scroll-snap-align: center;
         }
 
         .scroll-gallery-card:hover {
@@ -1108,13 +1110,15 @@
         /* Responsive horizontal scroll gallery */
         @media screen and (max-width: 768px) {
             .scroll-gallery-card {
-                flex: 0 0 320px;
+                flex: 0 0 calc(100vw - 4rem);
                 height: 400px;
+                scroll-snap-align: start;
             }
 
             .scroll-gallery-wrapper {
-                padding: 1rem;
-                gap: 1rem;
+                padding: 1rem 2rem;
+                gap: 1.5rem;
+                scroll-padding: 2rem;
             }
             
             .gallery-back-content h3 {
@@ -1132,12 +1136,15 @@
         
         @media screen and (max-width: 480px) {
             .scroll-gallery-card {
-                flex: 0 0 280px;
-                height: 350px;
+                flex: 0 0 calc(100vw - 2rem);
+                height: 380px;
+                scroll-snap-align: start;
             }
 
             .scroll-gallery-wrapper {
-                padding: 0.5rem;
+                padding: 1rem;
+                gap: 1rem;
+                scroll-padding: 1rem;
             }
             
             .gallery-back {
