@@ -253,6 +253,21 @@
             },
         });
 
+        // Initialize Swiper for Gallery
+        const gallerySlider = new Swiper('.gallery-slider', {
+            loop: true,
+            autoplay: {
+                delay: 4000, // 4 seconds per slide
+                disableOnInteraction: false,
+            },
+            effect: 'slide',
+            speed: 800,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
     }; // end ssSwiper
 
 
