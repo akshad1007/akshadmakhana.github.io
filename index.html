@@ -592,10 +592,11 @@
                             "Moments from my learning journey"
                         </p>
 
-                        <!-- Bento Box Gallery Container -->
-                        <div class="bento-gallery-container" data-animate-el>
-                                <!-- Large Box: Hackathon (Takes 2 rows) -->
-                                <div class="bento-box bento-large">
+                        <!-- Horizontal Scroll Gallery Container -->
+                        <div class="horizontal-scroll-gallery" data-animate-el>
+                            <div class="scroll-gallery-wrapper">
+                                <!-- Gallery Card 1: Hackathon -->
+                                <div class="scroll-gallery-card">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -619,8 +620,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Small Box 1: IKS Presentation -->
-                                <div class="bento-box bento-small">
+                                <!-- Gallery Card 2: IKS Presentation -->
+                                <div class="scroll-gallery-card">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -643,8 +644,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Small Box 2: Chess Championship -->
-                                <div class="bento-box bento-small">
+                                <!-- Gallery Card 3: Chess Championship -->
+                                <div class="scroll-gallery-card">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -667,8 +668,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Medium Box: Volleyball Championship -->
-                                <div class="bento-box bento-medium">
+                                <!-- Gallery Card 4: Volleyball Championship -->
+                                <div class="scroll-gallery-card">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
                                         <div class="gallery-flipper">
                                             <!-- Front Side: Image -->
@@ -692,8 +693,16 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <!-- Scroll Hint -->
+                            <div class="scroll-hint">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(234, 190, 124, 0.6)" stroke-width="2">
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                                <span>Scroll to see more</span>
+                            </div>
                         </div>
-                        <!-- End Bento Box Gallery -->
+                        <!-- End Horizontal Scroll Gallery -->
                     </div>
                 </div>
             </section> <!-- end gallery section -->
@@ -898,70 +907,98 @@
 
     <!-- Contact Form Modal Styles -->
     <style>
-        /* Bento Box Gallery Layout */
-        .bento-gallery-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 300px);
-            gap: 1.5rem;
-            max-width: 1100px;
+        /* Horizontal Scroll Gallery Layout */
+        .horizontal-scroll-gallery {
+            max-width: 100%;
             margin: 0 auto;
-            padding: 2rem 0;
-        }
-
-        /* Large box - takes 2 rows, 2 columns */
-        .bento-large {
-            grid-column: 1 / 3;
-            grid-row: 1 / 3;
-        }
-
-        /* Small boxes - 1 row, 1 column each */
-        .bento-small {
-            grid-column: span 1;
-            grid-row: span 1;
-        }
-
-        /* Medium box - 2 columns, 1 row */
-        .bento-medium {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-
-        .bento-box {
+            padding: 1rem 0;
             position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .bento-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(234, 190, 124, 0.3);
+        .scroll-gallery-wrapper {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            padding: 1rem 2rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(234, 190, 124, 0.5) rgba(0, 0, 0, 0.1);
         }
 
-        .bento-box .gallery-flip-container {
+        /* Custom Scrollbar for Chrome/Safari */
+        .scroll-gallery-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-gallery-wrapper::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .scroll-gallery-wrapper::-webkit-scrollbar-thumb {
+            background: rgba(234, 190, 124, 0.5);
+            border-radius: 10px;
+        }
+
+        .scroll-gallery-wrapper::-webkit-scrollbar-thumb:hover {
+            background: rgba(234, 190, 124, 0.8);
+        }
+
+        .scroll-gallery-card {
+            flex: 0 0 400px;
+            height: 450px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-gallery-card:hover {
+            transform: scale(1.02);
+        }
+
+        .scroll-gallery-card .gallery-flip-container {
             width: 100%;
             height: 100%;
             max-width: none;
         }
 
-        .bento-box .gallery-flipper {
+        .scroll-gallery-card .gallery-flipper {
             height: 100%;
         }
 
-        .bento-box .gallery-image-container {
+        .scroll-gallery-card .gallery-image-container {
             width: 100%;
             height: 100%;
             max-width: none;
             max-height: none;
         }
 
-        .bento-box .gallery-image {
+        .scroll-gallery-card .gallery-image {
             width: 100%;
             height: 100%;
             max-width: none;
             max-height: none;
             object-fit: cover;
+            object-position: center;
+        }
+
+        /* Scroll Hint */
+        .scroll-hint {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: rgba(234, 190, 124, 0.6);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            animation: fadeInOut 2s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
         }
 
         .gallery-grid-item {
@@ -1094,52 +1131,20 @@
             transform: scale(1.02);
         }
         
-        /* Responsive bento box */
-        @media screen and (max-width: 1024px) {
-            .bento-gallery-container {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 280px);
-                gap: 1.2rem;
-            }
-
-            .bento-large {
-                grid-column: 1 / 3;
-                grid-row: 1 / 3;
-            }
-
-            .bento-small {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-
-            .bento-medium {
-                grid-column: span 2;
-                grid-row: span 1;
-            }
-        }
-        
+        /* Responsive horizontal scroll gallery */
         @media screen and (max-width: 768px) {
-            .bento-gallery-container {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                gap: 1.5rem;
-                padding: 1rem;
-            }
-
-            .bento-large,
-            .bento-small,
-            .bento-medium {
-                grid-column: 1;
-                grid-row: auto;
+            .scroll-gallery-card {
+                flex: 0 0 320px;
                 height: 400px;
             }
 
-            .gallery-flip-container {
-                max-width: 100%;
+            .scroll-gallery-wrapper {
+                padding: 1rem;
+                gap: 1rem;
             }
-            
-            .gallery-flipper {
-                height: 100%;
+
+            .scroll-hint {
+                font-size: 0.85rem;
             }
             
             .gallery-back-content h3 {
@@ -1156,12 +1161,19 @@
         }
         
         @media screen and (max-width: 480px) {
-            .bento-large,
-            .bento-small,
-            .bento-medium {
+            .scroll-gallery-card {
+                flex: 0 0 280px;
                 height: 350px;
             }
 
+            .scroll-gallery-wrapper {
+                padding: 0.5rem;
+            }
+
+            .scroll-hint {
+                display: none;
+            }
+            
             .gallery-back {
                 padding: 1.5rem;
             }
