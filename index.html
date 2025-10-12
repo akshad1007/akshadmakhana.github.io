@@ -1119,25 +1119,30 @@
         
         /* Responsive horizontal scroll gallery */
         @media screen and (max-width: 768px) {
+            .horizontal-scroll-gallery {
+                padding: 0;
+            }
+
             .scroll-gallery-wrapper {
-                gap: 1.5rem;
-                padding: 1.5rem;
+                gap: 2rem;
+                padding: 2rem 1rem;
+                scroll-padding: 1rem;
             }
 
             .scroll-gallery-card {
-                flex: 0 0 calc(100vw - 4rem);
-                min-width: calc(100vw - 4rem);
-                max-width: calc(100vw - 4rem);
-                height: 400px;
-                scroll-snap-align: start;
+                flex: 0 0 calc(100vw - 2rem);
+                min-width: calc(100vw - 2rem);
+                max-width: calc(100vw - 2rem);
+                height: 420px;
+                scroll-snap-align: center;
             }
 
             .scroll-gallery-card .gallery-flipper {
-                height: 400px;
+                height: 420px;
             }
 
             .scroll-gallery-card .gallery-image-container {
-                height: 400px;
+                height: 420px;
             }
             
             .gallery-back-content h3 {
@@ -1154,25 +1159,30 @@
         }
         
         @media screen and (max-width: 480px) {
+            .horizontal-scroll-gallery {
+                padding: 0;
+            }
+
             .scroll-gallery-wrapper {
-                gap: 1rem;
-                padding: 1rem;
+                gap: 2rem;
+                padding: 1.5rem 0.5rem;
+                scroll-padding: 0.5rem;
             }
 
             .scroll-gallery-card {
-                flex: 0 0 calc(100vw - 2rem);
-                min-width: calc(100vw - 2rem);
-                max-width: calc(100vw - 2rem);
-                height: 380px;
-                scroll-snap-align: start;
+                flex: 0 0 calc(100vw - 1rem);
+                min-width: calc(100vw - 1rem);
+                max-width: calc(100vw - 1rem);
+                height: 400px;
+                scroll-snap-align: center;
             }
 
             .scroll-gallery-card .gallery-flipper {
-                height: 380px;
+                height: 400px;
             }
 
             .scroll-gallery-card .gallery-image-container {
-                height: 380px;
+                height: 400px;
             }
             
             .gallery-back {
