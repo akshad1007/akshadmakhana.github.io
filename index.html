@@ -978,8 +978,11 @@
             <div class="row">
                 <div class="column ss-copyright">
                     <span>© Copyright Akshad Makhana</span><br>
-                    <span style="font-size: 0.6em; color: var(--color-text-light); font-weight: normal;">
-                        Total Visitors: <span id="visitor-count" style="font-weight: 500; color: rgba(234, 190, 124, 0.8);">Loading...</span>
+                    <span style="font-size: 0.6em; color: var(--color-text-light); font-weight: normal; display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;">
+                        Total Visitors: 
+                        <img src="https://profile-counter.glitch.me/akshadmakhana-portfolio/count.svg" 
+                             alt="Visitor Count" 
+                             style="height: 16px; filter: brightness(0.8) hue-rotate(20deg);" />
                     </span>
                 </div>
 
@@ -998,32 +1001,6 @@
     ================================================== -->
     <script src="plugins.js"></script>
     <script src="main.js"></script>
-
-    <!-- Visitor Counter Script (Real Tracking) -->
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Real visitor counter using CountAPI (free service)
-            fetch('https://api.countapi.xyz/hit/akshadmakhana.github.io/visits')
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    return response.json();
-                })
-                .then(data => {
-                    const counterElement = document.getElementById('visitor-count');
-                    if (counterElement && data.value) {
-                        counterElement.textContent = data.value.toLocaleString();
-                    }
-                })
-                .catch(error => {
-                    console.error('Counter error:', error);
-                    const counterElement = document.getElementById('visitor-count');
-                    if (counterElement) {
-                        counterElement.textContent = '1,234'; // Fallback display
-                    }
-                });
-        });
-    </script>
 
     <!-- Contact Form Modal Styles -->
     <style>
