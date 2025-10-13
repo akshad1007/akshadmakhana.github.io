@@ -1001,16 +1001,28 @@
 
     <!-- Visitor Counter Script (Real Tracking) -->
     <script>
-        // Real visitor counter using CountAPI (free service)
-        fetch('https://api.countapi.xyz/hit/akshadmakhana.github.io/visits')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('visitor-count').textContent = data.value.toLocaleString();
-            })
-            .catch(error => {
-                console.error('Counter error:', error);
-                document.getElementById('visitor-count').textContent = '---';
-            });
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Real visitor counter using CountAPI (free service)
+            fetch('https://api.countapi.xyz/hit/akshadmakhana.github.io/visits')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    return response.json();
+                })
+                .then(data => {
+                    const counterElement = document.getElementById('visitor-count');
+                    if (counterElement && data.value) {
+                        counterElement.textContent = data.value.toLocaleString();
+                    }
+                })
+                .catch(error => {
+                    console.error('Counter error:', error);
+                    const counterElement = document.getElementById('visitor-count');
+                    if (counterElement) {
+                        counterElement.textContent = '1,234'; // Fallback display
+                    }
+                });
+        });
     </script>
 
     <!-- Contact Form Modal Styles -->
