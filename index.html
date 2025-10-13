@@ -977,16 +977,10 @@
         <footer class="s-footer">
             <div class="row">
                 <div class="column ss-copyright">
-                    <span>© Copyright Akshad Makhana</span> 
-                    <!-- Visitor Counter -->
-                    <div style="margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                        <span style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Visitors:</span>
-                        <img src="https://hitwebcounter.com/counter/counter.php?page=14301895&style=0025&nbdigits=6&type=page&initCount=0" 
-                             title="Visitor Counter" 
-                             alt="Visit counter" 
-                             border="0" 
-                             style="border: none; vertical-align: middle;" />
-                    </div>
+                    <span>© Copyright Akshad Makhana</span><br>
+                    <span style="font-size: 0.6em; color: var(--color-text-light); font-weight: normal;">
+                        Total Visitors: <span id="visitor-count" style="font-weight: 500; color: rgba(234, 190, 124, 0.8);">Loading...</span>
+                    </span>
                 </div>
 
                 <div class="ss-go-top">
@@ -1004,6 +998,20 @@
     ================================================== -->
     <script src="plugins.js"></script>
     <script src="main.js"></script>
+
+    <!-- Visitor Counter Script (Real Tracking) -->
+    <script>
+        // Real visitor counter using CountAPI (free service)
+        fetch('https://api.countapi.xyz/hit/akshadmakhana.github.io/visits')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitor-count').textContent = data.value.toLocaleString();
+            })
+            .catch(error => {
+                console.error('Counter error:', error);
+                document.getElementById('visitor-count').textContent = '---';
+            });
+    </script>
 
     <!-- Contact Form Modal Styles -->
     <style>
