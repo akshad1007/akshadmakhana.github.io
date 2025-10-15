@@ -1270,13 +1270,13 @@
 
         /* HSC Award photo (card 3) - different positioning for desktop vs mobile */
         .scroll-gallery-card:nth-child(3) .gallery-image {
-            object-position: center 30%; /* Desktop: show more context */
+            object-position: left 30%; /* Mobile: show left side where you're standing */
         }
 
         /* Desktop/Laptop specific positioning for HSC Award photo */
         @media screen and (min-width: 769px) {
             .scroll-gallery-card:nth-child(3) .gallery-image {
-                object-position: center 35%; /* Adjusted for laptop view to show face properly */
+                object-position: left 35%; /* Laptop: show left portion to include you in frame */
             }
         }
         
