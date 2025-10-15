@@ -1268,9 +1268,16 @@
             object-position: center 20%;
         }
 
-        /* HSC Award photo (card 3) - position higher to show face better */
+        /* HSC Award photo (card 3) - different positioning for desktop vs mobile */
         .scroll-gallery-card:nth-child(3) .gallery-image {
-            object-position: center 10%;
+            object-position: center 30%; /* Desktop: show more context */
+        }
+
+        /* Desktop/Laptop specific positioning for HSC Award photo */
+        @media screen and (min-width: 769px) {
+            .scroll-gallery-card:nth-child(3) .gallery-image {
+                object-position: center 35%; /* Adjusted for laptop view to show face properly */
+            }
         }
         
         .gallery-flip-container:hover .gallery-image {
