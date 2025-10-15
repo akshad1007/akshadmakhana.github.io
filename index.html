@@ -1262,11 +1262,15 @@
             border: 3px solid rgba(234, 190, 124, 0.4);
         }
 
-        /* Individual photo positioning - Chess (card 1), Volleyball (card 2), and HSC Award (card 3) need faces visible */
+        /* Individual photo positioning - Chess (card 1) and Volleyball (card 2) need faces visible */
         .scroll-gallery-card:nth-child(1) .gallery-image,
-        .scroll-gallery-card:nth-child(2) .gallery-image,
-        .scroll-gallery-card:nth-child(3) .gallery-image {
+        .scroll-gallery-card:nth-child(2) .gallery-image {
             object-position: center 20%;
+        }
+
+        /* HSC Award photo (card 3) - position higher to show face better */
+        .scroll-gallery-card:nth-child(3) .gallery-image {
+            object-position: center 10%;
         }
         
         .gallery-flip-container:hover .gallery-image {
