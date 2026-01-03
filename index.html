@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html class="no-js ss-preload" lang="en">
+
 <head>
     <!-- basic page needs
     ================================================== -->
     <meta charset="utf-8">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVW2ZFPH8S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-DVW2ZFPH8S');
+    </script>
+
     <!-- web icon-->
     <title>AKSHAD MAKHANA</title>
     <link rel="shortcut icon" href="pictures/icon.JPG">
-    
-    <meta name="description" content="">
-    <meta name="author" content="">
+
+    <meta name="description"
+        content="Akshad Makhana - AI & Data Science Student | Portfolio showcasing Machine Learning, Computer Vision, and Data Science projects including published research achieving 92% accuracy AQI prediction model. B.Tech at Sanjivani University.">
+    <meta name="author" content="Akshad Makhana">
+    <meta name="keywords"
+        content="Akshad Makhana, AI, Machine Learning, Data Science, Python, TensorFlow, Portfolio, LSTM, Computer Vision, YOLO, Deep Learning, B.Tech, Sanjivani University">
+
+    <!-- Open Graph Tags for Social Media Sharing -->
+    <meta property="og:title" content="Akshad Makhana | AI & Data Science Portfolio">
+    <meta property="og:description"
+        content="B.Tech AI & Data Science student showcasing ML projects, research publications, and 12+ certifications. Specializing in Computer Vision, Time Series Forecasting, and Deep Learning.">
+    <meta property="og:image" content="pictures/my photo.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://akshadmakhana.github.io">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akshad Makhana | AI & Data Science Portfolio">
+    <meta name="twitter:description"
+        content="AI & Data Science student with published research and 12+ certifications.">
+    <meta name="twitter:image" content="pictures/my photo.jpg">
 
     <!-- mobile specific metas
     ================================================== -->
@@ -32,7 +60,7 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- social media icon-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -50,6 +78,9 @@
 </head>
 
 <body id="top">
+    <!-- Skip to content link for accessibility -->
+    <a href="#intro" class="skip-to-content">Skip to main content</a>
+
     <!-- preloader
     ================================================== -->
     <div id="preloader">
@@ -82,6 +113,7 @@
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#works" class="smoothscroll">Projects</a></li>
+                        <li><a href="#blog" class="smoothscroll">Blog</a></li>
                         <li><a href="#contact" class="smoothscroll">Contact</a></li>
                     </ul>
                 </nav>
@@ -101,8 +133,8 @@
                         </div>
 
                         <h1 class="text-huge-title">
-                            I am Akshad, <br> 
-                            building intelligent solutions <br> 
+                            I am Akshad, <br>
+                            building intelligent solutions <br>
                             with AI and Data <br>
                         </h1>
 
@@ -119,8 +151,10 @@
                 </div> <!-- end intro content -->
 
                 <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                        <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/>
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill-rule="evenodd" clip-rule="evenodd">
+                        <path
+                            d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
                     </svg>
                 </a>
             </section> <!-- end s-intro -->
@@ -130,9 +164,9 @@
             <section id="about" class="s-about target-section">
                 <div class="row about-info wide" data-animate-block>
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="pictures/my photo.jpg" 
-                             srcset="pictures/my photo.jpg 1x, pictures/my photo@2x.jpg 2x" 
-                             alt="" class="about-info__pic" data-animate-el>
+                        <img src="pictures/my photo.jpg" srcset="pictures/my photo.jpg 1x, pictures/my photo@2x.jpg 2x"
+                            alt="Akshad Makhana - AI and Data Science Student" class="about-info__pic" data-animate-el
+                            loading="lazy">
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -141,9 +175,15 @@
                                 About
                             </h2>
                             <p class="attention-getter" data-animate-el style="text-align: justify;">
-                                I'm passionate about using AI and data science to solve real-world problems, from predicting financial markets to detecting security threats. My goal is to bridge the gap between cutting-edge technology and practical applications that benefit society. Currently pursuing B.Tech in AI & Data Science at Sanjivani University, I combine academic learning with hands-on projects to build intelligent systems that make a difference.
+                                I'm passionate about using AI and data science to solve real-world problems, from
+                                predicting financial markets to detecting security threats. My goal is to bridge the gap
+                                between cutting-edge technology and practical applications that benefit society.
+                                Currently pursuing B.Tech in AI & Data Science at Sanjivani University, I combine
+                                academic learning with hands-on projects to build intelligent systems that make a
+                                difference.
                             </p>
-                            <a href="pictures/Akshad_Makhana_Resume.pdf" class="btn btn--medium u-fullwidth" data-animate-el target="_blank">Download CV</a>
+                            <a href="pictures/Akshad_Makhana_Resume.pdf" class="btn btn--medium u-fullwidth"
+                                data-animate-el target="_blank">Download CV</a>
                         </div>
                     </div>
                 </div> <!-- about-info -->
@@ -163,7 +203,7 @@
                 <div class="row about-skills" data-animate-block>
                     <div class="column lg-12">
                         <h2 class="text-pretitle" data-animate-el>Technical Skills</h2>
-                        
+
                         <ul class="skill-bars" data-animate-el>
                             <li>
                                 <div class="progress percent85"><span>85%</span></div>
@@ -197,9 +237,10 @@
                 <div class="row about-expertise" data-animate-block>
                     <div class="column lg-12">
                         <h2 class="text-pretitle" data-animate-el>Libraries & Frameworks</h2>
-                        
+
                         <div class="column lg-6 tab-12" style="float: left;">
-                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Data Science & ML Foundations</h3>
+                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Data Science &
+                                ML Foundations</h3>
                             <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
                                 <li>NumPy, Pandas</li>
                                 <li>Matplotlib, Seaborn</li>
@@ -209,7 +250,8 @@
                         </div>
 
                         <div class="column lg-6 tab-12" style="float: left;">
-                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Specialized Tools Foundations</h3>
+                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Specialized
+                                Tools Foundations</h3>
                             <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
                                 <li>OpenCV, YOLO</li>
                                 <li>ARIMA, SARIMA, Prophet</li>
@@ -217,7 +259,7 @@
                                 <li>FlutterFlow, Git</li>
                             </ul>
                         </div>
-                        
+
                         <div style="clear: both;"></div>
                     </div>
                 </div> <!-- end libraries-frameworks -->
@@ -230,7 +272,9 @@
                             <li>English</li>
                             <li>Hindi</li>
                             <li>Marathi</li>
-                            <li>Japanese <span style="font-size: 0.6em; color: var(--color-text-light); font-weight: normal;">(Preparing for N5 Level Examination)</span></li>
+                            <li>Japanese <span
+                                    style="font-size: 0.6em; color: var(--color-text-light); font-weight: normal;">(Preparing
+                                    for N5 Level Examination)</span></li>
                         </ul>
                     </div>
                 </div> <!-- end languages -->
@@ -251,8 +295,16 @@
                                     <p class="timeline__timeframe">May 2025 - July 2025</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p style="text-align: justify;">Completed a 3-month hybrid internship in Data Science & Analytics at Zidio Development. Worked on a project titled "Stock Market Time Series Forecasting" using ARIMA, SARIMA, Prophet, and LSTM models. Built an LSTM-based prediction pipeline, developed interactive Streamlit dashboards, and applied tools like Python, Pandas, TensorFlow, and Statsmodels. Gained hands-on experience in real-world time series analysis and financial forecasting, enhancing skills in Data Analytics, Time Series Forecasting, and Machine Learning.</p>
-                                    <a href="pictures/Training_Certificate.pdf" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 10px;">
+                                    <p style="text-align: justify;">Completed a 3-month hybrid internship in Data
+                                        Science & Analytics at Zidio Development. Worked on a project titled "Stock
+                                        Market Time Series Forecasting" using ARIMA, SARIMA, Prophet, and LSTM models.
+                                        Built an LSTM-based prediction pipeline, developed interactive Streamlit
+                                        dashboards, and applied tools like Python, Pandas, TensorFlow, and Statsmodels.
+                                        Gained hands-on experience in real-world time series analysis and financial
+                                        forecasting, enhancing skills in Data Analytics, Time Series Forecasting, and
+                                        Machine Learning.</p>
+                                    <a href="pictures/Training_Certificate.pdf" class="btn btn--small" target="_blank"
+                                        style="display: inline-block; margin-top: 10px;">
                                         View Certificate
                                     </a>
                                 </div>
@@ -274,25 +326,36 @@
                                     <p class="timeline__timeframe">2024 to Present</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p style="text-align: justify;">Located in Kopergoan, Maharashtra, Sanjivani University offers a comprehensive CSE in AI and Data Science program. The curriculum focuses on artificial intelligence, machine learning, and data analytics, combining theoretical knowledge with practical applications. With state-of-the-art facilities, industry tie-ups, and a focus on hands-on learning, the university prepares students to excel in emerging technologies.</p>
+                                    <p style="text-align: justify;">Located in Kopergoan, Maharashtra, Sanjivani
+                                        University offers a comprehensive CSE in AI and Data Science program. The
+                                        curriculum focuses on artificial intelligence, machine learning, and data
+                                        analytics, combining theoretical knowledge with practical applications. With
+                                        state-of-the-art facilities, industry tie-ups, and a focus on hands-on learning,
+                                        the university prepares students to excel in emerging technologies.</p>
                                 </div>
                             </div>
-    
+
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Shri Saibaba English Medium School and Junior College</h4>
+                                    <h4 class="timeline__title">Shri Saibaba English Medium School and Junior College
+                                    </h4>
                                     <h5 class="timeline__meta">SSC and HSC</h5>
                                     <p class="timeline__timeframe">2012 to 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p style="text-align: justify;">I completed my SSC and HSC in Science from Shri Saibaba English Medium School and Junior College, Shirdi. The institution provided a solid academic foundation with a strong emphasis on Science, supported by excellent teaching methods and well-equipped laboratories. Its focus on practical learning and overall development prepared me for higher education.</p>
+                                    <p style="text-align: justify;">I completed my SSC and HSC in Science from Shri
+                                        Saibaba English Medium School and Junior College, Shirdi. The institution
+                                        provided a solid academic foundation with a strong emphasis on Science,
+                                        supported by excellent teaching methods and well-equipped laboratories. Its
+                                        focus on practical learning and overall development prepared me for higher
+                                        education.</p>
                                 </div>
                             </div>
                         </div> <!-- end timeline -->
                     </div> <!-- end column -->
                 </div> <!-- end about-timelines -->
-                
+
                 <!-- Achievements Section -->
                 <div class="row works-portfolio">
                     <div class="column lg-12" data-animate-block>
@@ -301,79 +364,119 @@
                             <!-- Achievement 1: Accenture -->
                             <div class="achievement-item">
                                 <h3>Accenture Certified: Acquiring Data (AI Fundamentals)</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: March 2025</p>
-                                <a class="btn btn--stroke u-fullwidth" href="pictures/accenture-ai-cert.jpg">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    March 2025</p>
+                                <a class="btn btn--stroke u-fullwidth" href="pictures/accenture-ai-cert.jpg">View
+                                    Certificate</a>
                             </div>
                             <!-- Achievement 2: AWS ML -->
                             <div class="achievement-item">
                                 <h3>AWS Certified: Machine Learning Foundations</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: June 2025</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://www.credly.com/badges/ab655bab-799d-4d29-9ce8-ddcc1a787ec9/linked_in_profile" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    June 2025</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://www.credly.com/badges/ab655bab-799d-4d29-9ce8-ddcc1a787ec9/linked_in_profile"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 3: Celonis -->
                             <div class="achievement-item">
                                 <h3>Celonis Certified: Academic Process Mining Fundamentals</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: December 2024</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://www.credly.com/badges/eba7d0e9-a965-4fd5-b463-ddfee6985f90/linked_in_profile" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    December 2024</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://www.credly.com/badges/eba7d0e9-a965-4fd5-b463-ddfee6985f90/linked_in_profile"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 4: Cisco -->
                             <div class="achievement-item">
                                 <h3>Cisco Certified: Introduction to Cybersecurity</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: March 2025</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://www.credly.com/badges/d81dd17f-7eac-409b-9f50-a1bee92231b8/linked_in_profile" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    March 2025</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://www.credly.com/badges/d81dd17f-7eac-409b-9f50-a1bee92231b8/linked_in_profile"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 5: Forage AWS -->
                             <div class="achievement-item">
                                 <h3>Forage: AWS APAC - Solutions Architecture Job Simulation</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: May 2025</p>
-                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">Credential ID: 3mK5EvPxP4Y2fRZDt</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_T6ZBxztXfRdeRGiM9_1746460404887_completion_certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    May 2025</p>
+                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">
+                                    Credential ID: 3mK5EvPxP4Y2fRZDt</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_T6ZBxztXfRdeRGiM9_1746460404887_completion_certificate.pdf"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 6: Forage BCG -->
                             <div class="achievement-item">
                                 <h3>Forage: BCG - Data Science Job Simulation</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: May 2025</p>
-                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">Credential ID: Quu7pCGM726eZyHpv</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_T6ZBxztXfRdeRGiM9_1746114070141_completion_certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    May 2025</p>
+                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">
+                                    Credential ID: Quu7pCGM726eZyHpv</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_T6ZBxztXfRdeRGiM9_1746114070141_completion_certificate.pdf"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 7: Forage Tata -->
                             <div class="achievement-item">
                                 <h3>Forage: Tata Group - Data Visualisation Job Simulation</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: May 2025</p>
-                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">Credential ID: fDxXiEWrAC76jM9nT</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_T6ZBxztXfRdeRGiM9_1746350558495_completion_certificate.pdf" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    May 2025</p>
+                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">
+                                    Credential ID: fDxXiEWrAC76jM9nT</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_T6ZBxztXfRdeRGiM9_1746350558495_completion_certificate.pdf"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 8: IBM Data Viz -->
                             <div class="achievement-item">
                                 <h3>IBM Certified: Data Visualisation</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: March 2025</p>
-                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">Credential ID: 689e8dedd9a240439dcfb20d8dd370fe</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://courses.ibmcep.cognitiveclass.ai/certificates/689e8dedd9a240439dcfb20d8dd370fe" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    March 2025</p>
+                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">
+                                    Credential ID: 689e8dedd9a240439dcfb20d8dd370fe</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://courses.ibmcep.cognitiveclass.ai/certificates/689e8dedd9a240439dcfb20d8dd370fe"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 9: IBM DevOps -->
                             <div class="achievement-item">
                                 <h3>IBM Certified: DevOps, Agile</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: August 2025</p>
-                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">Credential ID: 8191d1926b844449856aa2ffcb3c7537</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://courses.ibmcep.cognitiveclass.ai/certificates/8191d1926b844449856aa2ffcb3c7537" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    August 2025</p>
+                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">
+                                    Credential ID: 8191d1926b844449856aa2ffcb3c7537</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://courses.ibmcep.cognitiveclass.ai/certificates/8191d1926b844449856aa2ffcb3c7537"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 10: IBM Python -->
                             <div class="achievement-item">
                                 <h3>IBM Certified: Introduction to Python</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: November 2024</p>
-                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">Credential ID: 14e78e1be1f94c7696c706d1842f8070</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://courses.ibmcep.cognitiveclass.ai/certificates/14e78e1be1f94c7696c706d1842f8070" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    November 2024</p>
+                                <p style="font-size: 0.85rem; margin: 0.3rem 0; color: var(--color-text-light);">
+                                    Credential ID: 14e78e1be1f94c7696c706d1842f8070</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://courses.ibmcep.cognitiveclass.ai/certificates/14e78e1be1f94c7696c706d1842f8070"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 11: IBM ML -->
                             <div class="achievement-item">
                                 <h3>IBM Certified: Machine Learning for Data Science Projects</h3>
-                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued: June 2025</p>
-                                <a class="btn btn--stroke u-fullwidth" href="https://www.credly.com/badges/0953e4fb-5a32-4886-a7f3-71e6825c54cf/linked_in_profile" target="_blank" rel="noopener">View Certificate</a>
+                                <p style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--color-text-light);">Issued:
+                                    June 2025</p>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://www.credly.com/badges/0953e4fb-5a32-4886-a7f3-71e6825c54cf/linked_in_profile"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                             <!-- Achievement 12: OpenAI -->
                             <div class="achievement-item">
                                 <h3>OpenAI Certified: ChatGPT Prompt Engineering for Developers</h3>
-                                <a class="btn btn--stroke u-fullwidth" href="https://learn.deeplearning.ai/accomplishments/42c00c37-701c-4865-b0b4-cef7641ed8c4?usp=sharing" target="_blank" rel="noopener">View Certificate</a>
+                                <a class="btn btn--stroke u-fullwidth"
+                                    href="https://learn.deeplearning.ai/accomplishments/42c00c37-701c-4865-b0b4-cef7641ed8c4?usp=sharing"
+                                    target="_blank" rel="noopener">View Certificate</a>
                             </div>
                         </div>
                     </div>
@@ -383,25 +486,42 @@
                 <div class="row works-portfolio" style="margin-top: 4rem;">
                     <div class="column lg-12" data-animate-block>
                         <h2 class="text-pretitle" data-animate-el>Research & Publications</h2>
-                        
+
                         <div class="publications-grid" style="margin-top: 2rem;">
                             <!-- Publication 1: AnantaNetra -->
                             <div class="achievement-item" style="text-align: left;">
-                                <h3 style="color: var(--color-1); margin-bottom: 0.3rem;">AnantaNetra: A Hybrid AI-Powered Environmental Monitoring and Health Advisory System for India's Air Quality Crisis</h3>
+                                <h3 style="color: var(--color-1); margin-bottom: 0.3rem;">AnantaNetra: A Hybrid
+                                    AI-Powered Environmental Monitoring and Health Advisory System for India's Air
+                                    Quality Crisis</h3>
                                 <p style="margin: 0.8rem 0; font-size: 1.05rem; color: var(--color-text-light);">
-                                    <strong>Journal:</strong> Journal of Emerging Technologies and Innovative Research (JETIR) | <strong>Published:</strong> September 16, 2025 | <strong>Impact Factor:</strong> 7.95 | UGC-Approved, Peer-Reviewed International Journal
+                                    <strong>Journal:</strong> Journal of Emerging Technologies and Innovative Research
+                                    (JETIR) | <strong>Published:</strong> September 16, 2025 | <strong>Impact
+                                        Factor:</strong> 7.95 | UGC-Approved, Peer-Reviewed International Journal
                                 </p>
-                                
+
                                 <p style="margin: 1rem 0; color: var(--color-text); text-align: justify;">
-                                    Published research presenting "AnantaNetra," a novel hybrid AI framework designed to address India's critical air quality crisis. The research involved the development and deployment of a custom-built LSTM+XGBoost ensemble model, achieving 92% accuracy for real-time Air Quality Index (AQI) monitoring and 24-hour forecasting across all 732 districts in India. A significant undertaking was the creation of a proprietary, unified dataset, meticulously curated from over 15 distinct environmental and meteorological data sources to ensure comprehensive spatial and temporal coverage.
+                                    Published research presenting "AnantaNetra," a novel hybrid AI framework designed to
+                                    address India's critical air quality crisis. The research involved the development
+                                    and deployment of a custom-built LSTM+XGBoost ensemble model, achieving 92% accuracy
+                                    for real-time Air Quality Index (AQI) monitoring and 24-hour forecasting across all
+                                    732 districts in India. A significant undertaking was the creation of a proprietary,
+                                    unified dataset, meticulously curated from over 15 distinct environmental and
+                                    meteorological data sources to ensure comprehensive spatial and temporal coverage.
                                 </p>
-                                
+
                                 <p style="margin: 1rem 0; color: var(--color-text); text-align: justify;">
-                                    The implemented system provides actionable, AI-powered health advisories and supports evidence-based policy making, directly aligning with the objectives of India's National Clean Air Programme (NCAP). The scalable microservices architecture ensures robustness and reliability, demonstrating the practical application of machine learning for large-scale environmental monitoring and public health protection.
+                                    The implemented system provides actionable, AI-powered health advisories and
+                                    supports evidence-based policy making, directly aligning with the objectives of
+                                    India's National Clean Air Programme (NCAP). The scalable microservices architecture
+                                    ensures robustness and reliability, demonstrating the practical application of
+                                    machine learning for large-scale environmental monitoring and public health
+                                    protection.
                                 </p>
-                                
-                                <a class="btn btn--stroke" href="https://www.jetir.org/view?paper=JETIR2509217" target="_blank" rel="noopener" style="margin-right: 1rem;">View Publication</a>
-                                <a class="btn btn--stroke" href="http://www.jetir.org/papers/JETIR2509217.pdf" target="_blank" rel="noopener">Download PDF</a>
+
+                                <a class="btn btn--stroke" href="https://www.jetir.org/view?paper=JETIR2509217"
+                                    target="_blank" rel="noopener" style="margin-right: 1rem;">View Publication</a>
+                                <a class="btn btn--stroke" href="http://www.jetir.org/papers/JETIR2509217.pdf"
+                                    target="_blank" rel="noopener">Download PDF</a>
                             </div>
                         </div>
                     </div>
@@ -426,7 +546,8 @@
                             <li class="folio-list__item column" data-animate-el data-category="ai-ml python">
                                 <div class="folio-list__item-link">
                                     <div class="folio-list__item-pic">
-                                        <img src="pictures/internship project img.jpg" alt="Stock Market Forecasting">
+                                        <img src="pictures/internship project img.jpg" alt="Stock Market Forecasting"
+                                            loading="lazy">
                                     </div>
 
                                     <div class="folio-list__item-text">
@@ -444,8 +565,21 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">An end-to-end stock market forecasting system developed during a one-month Data Science internship at Zidio Development. The project integrates classical time series models (ARIMA, SARIMA) and deep learning techniques (Prophet, LSTM) into a unified platform with interactive Streamlit dashboards. <strong>Achieved 85% prediction accuracy on test data with LSTM model, reducing forecasting error by 25% compared to baseline models.</strong> Built an LSTM-based prediction pipeline with technical indicators (RSI, MACD, Bollinger Bands), achieving comprehensive model evaluation using RMSE, MAE, MAPE, and R² metrics. Developed as a collaborative team project with six members, gaining hands-on experience in financial data analysis, model comparison, and real-world time series forecasting applications.</p>
-                                    <a href="https://github.com/eshPra/stock-forecasting-models.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                    <p style="text-align: justify;">An end-to-end stock market forecasting system
+                                        developed during a one-month Data Science internship at Zidio Development. The
+                                        project integrates classical time series models (ARIMA, SARIMA) and deep
+                                        learning techniques (Prophet, LSTM) into a unified platform with interactive
+                                        Streamlit dashboards. <strong>Achieved 85% prediction accuracy on test data with
+                                            LSTM model, reducing forecasting error by 25% compared to baseline
+                                            models.</strong> Built an LSTM-based prediction pipeline with technical
+                                        indicators (RSI, MACD, Bollinger Bands), achieving comprehensive model
+                                        evaluation using RMSE, MAE, MAPE, and R² metrics. Developed as a collaborative
+                                        team project with six members, gaining hands-on experience in financial data
+                                        analysis, model comparison, and real-world time series forecasting applications.
+                                    </p>
+                                    <a href="https://github.com/eshPra/stock-forecasting-models.git"
+                                        class="btn btn--small" target="_blank"
+                                        style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>
@@ -473,8 +607,19 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">An AI-powered real-time shoplifting detection system built using YOLO object detection and OpenCV. <strong>Detected suspicious behavior with 78% accuracy, processing 500+ video frames per second</strong> for real-time surveillance. The system processes video streams to identify and track suspicious behavior, displaying visual alerts with confidence scores. Developed as a collaborative team project with Snehal Ranade, Samruddhi Ahire, Tejas Borkar, and Sarthak Bidve, it demonstrates practical applications of computer vision for retail security. Features include real-time detection, customizable parameters for fine-tuning, and support for both live camera feeds and video files, making it a comprehensive solution for modern retail surveillance.</p>
-                                    <a href="https://github.com/akshad1007/Shoplift-Patrol.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                    <p style="text-align: justify;">An AI-powered real-time shoplifting detection system
+                                        built using YOLO object detection and OpenCV. <strong>Detected suspicious
+                                            behavior with 78% accuracy, processing 500+ video frames per second</strong>
+                                        for real-time surveillance. The system processes video streams to identify and
+                                        track suspicious behavior, displaying visual alerts with confidence scores.
+                                        Developed as a collaborative team project with Snehal Ranade, Samruddhi Ahire,
+                                        Tejas Borkar, and Sarthak Bidve, it demonstrates practical applications of
+                                        computer vision for retail security. Features include real-time detection,
+                                        customizable parameters for fine-tuning, and support for both live camera feeds
+                                        and video files, making it a comprehensive solution for modern retail
+                                        surveillance.</p>
+                                    <a href="https://github.com/akshad1007/Shoplift-Patrol.git" class="btn btn--small"
+                                        target="_blank" style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>
@@ -502,8 +647,22 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">The AI Reflection project was developed for an industry hackathon organized by Sanjivani University, focusing on emotion sentiment analysis using text and real-time facial expressions. <strong>Classified 5 emotions (happy, sad, neutral, angry, surprised) with 82% accuracy, trained on 10,000+ facial images.</strong> We aimed to create a robust model capable of classifying emotions. The project utilized TensorFlow for model training, face-recognition and OpenCV for facial expression detection, and followed a structured development process including dataset creation, model training, and testing. This project allowed us to explore and apply machine learning techniques in a practical application, enhancing our skills in AI and software development. We were also awarded an appreciation certificate for our efforts and innovation during the hackathon, representing our college in Kopargaon.</p>
-                                    <a href="https://github.com/akshad1007/SU_HACKATHON.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                    <p style="text-align: justify;">The AI Reflection project was developed for an
+                                        industry hackathon organized by Sanjivani University, focusing on emotion
+                                        sentiment analysis using text and real-time facial expressions.
+                                        <strong>Classified 5 emotions (happy, sad, neutral, angry, surprised) with 82%
+                                            accuracy, trained on 10,000+ facial images.</strong> We aimed to create a
+                                        robust model capable of classifying emotions. The project utilized TensorFlow
+                                        for model training, face-recognition and OpenCV for facial expression detection,
+                                        and followed a structured development process including dataset creation, model
+                                        training, and testing. This project allowed us to explore and apply machine
+                                        learning techniques in a practical application, enhancing our skills in AI and
+                                        software development. We were also awarded an appreciation certificate for our
+                                        efforts and innovation during the hackathon, representing our college in
+                                        Kopargaon.
+                                    </p>
+                                    <a href="https://github.com/akshad1007/SU_HACKATHON.git" class="btn btn--small"
+                                        target="_blank" style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>
@@ -531,8 +690,21 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">A comprehensive library management system built using C++ to demonstrate core Data Structures and Algorithms concepts. <strong>Handles 1,000+ book records efficiently with search time reduced by 40% using optimized algorithms.</strong> Implemented using Doubly Linked Lists for efficient book storage, the system features Bubble Sort for alphabetical organization and Linear Search for book retrieval. Developed as a DSA presentation project at Sanjivani University, it includes functionalities for adding, deleting, searching, issuing, and returning books with a menu-driven interface. The project showcases practical applications of fundamental DSA concepts including linked list operations, sorting algorithms, and search techniques in real-world knowledge management systems.</p>
-                                    <a href="https://github.com/akshad1007/DSA-Based-Library-Management.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                    <p style="text-align: justify;">A comprehensive library management system built
+                                        using C++ to demonstrate core Data Structures and Algorithms concepts.
+                                        <strong>Handles 1,000+ book records efficiently with search time reduced by 40%
+                                            using optimized algorithms.</strong> Implemented using Doubly Linked Lists
+                                        for efficient book storage, the system features Bubble Sort for alphabetical
+                                        organization and Linear Search for book retrieval. Developed as a DSA
+                                        presentation project at Sanjivani University, it includes functionalities for
+                                        adding, deleting, searching, issuing, and returning books with a menu-driven
+                                        interface. The project showcases practical applications of fundamental DSA
+                                        concepts including linked list operations, sorting algorithms, and search
+                                        techniques in real-world knowledge management systems.
+                                    </p>
+                                    <a href="https://github.com/akshad1007/DSA-Based-Library-Management.git"
+                                        class="btn btn--small" target="_blank"
+                                        style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>
@@ -541,29 +713,41 @@
                             <!-- Project 5: Busify (PRIORITY: Design Thinking) -->
                             <li class="folio-list__item column" data-animate-el data-category="design">
                                 <div class="folio-list__item-link">
-                                <div class="folio-list__item-pic">
-                                <img src="pictures\busify img.webp" alt="">
+                                    <div class="folio-list__item-pic">
+                                        <img src="pictures\busify img.webp" alt="">
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Design Thinking project
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Bus Live Location Tracking App
+                                        </div>
+                                        <p style="margin-top: 0.5rem; color: var(--color-text); font-size: 0.9rem;">
+                                            FlutterFlow, Figma, UI/UX
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div class="folio-list__item-text">
-                                <div class="folio-list__item-cat">
-                                Design Thinking project
-                                </div>
-                                <div class="folio-list__item-title">
-                                Bus Live Location Tracking App
-                                </div>
-                                <p style="margin-top: 0.5rem; color: var(--color-text); font-size: 0.9rem;">
-                                    FlutterFlow, Figma, UI/UX
-                                </p>
-                                </div>
-                                </div>
-
-                                   <!-- Description and Project Link (Always visible below the heading) -->
+                                <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                <p style="text-align: justify;">The Busify app was developed as part of a Design Thinking project to understand and apply the principles of human-centered design. <strong>Designed for 50+ daily users with 60% improvement in user satisfaction</strong> based on user testing feedback. The goal was to create a real-time bus tracking app that enhances user convenience by improving the commuting experience. In this project, we followed the Design Thinking process, which involves empathizing with users, defining problems, ideating solutions, prototyping, and testing. We used FlutterFlow for app development, Figma for UI/UX design, and integrated various AI tools to enhance the app's features. This project helped us apply Design Thinking principles and create a practical solution focused on user needs.</p>
-                                <a href="https://github.com/akshad1007/busify-tracker-app.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
-                                View Project Link
-                                </a>
+                                    <p style="text-align: justify;">The Busify app was developed as part of a Design
+                                        Thinking project to understand and apply the principles of human-centered
+                                        design. <strong>Designed for 50+ daily users with 60% improvement in user
+                                            satisfaction</strong> based on user testing feedback. The goal was to create
+                                        a real-time bus tracking app that enhances user convenience by improving the
+                                        commuting experience. In this project, we followed the Design Thinking process,
+                                        which involves empathizing with users, defining problems, ideating solutions,
+                                        prototyping, and testing. We used FlutterFlow for app development, Figma for
+                                        UI/UX design, and integrated various AI tools to enhance the app's features.
+                                        This project helped us apply Design Thinking principles and create a practical
+                                        solution focused on user needs.</p>
+                                    <a href="https://github.com/akshad1007/busify-tracker-app.git"
+                                        class="btn btn--small" target="_blank"
+                                        style="display: inline-block; margin-top: 5px;">
+                                        View Project Link
+                                    </a>
                                 </div>
                             </li> <!-- end folio-list__item -->
 
@@ -589,8 +773,19 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">The Expenses Tracker is a Python-based program designed to track and visualize personal expenses. <strong>Tracks expenses across 100+ categories and visualizes data for 500+ transactions</strong> with interactive charts. Using Tkinter for the graphical user interface (GUI) and Matplotlib for data visualization, the project allows users to input and categorize their expenses while displaying the data in charts. As part of the Python Programming course by IBM, this coding project helped me develop proficiency in Python, enhance my skills in GUI development, and apply data visualization techniques to display financial data effectively. I also used AI tools like ChatGPT to assist in solving coding challenges and optimizing the functionality.</p>
-                                    <a href="https://github.com/akshad1007/Expense-Tracker" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                    <p style="text-align: justify;">The Expenses Tracker is a Python-based program
+                                        designed to track and visualize personal expenses. <strong>Tracks expenses
+                                            across 100+ categories and visualizes data for 500+ transactions</strong>
+                                        with interactive charts. Using Tkinter for the graphical user interface (GUI)
+                                        and Matplotlib for data visualization, the project allows users to input and
+                                        categorize their expenses while displaying the data in charts. As part of the
+                                        Python Programming course by IBM, this coding project helped me develop
+                                        proficiency in Python, enhance my skills in GUI development, and apply data
+                                        visualization techniques to display financial data effectively. I also used AI
+                                        tools like ChatGPT to assist in solving coding challenges and optimizing the
+                                        functionality.</p>
+                                    <a href="https://github.com/akshad1007/Expense-Tracker" class="btn btn--small"
+                                        target="_blank" style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>
@@ -618,8 +813,23 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">An interactive Java application that demonstrates the principles of sustainable growth through plant cultivation simulation. This educational tool illustrates the delicate balance between nurturing development and the consequences of excess, providing profound insights into personal and professional growth dynamics. <strong>Features seven distinct growth stages, each conveying meaningful life principles with realistic simulation of overwatering effects and recovery cycles.</strong> The Virtual Plant Growth Simulator serves as an interactive metaphor for human development, teaching essential life lessons through the simple act of plant care. By requiring precise watering at each growth stage, users learn the importance of balance, timing, and moderation in achieving sustainable success. This project was created purely for fun and learning GUI development with Java Swing, evolving into a meaningful application that teaches balance and consequences through interactive plant care.</p>
-                                    <a href="https://github.com/akshad1007/Java-Swing-Plant-Simulator.git" class="btn btn--small" target="_blank" style="display: inline-block; margin-top: 5px;">
+                                    <p style="text-align: justify;">An interactive Java application that demonstrates
+                                        the principles of sustainable growth through plant cultivation simulation. This
+                                        educational tool illustrates the delicate balance between nurturing development
+                                        and the consequences of excess, providing profound insights into personal and
+                                        professional growth dynamics. <strong>Features seven distinct growth stages,
+                                            each conveying meaningful life principles with realistic simulation of
+                                            overwatering effects and recovery cycles.</strong> The Virtual Plant Growth
+                                        Simulator serves as an interactive metaphor for human development, teaching
+                                        essential life lessons through the simple act of plant care. By requiring
+                                        precise watering at each growth stage, users learn the importance of balance,
+                                        timing, and moderation in achieving sustainable success. This project was
+                                        created purely for fun and learning GUI development with Java Swing, evolving
+                                        into a meaningful application that teaches balance and consequences through
+                                        interactive plant care.</p>
+                                    <a href="https://github.com/akshad1007/Java-Swing-Plant-Simulator.git"
+                                        class="btn btn--small" target="_blank"
+                                        style="display: inline-block; margin-top: 5px;">
                                         View Project Link
                                     </a>
                                 </div>
@@ -649,10 +859,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/chess_12th.jpg" 
-                                                         alt="Chess Competition Winner" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/chess_12th.jpg"
+                                                        alt="Chess Competition Winner" class="gallery-image"
+                                                        oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -660,8 +869,12 @@
                                                 <div class="gallery-back-content">
                                                     <h3>Chess Competition Winner</h3>
                                                     <p class="event-details">City-Level Championship | 2024</p>
-                                                    <p class="event-location">Shri Saibaba English Medium School and Junior College, Shirdi</p>
-                                                    <p class="event-description">Won 1st Prize in the inter-college chess championship held during 12th Standard, securing the top rank among all participating colleges across the city and demonstrating strategic thinking and competitive excellence.</p>
+                                                    <p class="event-location">Shri Saibaba English Medium School and
+                                                        Junior College, Shirdi</p>
+                                                    <p class="event-description">Won 1st Prize in the inter-college
+                                                        chess championship held during 12th Standard, securing the top
+                                                        rank among all participating colleges across the city and
+                                                        demonstrating strategic thinking and competitive excellence.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -675,10 +888,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/sawant_mam.jpg" 
-                                                         alt="Volleyball Prize with Prof. Sawant" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/sawant_mam.jpg"
+                                                        alt="Volleyball Prize with Prof. Sawant" class="gallery-image"
+                                                        oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -686,8 +898,13 @@
                                                 <div class="gallery-back-content">
                                                     <h3>Volleyball Championship</h3>
                                                     <p class="event-details">Sports Championship | 2024</p>
-                                                    <p class="event-location">Shri Saibaba English Medium School and Junior College, Shirdi</p>
-                                                    <p class="event-description">Won 1st Prize in the inter-college volleyball tournament during 12th Standard. Honored to receive the championship trophy from Prof. M. Sawant Mam, one of the most inspiring teachers who greatly influenced my academic journey.</p>
+                                                    <p class="event-location">Shri Saibaba English Medium School and
+                                                        Junior College, Shirdi</p>
+                                                    <p class="event-description">Won 1st Prize in the inter-college
+                                                        volleyball tournament during 12th Standard. Honored to receive
+                                                        the championship trophy from Prof. M. Sawant Mam, one of the
+                                                        most inspiring teachers who greatly influenced my academic
+                                                        journey.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -701,10 +918,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/saibabatrust.jpg" 
-                                                         alt="HSC Academic Excellence Award" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/saibabatrust.jpg"
+                                                        alt="HSC Academic Excellence Award" class="gallery-image"
+                                                        oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -712,8 +928,16 @@
                                                 <div class="gallery-back-content">
                                                     <h3>HSC Academic Excellence Award</h3>
                                                     <p class="event-details">Academic Achievement | 2024</p>
-                                                    <p class="event-location">Shri Saibaba English Medium School and Junior College, Shirdi</p>
-                                                    <p class="event-description">Felicitated by Shri Saibaba Sansthan Trust, Shirdi for outstanding academic performance in the HSC (12th Standard) Science examination. This prestigious recognition honors high-scoring students from all educational institutes under the Trust's umbrella. Selected as one of the top performers in the Science domain for achieving excellent marks and demonstrating dedication to academic excellence throughout junior college.</p>
+                                                    <p class="event-location">Shri Saibaba English Medium School and
+                                                        Junior College, Shirdi</p>
+                                                    <p class="event-description">Felicitated by Shri Saibaba Sansthan
+                                                        Trust, Shirdi for outstanding academic performance in the HSC
+                                                        (12th Standard) Science examination. This prestigious
+                                                        recognition honors high-scoring students from all educational
+                                                        institutes under the Trust's umbrella. Selected as one of the
+                                                        top performers in the Science domain for achieving excellent
+                                                        marks and demonstrating dedication to academic excellence
+                                                        throughout junior college.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -727,10 +951,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/seminarpresent.jpeg" 
-                                                         alt="Research Publication - AnantaNetra" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/seminarpresent.jpeg"
+                                                        alt="Research Publication - AnantaNetra" class="gallery-image"
+                                                        oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -739,14 +962,20 @@
                                                     <h3>Seminar Presentation on AnantaNetra</h3>
                                                     <p class="event-details">Seminar Subject | 2025</p>
                                                     <p class="event-location">Sanjivani University, Kopergaon</p>
-                                                    <p class="event-description">Presented seminar on our research paper "AnantaNetra: A Hybrid AI-Powered Environmental Monitoring System for India's Air Quality Crisis" - showcasing LSTM+XGBoost model achieving 92% accuracy for real-time AQI monitoring across 732 districts, published in JETIR.</p>
-                                                    <p class="event-team">Research Team: Akshad, Yash, Pranav, Tejas & Saurabh<br>Mentor: Prof. Vengatesan Krishnasamy (HOD, AI & DS)</p>
+                                                    <p class="event-description">Presented seminar on our research paper
+                                                        "AnantaNetra: A Hybrid AI-Powered Environmental Monitoring
+                                                        System for India's Air Quality Crisis" - showcasing LSTM+XGBoost
+                                                        model achieving 92% accuracy for real-time AQI monitoring across
+                                                        732 districts, published in JETIR.</p>
+                                                    <p class="event-team">Research Team: Akshad, Yash, Pranav, Tejas &
+                                                        Saurabh<br>Mentor: Prof. Vengatesan Krishnasamy (HOD, AI & DS)
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Gallery Card 5: Shoplift-Patrol AI Project (2025 - Major AI Project) -->
                                 <div class="scroll-gallery-card">
                                     <div class="gallery-flip-container" onclick="this.classList.toggle('flipped')">
@@ -754,10 +983,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/shopliftpresent.jpeg" 
-                                                         alt="Shoplift-Patrol AI Project Presentation" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/shopliftpresent.jpeg"
+                                                        alt="Shoplift-Patrol AI Project Presentation"
+                                                        class="gallery-image" oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -766,8 +994,13 @@
                                                     <h3>Shoplift-Patrol: AI Theft Detection</h3>
                                                     <p class="event-details">Computer Vision Project | 2025</p>
                                                     <p class="event-location">Sanjivani University, Kopergaon</p>
-                                                    <p class="event-description">Developed an AI-powered real-time shoplifting detection system using YOLO object detection and OpenCV. The system processes video streams to identify and track suspicious behavior with 78% accuracy, featuring customizable parameters for retail security.</p>
-                                                    <p class="event-team">Project Team: Akshad, Snehal, Samruddhi, Tejas & Sarthak<br>Mentor: Prof. Rajeshvar Gupta</p>
+                                                    <p class="event-description">Developed an AI-powered real-time
+                                                        shoplifting detection system using YOLO object detection and
+                                                        OpenCV. The system processes video streams to identify and track
+                                                        suspicious behavior with 78% accuracy, featuring customizable
+                                                        parameters for retail security.</p>
+                                                    <p class="event-team">Project Team: Akshad, Snehal, Samruddhi, Tejas
+                                                        & Sarthak<br>Mentor: Prof. Rajeshvar Gupta</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -781,10 +1014,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/su_hack.jpg" 
-                                                         alt="AI Reflection Hackathon" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/su_hack.jpg"
+                                                        alt="AI Reflection Hackathon" class="gallery-image"
+                                                        oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -793,8 +1025,12 @@
                                                     <h3>AI Reflection Hackathon</h3>
                                                     <p class="event-details">Industry Hackathon | 2025</p>
                                                     <p class="event-location">Sanjivani University, Kopergaon</p>
-                                                    <p class="event-description">Won appreciation certificate for developing an Emotion Sentiment Analysis project using AI and Machine Learning. Successfully classified emotions through text and real-time facial expressions.</p>
-                                                    <p class="event-team">Team Members: Akshad, Tejas, Sarthak, Priyanka & Saisha</p>
+                                                    <p class="event-description">Won appreciation certificate for
+                                                        developing an Emotion Sentiment Analysis project using AI and
+                                                        Machine Learning. Successfully classified emotions through text
+                                                        and real-time facial expressions.</p>
+                                                    <p class="event-team">Team Members: Akshad, Tejas, Sarthak, Priyanka
+                                                        & Saisha</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -808,10 +1044,9 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/rpresent.jpeg" 
-                                                         alt="Expense Tracker System Presentation" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/rpresent.jpeg"
+                                                        alt="Expense Tracker System Presentation" class="gallery-image"
+                                                        oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -820,8 +1055,13 @@
                                                     <h3>Python Expense Tracker System</h3>
                                                     <p class="event-details">Python Project | 2025</p>
                                                     <p class="event-location">Sanjivani University, Kopergaon</p>
-                                                    <p class="event-description">Developed a Python-based Expense Tracker System to simplify personal finance management using Tkinter for GUI and Matplotlib for data visualization. Built as part of IBM Python Programming course, leveraging AI tools for enhanced implementation.</p>
-                                                    <p class="event-team">Project Team: Akshad, Anushka, Rushikesh, Parth & Sharvari</p>
+                                                    <p class="event-description">Developed a Python-based Expense
+                                                        Tracker System to simplify personal finance management using
+                                                        Tkinter for GUI and Matplotlib for data visualization. Built as
+                                                        part of IBM Python Programming course, leveraging AI tools for
+                                                        enhanced implementation.</p>
+                                                    <p class="event-team">Project Team: Akshad, Anushka, Rushikesh,
+                                                        Parth & Sharvari</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -835,10 +1075,8 @@
                                             <!-- Front Side: Image -->
                                             <div class="gallery-front">
                                                 <div class="gallery-image-container">
-                                                    <img src="pictures/gallary/iks_present.jpg" 
-                                                         alt="IKS Presentation" 
-                                                         class="gallery-image"
-                                                         oncontextmenu="return false;">
+                                                    <img src="pictures/gallary/iks_present.jpg" alt="IKS Presentation"
+                                                        class="gallery-image" oncontextmenu="return false;">
                                                 </div>
                                             </div>
                                             <!-- Back Side: Description -->
@@ -847,7 +1085,10 @@
                                                     <h3>IKS Presentation on Chaturyugas</h3>
                                                     <p class="event-details">Indian Knowledge Systems (IKS) | 2025</p>
                                                     <p class="event-location">Sanjivani University, Kopergaon</p>
-                                                    <p class="event-description">Delivered a comprehensive presentation on the four Yugas (Satyug, Treta, Dwapar, and Kaliyuga) exploring ancient Indian knowledge systems, time cycles, and their philosophical significance in modern context.</p>
+                                                    <p class="event-description">Delivered a comprehensive presentation
+                                                        on the four Yugas (Satyug, Treta, Dwapar, and Kaliyuga)
+                                                        exploring ancient Indian knowledge systems, time cycles, and
+                                                        their philosophical significance in modern context.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -866,7 +1107,7 @@
                 <div class="row testimonials">
                     <div class="column lg-12" data-animate-block>
                         <h2 class="text-pretitle" data-animate-el>Inspiration</h2>
-                        
+
 
                         <!-- Swiper Container for Testimonial Slider -->
                         <div class="swiper-container testimonial-slider" data-animate-el>
@@ -877,8 +1118,8 @@
                                         <p>"The day I am not able to work, I will consider myself as dead."</p>
                                     </div>
                                     <div class="testimonial-slider__author">
-                                        <img src="https://imgs.search.brave.com/LJr8o8ZgJS4ZQZfmKPVWubZaOoWnY2N_PizNB_FB4a0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlZmFtb3VzcGVv/cGxlLmNvbS9wcm9m/aWxlcy90aHVtYnMv/ZGhpcnViaGFpLWFt/YmFuaS01LmpwZw" 
-                                             alt="Dhirubhai Ambani" class="testimonial-slider__avatar">
+                                        <img src="https://imgs.search.brave.com/LJr8o8ZgJS4ZQZfmKPVWubZaOoWnY2N_PizNB_FB4a0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlZmFtb3VzcGVv/cGxlLmNvbS9wcm9m/aWxlcy90aHVtYnMv/ZGhpcnViaGFpLWFt/YmFuaS01LmpwZw"
+                                            alt="Dhirubhai Ambani" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Dhirubhai Ambani</strong>
                                             <span>Founder of Reliance Industries</span>
@@ -889,11 +1130,12 @@
                                 <!-- Testimonial 2 -->
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__content">
-                                        <p>"I don't believe in taking the right decisions. I take decisions and then make them right."</p>
+                                        <p>"I don't believe in taking the right decisions. I take decisions and then
+                                            make them right."</p>
                                     </div>
                                     <div class="testimonial-slider__author">
-                                        <img src="https://imgs.search.brave.com/zWVN69iTYQrczt6UKHobsNI6bRVkGOsP7De5zqI3mMw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2I4L2Vi/LzVhL2I4ZWI1YTg2/NjkxYjYyYTBlMGRi/OTg5OWM2MmM0ZGU2/LmpwZw" 
-                                             alt="Ratan Tata" class="testimonial-slider__avatar">
+                                        <img src="https://imgs.search.brave.com/zWVN69iTYQrczt6UKHobsNI6bRVkGOsP7De5zqI3mMw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2I4L2Vi/LzVhL2I4ZWI1YTg2/NjkxYjYyYTBlMGRi/OTg5OWM2MmM0ZGU2/LmpwZw"
+                                            alt="Ratan Tata" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Ratan Tata</strong>
                                             <span>Former Chairman of Tata Sons</span>
@@ -904,11 +1146,13 @@
                                 <!-- Testimonial 3 -->
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__content">
-                                        <p>"Performance leads to recognition. Recognition brings respect. Respect enhances power. Humility and grace in one's moments of power enhances the dignity of one's position."</p>
+                                        <p>"Performance leads to recognition. Recognition brings respect. Respect
+                                            enhances power. Humility and grace in one's moments of power enhances the
+                                            dignity of one's position."</p>
                                     </div>
                                     <div class="testimonial-slider__author">
-                                        <img src="https://imgs.search.brave.com/6Ak62r-FR4kkgMkW3cPFAp0KJBymNUwNA_DAPzT_ypk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8x/LzExL05hcmF5YW5h/X011cnRoeV9DSUZf/KGNyb3BwZWQpLkpQ/Rw" 
-                                             alt="Narayana Murthy" class="testimonial-slider__avatar">
+                                        <img src="https://imgs.search.brave.com/6Ak62r-FR4kkgMkW3cPFAp0KJBymNUwNA_DAPzT_ypk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8x/LzExL05hcmF5YW5h/X011cnRoeV9DSUZf/KGNyb3BwZWQpLkpQ/Rw"
+                                            alt="Narayana Murthy" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Narayana Murthy</strong>
                                             <span>Founder of Infosys</span>
@@ -922,8 +1166,8 @@
                                         <p>"If you put your heart and mind to it, you can achieve anything."</p>
                                     </div>
                                     <div class="testimonial-slider__author">
-                                        <img src="https://imgs.search.brave.com/aRdIkLXKlZIK3621KO_CCqanPj20Y836Tf71cipW6UQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly92ei5j/bndpbWcuY29tL3Ro/bS83ZjM0OHVsdGRs/b24xVU1CQnJpOXB6/LWE0dVE9LzMzOHgz/MzgvY2VudGVyL2Zp/bHRlcnM6Zm9ybWF0/KHdlYnApLzIwMTAv/MDUvR2V0dHlJbWFn/ZXMtMTU1MjIwMTUx/LmpwZw" 
-                                             alt="Azim Premji" class="testimonial-slider__avatar">
+                                        <img src="https://imgs.search.brave.com/aRdIkLXKlZIK3621KO_CCqanPj20Y836Tf71cipW6UQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly92ei5j/bndpbWcuY29tL3Ro/bS83ZjM0OHVsdGRs/b24xVU1CQnJpOXB6/LWE0dVE9LzMzOHgz/MzgvY2VudGVyL2Zp/bHRlcnM6Zm9ybWF0/KHdlYnApLzIwMTAv/MDUvR2V0dHlJbWFn/ZXMtMTU1MjIwMTUx/LmpwZw"
+                                            alt="Azim Premji" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Azim Premji</strong>
                                             <span>Founder of Wipro</span>
@@ -934,11 +1178,12 @@
                                 <!-- Testimonial 5 -->
                                 <div class="testimonial-slider__slide swiper-slide">
                                     <div class="testimonial-slider__content">
-                                        <p>"I believe that entrepreneurship is about being able to face failure, manage failure and move on."</p>
+                                        <p>"I believe that entrepreneurship is about being able to face failure, manage
+                                            failure and move on."</p>
                                     </div>
                                     <div class="testimonial-slider__author">
-                                        <img src="https://imgs.search.brave.com/7Z753cXneXd5_P2GpNtIndoLnBrm1PnMPZ0vvyyT9ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGJzLmVkdS9jcmVh/dGluZy1lbWVyZ2lu/Zy1tYXJrZXRzL1B1/Ymxpc2hpbmdJbWFn/ZXMvaW50ZXJ2aWV3/cy9NYXp1bWRhci1T/aGF3X3Byb2ZpbGUu/anBn" 
-                                             alt="Kiran Mazumdar-Shaw" class="testimonial-slider__avatar">
+                                        <img src="https://imgs.search.brave.com/7Z753cXneXd5_P2GpNtIndoLnBrm1PnMPZ0vvyyT9ps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGJzLmVkdS9jcmVh/dGluZy1lbWVyZ2lu/Zy1tYXJrZXRzL1B1/Ymxpc2hpbmdJbWFn/ZXMvaW50ZXJ2aWV3/cy9NYXp1bWRhci1T/aGF3X3Byb2ZpbGUu/anBn"
+                                            alt="Kiran Mazumdar-Shaw" class="testimonial-slider__avatar">
                                         <cite class="testimonial-slider__cite">
                                             <strong>Kiran Mazumdar-Shaw</strong>
                                             <span>Founder of Biocon</span>
@@ -952,6 +1197,99 @@
                     </div>
                 </div>
             </section> <!-- end testimonials section -->
+
+            <!-- BLOG
+            ================================================== -->
+            <section id="blog" class="s-blog target-section">
+                <div class="row works-portfolio">
+                    <div class="column lg-12" data-animate-block>
+                        <h2 class="text-pretitle" data-animate-el>Blog</h2>
+                        <p class="h1" data-animate-el>
+                            "Technical insights and learning experiences"
+                        </p>
+
+                        <!-- Featured Blog Post -->
+                        <article class="blog-featured" data-animate-el>
+                            <div class="blog-featured__image">
+                                <div class="blog-featured__badge">⭐ Featured</div>
+                                <div class="blog-featured__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        width="48" height="48">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="blog-featured__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">Coming Soon</span>
+                                    <span class="blog-card__category">Research</span>
+                                </div>
+                                <h3 class="blog-featured__title">My First Research Publication Journey</h3>
+                                <p class="blog-featured__excerpt">
+                                    The complete journey of publishing "AnantaNetra: A Hybrid AI-Powered Environmental
+                                    Monitoring System"
+                                    in JETIR journal as a first-year B.Tech student. From concept to 92% accuracy model,
+                                    dataset creation
+                                    from 15+ sources, and navigating the peer-review process. Tips and lessons for
+                                    aspiring student
+                                    researchers in AI and Data Science.
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span>Research</span>
+                                    <span>JETIR</span>
+                                    <span>LSTM</span>
+                                    <span>XGBoost</span>
+                                    <span>AnantaNetra</span>
+                                </div>
+                                <a href="#" class="blog-featured__cta">Read Full Story →</a>
+                            </div>
+                        </article>
+
+                        <!-- Blog Cards Grid -->
+                        <div class="blog-grid blog-grid--two" data-animate-el>
+                            <!-- Blog Card 1 -->
+                            <article class="blog-card">
+                                <div class="blog-card__content">
+                                    <div class="blog-card__meta">
+                                        <span class="blog-card__date">Coming Soon</span>
+                                        <span class="blog-card__category">AI/ML</span>
+                                    </div>
+                                    <h3 class="blog-card__title">How I Built a Stock Forecasting Model with LSTM</h3>
+                                    <p class="blog-card__excerpt">Deep dive into building a time series forecasting
+                                        system using LSTM neural networks during my internship at Zidio Development.
+                                        Comparing performance with ARIMA and Prophet models.</p>
+                                    <div class="blog-card__tags">
+                                        <span>Python</span>
+                                        <span>LSTM</span>
+                                        <span>TensorFlow</span>
+                                        <span>Streamlit</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Card 2 -->
+                            <article class="blog-card">
+                                <div class="blog-card__content">
+                                    <div class="blog-card__meta">
+                                        <span class="blog-card__date">Coming Soon</span>
+                                        <span class="blog-card__category">Computer Vision</span>
+                                    </div>
+                                    <h3 class="blog-card__title">Detecting Shoplifting with YOLO & OpenCV</h3>
+                                    <p class="blog-card__excerpt">Building a real-time AI-powered surveillance system
+                                        for retail theft detection. Technical walkthrough of YOLO object detection
+                                        implementation and accuracy optimization.</p>
+                                    <div class="blog-card__tags">
+                                        <span>YOLO</span>
+                                        <span>OpenCV</span>
+                                        <span>Python</span>
+                                        <span>AI</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- end blog section -->
 
             <!-- CONTACT
             ================================================== -->
@@ -970,8 +1308,9 @@
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle" align="center">Reach me at</h3>
                         <p class="contact-links" align="center">
-                            <a href="mailto:akshadmakhana@zohomail.in" class="mailtoui">akshadmakhana@zohomail.in</a><br>
-                            <a href="tel:+7972246609">+7972246609</a>
+                            <a href="mailto:akshadmakhana@zohomail.in"
+                                class="mailtoui">akshadmakhana@zohomail.in</a><br>
+                            <a href="tel:+917972246609">+91 7972246609</a>
                         </p>
                     </div>
 
@@ -980,13 +1319,16 @@
                         <h3 class="text-pretitle" align="center">Follow me</h3>
                         <div class="contact-social">
                             <!-- Social Icons with Hover Effects -->
-                            <a href="https://www.instagram.com" class="social-icon instagram">
+                            <a href="https://www.instagram.com/akshad_makhana" target="_blank" rel="noopener"
+                                class="social-icon instagram">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://github.com" class="social-icon github">
+                            <a href="https://github.com/akshad1007" target="_blank" rel="noopener"
+                                class="social-icon github">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com" class="social-icon linkedin">
+                            <a href="https://www.linkedin.com/in/akshad-makhana" target="_blank" rel="noopener"
+                                class="social-icon linkedin">
                                 <i class="fab fa-linkedin"></i>
                             </a>
                             <a href="https://wa.me/7972246609" class="social-icon whatsapp">
@@ -997,7 +1339,8 @@
 
                     <!-- Call to Action Button -->
                     <div class="column lg-4 md-12 contact-block">
-                        <button onclick="openContactForm()" class="btn btn--medium u-fullwidth contact-btn">Say Hello</button>
+                        <button onclick="openContactForm()" class="btn btn--medium u-fullwidth contact-btn">Say
+                            Hello</button>
                     </div>
                 </div> <!-- end contact-bottom -->
             </section> <!-- end contact -->
@@ -1012,23 +1355,25 @@
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required placeholder="Enter your name">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Your Email *</label>
                             <input type="email" id="email" name="email" required placeholder="Enter your email">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject">Subject *</label>
                             <input type="text" id="subject" name="subject" required placeholder="What is this about?">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+                            <textarea id="message" name="message" rows="6" required
+                                placeholder="Your message here..."></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn--medium u-fullwidth" style="margin-top: 1rem;">Send Message</button>
+
+                        <button type="submit" class="btn btn--medium u-fullwidth" style="margin-top: 1rem;">Send
+                            Message</button>
                     </form>
                 </div>
             </div>
@@ -1039,13 +1384,15 @@
         <footer class="s-footer">
             <div class="row">
                 <div class="column ss-copyright">
-                    <span>© Copyright Akshad Makhana</span> 
+                    <span>© Copyright Akshad Makhana</span>
                 </div>
 
                 <div class="ss-go-top">
                     <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
-                            <path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd"
+                            clip-rule="evenodd">
+                            <path
+                                d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z" />
                         </svg>
                     </a>
                 </div>
@@ -1081,6 +1428,7 @@
             letter-spacing: 0.05em;
             line-height: 1.4;
         }
+
         /* Horizontal Scroll Gallery Layout */
         .horizontal-scroll-gallery {
             max-width: 100%;
@@ -1309,10 +1657,14 @@
             display: block;
             object-fit: cover;
             object-position: center;
-            pointer-events: none; /* Prevents drag */
-            user-select: none; /* Prevents selection */
-            -webkit-user-drag: none; /* Prevents drag in Safari */
-            -webkit-touch-callout: none; /* Prevents callout in iOS */
+            pointer-events: none;
+            /* Prevents drag */
+            user-select: none;
+            /* Prevents selection */
+            -webkit-user-drag: none;
+            /* Prevents drag in Safari */
+            -webkit-touch-callout: none;
+            /* Prevents callout in iOS */
             filter: grayscale(100%);
             transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
             border-radius: 15px;
@@ -1327,22 +1679,24 @@
 
         /* HSC Award photo (card 3) - different positioning for desktop vs mobile */
         .scroll-gallery-card:nth-child(3) .gallery-image {
-            object-position: left 30%; /* Mobile: show left side where you're standing */
+            object-position: left 30%;
+            /* Mobile: show left side where you're standing */
         }
 
         /* Desktop/Laptop specific positioning for HSC Award photo */
         @media screen and (min-width: 769px) {
             .scroll-gallery-card:nth-child(3) .gallery-image {
-                object-position: left 35%; /* Laptop: show left portion to include you in frame */
+                object-position: left 35%;
+                /* Laptop: show left portion to include you in frame */
             }
         }
-        
+
         .gallery-flip-container:hover .gallery-image {
             filter: grayscale(0%);
             transform: scale(1.02);
             border-color: rgba(234, 190, 124, 0.6);
         }
-        
+
         /* Responsive horizontal scroll gallery */
         @media screen and (max-width: 768px) {
             .horizontal-scroll-gallery {
@@ -1374,12 +1728,12 @@
             .gallery-back {
                 padding: 2rem 1.8rem;
             }
-            
+
             .gallery-back-content h3 {
                 font-size: 2rem;
                 margin-bottom: 0.7rem;
             }
-            
+
             .gallery-back-content .event-details {
                 font-size: 1.05rem;
                 margin-bottom: 0.4rem;
@@ -1389,7 +1743,7 @@
                 font-size: 1rem;
                 margin-bottom: 1rem;
             }
-            
+
             .gallery-back-content .event-description {
                 font-size: 1.05rem;
                 line-height: 1.65;
@@ -1401,7 +1755,7 @@
                 margin-top: 0.8rem;
             }
         }
-        
+
         @media screen and (max-width: 480px) {
             .horizontal-scroll-gallery {
                 padding: 0;
@@ -1428,16 +1782,16 @@
             .scroll-gallery-card .gallery-image-container {
                 height: 400px;
             }
-            
+
             .gallery-back {
                 padding: 1.8rem 1.5rem;
             }
-            
+
             .gallery-back-content h3 {
                 font-size: 1.7rem;
                 margin-bottom: 0.6rem;
             }
-            
+
             .gallery-back-content .event-details {
                 font-size: 0.95rem;
                 margin-bottom: 0.3rem;
@@ -1447,7 +1801,7 @@
                 font-size: 0.9rem;
                 margin-bottom: 0.8rem;
             }
-            
+
             .gallery-back-content .event-description {
                 font-size: 0.95rem;
                 line-height: 1.6;
@@ -1483,8 +1837,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* Modal Content */
@@ -1505,6 +1864,7 @@
                 transform: translateY(-50px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -1612,7 +1972,7 @@
         }
 
         // Close modal when clicking outside of it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             const modal = document.getElementById('contactFormModal');
             if (event.target == modal) {
                 closeContactForm();
@@ -1620,7 +1980,7 @@
         }
 
         // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
                 closeContactForm();
             }
@@ -1629,19 +1989,19 @@
         // Handle Form Submission
         function handleFormSubmit(event) {
             event.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             // Create mailto link with form data
             const mailtoLink = `mailto:akshadmakhana@zohomail.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
-            
+
             // Open default email client
             window.location.href = mailtoLink;
-            
+
             // Close modal and reset form
             setTimeout(() => {
                 closeContactForm();
@@ -1651,4 +2011,5 @@
     </script>
 
 </body>
+
 </html>
