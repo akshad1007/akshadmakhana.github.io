@@ -1212,158 +1212,91 @@
                         <h2 class="text-pretitle" data-animate-el>Blog</h2>
                         <p class="h1" data-animate-el>Technical Insights & Stories</p>
 
-                        <!-- Accordion Blog List -->
-                        <div class="blog-accordion" data-animate-el>
+                        <!-- Blog Cards Grid -->
+                        <div class="blog-cards" data-animate-el>
 
-                            <!-- Blog Item 1 -->
-                            <div class="blog-accordion__item">
-                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
-                                    <div class="blog-accordion__info">
-                                        <span class="blog-accordion__category">Research</span>
-                                        <h3 class="blog-accordion__title">My First Research Publication Journey</h3>
-                                        <span class="blog-accordion__meta">5 min read • Coming Soon</span>
-                                    </div>
-                                    <span class="blog-accordion__icon">+</span>
-                                </button>
-                                <div class="blog-accordion__content">
-                                    <p>The complete journey of publishing "AnantaNetra: A Hybrid AI-Powered
-                                        Environmental Monitoring System" in JETIR journal as a first-year B.Tech
-                                        student. From concept to 92% accuracy model, dataset creation from 15+
-                                        sources,
-                                        and navigating the peer-review process.</p>
-                                    <p>This research involved the development of a custom-built LSTM+XGBoost
-                                        ensemble
-                                        model for real-time Air Quality Index (AQI) monitoring and 24-hour
-                                        forecasting
-                                        across all 732 districts in India. A significant undertaking was the
-                                        creation of
-                                        a proprietary, unified dataset from environmental and meteorological data
-                                        sources.</p>
-                                    <div class="blog-accordion__tags">
-                                        <span>Research</span>
-                                        <span>JETIR</span>
-                                        <span>LSTM</span>
-                                        <span>XGBoost</span>
-                                        <span>AnantaNetra</span>
+                            <!-- Blog Card 1 -->
+                            <article class="blog-card" onclick="toggleBlogCard(this)">
+                                <div class="blog-card__hero"
+                                    style="background-image: url('pictures/internship project img.jpg');">
+                                    <div class="blog-card__overlay">
+                                        <div class="blog-card__top">
+                                            <span class="blog-card__category">Research</span>
+                                            <span class="blog-card__date">Jan 2025</span>
+                                        </div>
+                                        <div class="blog-card__bottom">
+                                            <h3 class="blog-card__title">My First Research Publication Journey</h3>
+                                            <p class="blog-card__excerpt">Publishing "AnantaNetra: A Hybrid AI-Powered
+                                                Environmental Monitoring System" in JETIR journal as a first-year B.Tech
+                                                student.</p>
+                                            <button class="blog-card__btn">Read More</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="blog-card__content">
+                                    <p>The complete journey of publishing my research paper in JETIR journal. From
+                                        concept to 92% accuracy model, dataset creation from 15+ sources, and navigating
+                                        the peer-review process.</p>
+                                    <img src="pictures/internship project img.jpg" alt="Research Publication"
+                                        loading="lazy">
+                                    <p>This research involved the development of a custom-built LSTM+XGBoost ensemble
+                                        model for real-time Air Quality Index (AQI) monitoring and 24-hour forecasting
+                                        across all 732 districts in India.</p>
+                                </div>
+                            </article>
 
-                            <!-- Blog Item 2 -->
-                            <div class="blog-accordion__item">
-                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
-                                    <div class="blog-accordion__info">
-                                        <span class="blog-accordion__category">AI/ML</span>
-                                        <h3 class="blog-accordion__title">How I Built a Stock Forecasting Model with
-                                            LSTM</h3>
-                                        <span class="blog-accordion__meta">4 min read • Coming Soon</span>
+                            <!-- Blog Card 2 -->
+                            <article class="blog-card" onclick="toggleBlogCard(this)">
+                                <div class="blog-card__hero" style="background-image: url('pictures/shoplift.jpg');">
+                                    <div class="blog-card__overlay">
+                                        <div class="blog-card__top">
+                                            <span class="blog-card__category">AI/ML</span>
+                                            <span class="blog-card__date">Dec 2024</span>
+                                        </div>
+                                        <div class="blog-card__bottom">
+                                            <h3 class="blog-card__title">Building a Stock Forecasting Model with LSTM
+                                            </h3>
+                                            <p class="blog-card__excerpt">Deep dive into building a time series
+                                                forecasting system using LSTM neural networks during my internship.</p>
+                                            <button class="blog-card__btn">Read More</button>
+                                        </div>
                                     </div>
-                                    <span class="blog-accordion__icon">+</span>
-                                </button>
-                                <div class="blog-accordion__content">
-                                    <p>Deep dive into building a time series forecasting system using LSTM neural
-                                        networks during my internship at Zidio Development. The project integrates
-                                        classical time series models (ARIMA, SARIMA) and deep learning techniques
-                                        (Prophet, LSTM) into a unified platform.</p>
+                                </div>
+                                <div class="blog-card__content">
+                                    <p>The project integrates classical time series models (ARIMA, SARIMA) and deep
+                                        learning techniques (Prophet, LSTM) into a unified platform.</p>
+                                    <img src="pictures/shoplift.jpg" alt="Stock Forecasting" loading="lazy">
                                     <p>Built an LSTM-based prediction pipeline with technical indicators (RSI, MACD,
-                                        Bollinger Bands), achieving 85% prediction accuracy on test data and
-                                        comprehensive model evaluation using RMSE, MAE, MAPE, and R² metrics.</p>
-                                    <div class="blog-accordion__tags">
-                                        <span>Python</span>
-                                        <span>LSTM</span>
-                                        <span>TensorFlow</span>
-                                        <span>Streamlit</span>
+                                        Bollinger Bands), achieving 85% prediction accuracy on test data.</p>
+                                </div>
+                            </article>
+
+                            <!-- Blog Card 3 -->
+                            <article class="blog-card" onclick="toggleBlogCard(this)">
+                                <div class="blog-card__hero" style="background-image: url('pictures/teamlogo.jpg');">
+                                    <div class="blog-card__overlay">
+                                        <div class="blog-card__top">
+                                            <span class="blog-card__category">Computer Vision</span>
+                                            <span class="blog-card__date">Nov 2024</span>
+                                        </div>
+                                        <div class="blog-card__bottom">
+                                            <h3 class="blog-card__title">Detecting Shoplifting with YOLO & OpenCV</h3>
+                                            <p class="blog-card__excerpt">Building a real-time AI-powered surveillance
+                                                system for retail theft detection.</p>
+                                            <button class="blog-card__btn">Read More</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Blog Item 3 -->
-                            <div class="blog-accordion__item">
-                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
-                                    <div class="blog-accordion__info">
-                                        <span class="blog-accordion__category">Computer Vision</span>
-                                        <h3 class="blog-accordion__title">Detecting Shoplifting with YOLO & OpenCV
-                                        </h3>
-                                        <span class="blog-accordion__meta">3 min read • Coming Soon</span>
-                                    </div>
-                                    <span class="blog-accordion__icon">+</span>
-                                </button>
-                                <div class="blog-accordion__content">
-                                    <p>Building a real-time AI-powered surveillance system for retail theft
-                                        detection.
-                                        The system processes video streams to identify and track suspicious behavior
-                                        with 78% accuracy, processing 500+ video frames per second.</p>
-                                    <p>Features include real-time detection, customizable parameters for
-                                        fine-tuning,
-                                        and support for both live camera feeds and video files, making it a
-                                        comprehensive solution for modern retail surveillance.</p>
-                                    <div class="blog-accordion__tags">
-                                        <span>YOLO</span>
-                                        <span>OpenCV</span>
-                                        <span>Python</span>
-                                        <span>Computer Vision</span>
-                                    </div>
+                                <div class="blog-card__content">
+                                    <p>The system processes video streams to identify and track suspicious behavior with
+                                        78% accuracy, processing 500+ video frames per second.</p>
+                                    <img src="pictures/teamlogo.jpg" alt="Shoplifting Detection" loading="lazy">
+                                    <p>Features include real-time detection, customizable parameters for fine-tuning,
+                                        and support for both live camera feeds and video files.</p>
                                 </div>
-                            </div>
+                            </article>
 
-                            <!-- Blog Item 4 -->
-                            <div class="blog-accordion__item">
-                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
-                                    <div class="blog-accordion__info">
-                                        <span class="blog-accordion__category">Data Structures</span>
-                                        <h3 class="blog-accordion__title">Building a Library Management System with
-                                            C++
-                                        </h3>
-                                        <span class="blog-accordion__meta">4 min read • Coming Soon</span>
-                                    </div>
-                                    <span class="blog-accordion__icon">+</span>
-                                </button>
-                                <div class="blog-accordion__content">
-                                    <p>A comprehensive library management system built using C++ to demonstrate core
-                                        Data Structures and Algorithms concepts. Handles 1,000+ book records
-                                        efficiently
-                                        with search time reduced by 40% using optimized algorithms.</p>
-                                    <p>Implemented using Doubly Linked Lists for efficient book storage, with Bubble
-                                        Sort for alphabetical organization and Linear Search for book retrieval.
-                                        Features functionalities for adding, deleting, searching, issuing, and
-                                        returning
-                                        books.</p>
-                                    <div class="blog-accordion__tags">
-                                        <span>C++</span>
-                                        <span>DSA</span>
-                                        <span>Linked Lists</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Blog Item 5 -->
-                            <div class="blog-accordion__item">
-                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
-                                    <div class="blog-accordion__info">
-                                        <span class="blog-accordion__category">Design</span>
-                                        <h3 class="blog-accordion__title">Design Thinking: Creating Busify App</h3>
-                                        <span class="blog-accordion__meta">3 min read • Coming Soon</span>
-                                    </div>
-                                    <span class="blog-accordion__icon">+</span>
-                                </button>
-                                <div class="blog-accordion__content">
-                                    <p>The Busify app was developed as part of a Design Thinking project to create a
-                                        real-time bus tracking app that enhances user convenience. Designed for 50+
-                                        daily users with 60% improvement in user satisfaction based on testing
-                                        feedback.
-                                    </p>
-                                    <p>Following the Design Thinking process - empathizing with users, defining
-                                        problems, ideating solutions, prototyping, and testing. Used FlutterFlow for
-                                        development and Figma for UI/UX design.</p>
-                                    <div class="blog-accordion__tags">
-                                        <span>FlutterFlow</span>
-                                        <span>Figma</span>
-                                        <span>UI/UX</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> <!-- end blog-accordion -->
+                        </div> <!-- end blog-cards -->
 
                     </div>
                 </div>
@@ -2257,26 +2190,32 @@
         console.log('✅ Google Analytics custom tracking initialized');
     </script>
 
-    <!-- Blog Accordion Toggle Script -->
+    <!-- Blog Card Toggle Script -->
     <script>
-        function toggleBlog(button) {
-            const item = button.closest('.blog-accordion__item');
-            const isActive = item.classList.contains('active');
+        function toggleBlogCard(card) {
+            const isActive = card.classList.contains('active');
 
-            // Close all other items first
-            document.querySelectorAll('.blog-accordion__item.active').forEach(activeItem => {
-                if (activeItem !== item) {
-                    activeItem.classList.remove('active');
+            // Close all other cards first
+            document.querySelectorAll('.blog-card.active').forEach(activeCard => {
+                if (activeCard !== card) {
+                    activeCard.classList.remove('active');
                 }
             });
 
-            // Toggle the clicked item
-            item.classList.toggle('active');
+            // Toggle the clicked card
+            card.classList.toggle('active');
+
+            // If opening, scroll to show content
+            if (!isActive) {
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
 
             // Track with analytics if available
             if (typeof gtag !== 'undefined') {
-                const blogTitle = item.querySelector('.blog-accordion__title').textContent.trim();
-                gtag('event', 'blog_accordion_toggle', {
+                const blogTitle = card.querySelector('.blog-card__title').textContent.trim();
+                gtag('event', 'blog_card_toggle', {
                     'event_category': 'Blog',
                     'event_label': blogTitle,
                     'action': isActive ? 'collapse' : 'expand'

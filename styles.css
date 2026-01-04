@@ -5591,8 +5591,8 @@ img.u-pull-left {
 
 
 /* ===================================================================
- * # BLOG SECTION - Accordion/Expandable Style
- * Clean horizontal rows with dropdown content
+ * # BLOG SECTION - Card Style with Hero Images
+ * Modern card layout with expandable content
  * ------------------------------------------------------------------- */
 
 .s-blog {
@@ -5600,301 +5600,209 @@ img.u-pull-left {
     padding-bottom: var(--vspace-4);
 }
 
-/* Blog Accordion Container */
-.blog-accordion {
+/* Blog Cards Container */
+.blog-cards {
     margin-top: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
 }
 
-/* Accordion Item - Individual Horizontal Frame/Card */
-.blog-accordion__item {
+/* Blog Card */
+.blog-card {
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    position: relative;
 }
 
-.blog-accordion__item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--color-1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.blog-accordion__item:hover {
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-.blog-accordion__item:hover::before {
-    opacity: 1;
+/* Hero Image Section */
+.blog-card__hero {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.blog-accordion__item.active {
-    border-color: var(--color-1);
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.blog-accordion__item.active::before {
-    opacity: 1;
-}
-
-/* Accordion Header (Clickable) */
-.blog-accordion__header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem 3rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.3s ease;
-}
-
-.blog-accordion__header:hover {
-    background: rgba(234, 190, 124, 0.05);
-}
-
-/* Info Container - Stack elements vertically */
-.blog-accordion__info {
-    flex: 1;
+.blog-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.85) 100%);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
-/* Category - First */
-.blog-accordion__category {
-    display: inline-block;
+/* Top Section - Category & Date */
+.blog-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.blog-card__category {
+    background: #e63946;
+    color: white;
+    padding: 0.6rem 1.2rem;
     font-size: 1.1rem;
-    color: var(--color-1);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
-    padding: 0.3rem 0;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
     font-family: var(--font-1);
 }
 
-/* Title - Second */
-.blog-accordion__title {
-    font-family: var(--font-2);
-    font-size: 2.2rem;
-    font-weight: 500;
-    color: var(--color-white);
-    line-height: 1.4;
-    margin: 0.5rem 0;
-    transition: all 0.3s ease;
-}
-
-.blog-accordion__item:hover .blog-accordion__title {
-    color: var(--color-1);
-    text-shadow: 0 0 20px rgba(234, 190, 124, 0.3);
-}
-
-.blog-accordion__item.active .blog-accordion__title {
-    color: var(--color-1);
-}
-
-/* Meta - Third (below title) */
-.blog-accordion__meta {
-    font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.6);
-    font-family: var(--font-1);
-    letter-spacing: 0.08em;
-    margin-top: 0.3rem;
-}
-
-.blog-accordion__item:hover .blog-accordion__meta {
+.blog-card__date {
     color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    font-family: var(--font-1);
 }
 
-/* Plus/Minus Icon */
-.blog-accordion__icon {
-    font-size: 2.8rem;
-    color: var(--color-1);
-    font-weight: 300;
-    line-height: 1;
+/* Bottom Section - Title, Excerpt, Button */
+.blog-card__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.blog-card__title {
+    font-family: var(--font-2);
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.blog-card__excerpt {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.blog-card__btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    font-family: var(--font-1);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 4px;
+    cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 2rem;
-    flex-shrink: 0;
+    margin-top: 1rem;
 }
 
-.blog-accordion__item.active .blog-accordion__icon {
-    transform: rotate(45deg);
+.blog-card__btn:hover {
+    background: white;
+    color: #111;
 }
 
-/* Accordion Content (Hidden by default) */
-.blog-accordion__content {
+/* Expandable Content Section */
+.blog-card__content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-    padding: 0 3rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-top: 0 solid transparent;
+    background: white;
+    transition: max-height 0.5s ease;
 }
 
-.blog-accordion__item.active .blog-accordion__content {
-    max-height: 600px;
-    padding: 2.5rem 3rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+.blog-card.active .blog-card__content {
+    max-height: 1000px;
 }
 
-.blog-accordion__content p {
-    color: rgba(255, 255, 255, 0.85);
+.blog-card__content p {
+    color: #333;
     font-size: 1.6rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
-    max-width: 900px;
+    margin: 0 0 1.5rem 0;
+    padding: 2rem 2rem 0 2rem;
 }
 
-.blog-accordion__content p:last-of-type {
-    margin-bottom: 2rem;
+.blog-card__content img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
 }
 
-/* Tags inside accordion */
-.blog-accordion__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
+.blog-card__content p:last-of-type {
+    padding-bottom: 2rem;
 }
 
-.blog-accordion__tags span {
-    background: rgba(234, 190, 124, 0.1);
-    color: var(--color-1);
-    padding: 0.5rem 1.4rem;
-    border: 1px solid rgba(234, 190, 124, 0.3);
-    border-radius: 4px;
-    font-size: 1.2rem;
-    font-family: var(--font-1);
-    letter-spacing: 0.05em;
-    transition: all 0.3s ease;
-}
-
-.blog-accordion__tags span:hover {
-    border-color: var(--color-1);
-    color: var(--color-1);
-}
-
-/* Responsive Styles for Blog */
+/* Responsive Styles for Blog Cards */
 @media screen and (max-width: 900px) {
-    .blog-accordion {
-        gap: 1.2rem;
+    .blog-cards {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .blog-accordion__header {
-        padding: 1.8rem 2rem;
+    .blog-card__hero {
+        height: 350px;
     }
 
-    .blog-accordion__title {
-        font-size: 1.8rem;
-    }
-
-    .blog-accordion__icon {
+    .blog-card__title {
         font-size: 2.2rem;
-        margin-left: 1.5rem;
-    }
-
-    .blog-accordion__item.active .blog-accordion__content {
-        padding: 1.5rem 2rem 2rem 2rem;
-    }
-
-    .blog-accordion__content p {
-        font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .blog-accordion {
+    .blog-cards {
         margin-top: 3rem;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
-    .blog-accordion__header {
-        padding: 1.5rem 1.5rem;
-        padding-right: 4.5rem;
+    .blog-card__hero {
+        height: 300px;
     }
 
-    .blog-accordion__info {
-        width: 100%;
+    .blog-card__overlay {
+        padding: 1.5rem;
     }
 
-    .blog-accordion__title {
-        font-size: 1.5rem;
-        line-height: 1.4;
-        color: var(--color-white);
-        word-wrap: break-word;
+    .blog-card__title {
+        font-size: 1.9rem;
     }
 
-    .blog-accordion__category {
-        font-size: 1rem;
-        letter-spacing: 0.15em;
-        margin-bottom: 0.5rem;
-    }
-
-    .blog-accordion__meta {
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-    }
-
-    .blog-accordion__icon {
-        font-size: 1.8rem;
-        position: absolute;
-        top: 50%;
-        right: 1.5rem;
-        transform: translateY(-50%);
-    }
-
-    .blog-accordion__item.active .blog-accordion__icon {
-        transform: translateY(-50%) rotate(45deg);
-    }
-
-    .blog-accordion__item {
-        position: relative;
-    }
-
-    .blog-accordion__item.active .blog-accordion__content {
-        padding: 1.8rem 1.5rem 2rem 1.5rem;
-    }
-
-    .blog-accordion__content {
-        padding: 0 1.5rem;
-        background: rgba(0, 0, 0, 0.4);
-    }
-
-    .blog-accordion__content p {
+    .blog-card__excerpt {
         font-size: 1.4rem;
-        line-height: 1.75;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 1.2rem;
-        text-align: left;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
-    .blog-accordion__content p:last-of-type {
-        margin-bottom: 1.5rem;
+    .blog-card__btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
     }
 
-    .blog-accordion__tags {
-        gap: 0.6rem;
-        margin-top: 0.8rem;
+    .blog-card__content p {
+        font-size: 1.4rem;
+        padding: 1.5rem 1.5rem 0 1.5rem;
     }
 
-    .blog-accordion__tags span {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        background: rgba(234, 190, 124, 0.15);
-        color: var(--color-1);
+    .blog-card__content p:last-of-type {
+        padding-bottom: 1.5rem;
     }
 }
