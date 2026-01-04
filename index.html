@@ -52,6 +52,10 @@
     <!-- Japanese Font -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- Editorial Serif Font for Blog -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="pictures/icon.JPG">
@@ -1203,86 +1207,147 @@
             <section id="blog" class="s-blog target-section">
                 <div class="row works-portfolio">
                     <div class="column lg-12" data-animate-block>
-                        <h2 class="text-pretitle" data-animate-el>Blog</h2>
-                        <p class="h1" data-animate-el>
-                            "Technical insights and learning experiences"
-                        </p>
-
-                        <!-- Featured Blog Post -->
-                        <article class="blog-featured" data-animate-el>
-                            <div class="blog-featured__image">
-                                <div class="blog-featured__badge">⭐ Featured</div>
-                                <div class="blog-featured__icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        width="48" height="48">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                                    </svg>
-                                </div>
+                        <!-- Blog Header with View All Button -->
+                        <div class="blog-header" data-animate-el>
+                            <div class="blog-header__title">
+                                <h2 class="text-pretitle">Blog</h2>
+                                <p class="h1">Recent Blog Posts</p>
                             </div>
-                            <div class="blog-featured__content">
-                                <div class="blog-card__meta">
-                                    <span class="blog-card__date">Coming Soon</span>
-                                    <span class="blog-card__category">Research</span>
-                                </div>
-                                <h3 class="blog-featured__title">My First Research Publication Journey</h3>
-                                <p class="blog-featured__excerpt">
-                                    The complete journey of publishing "AnantaNetra: A Hybrid AI-Powered Environmental
-                                    Monitoring System"
-                                    in JETIR journal as a first-year B.Tech student. From concept to 92% accuracy model,
-                                    dataset creation
-                                    from 15+ sources, and navigating the peer-review process. Tips and lessons for
-                                    aspiring student
-                                    researchers in AI and Data Science.
-                                </p>
-                                <div class="blog-card__tags">
-                                    <span>Research</span>
-                                    <span>JETIR</span>
-                                    <span>LSTM</span>
-                                    <span>XGBoost</span>
-                                    <span>AnantaNetra</span>
-                                </div>
-                                <a href="#" class="blog-featured__cta">Read Full Story →</a>
-                            </div>
-                        </article>
+                            <a href="#" class="blog-header__btn btn btn--stroke">View All Blogs</a>
+                        </div>
 
-                        <!-- Blog Cards Grid -->
-                        <div class="blog-grid blog-grid--two" data-animate-el>
+                        <!-- Blog Cards Grid - 3 Column -->
+                        <div class="blog-grid-new" data-animate-el>
                             <!-- Blog Card 1 -->
-                            <article class="blog-card">
-                                <div class="blog-card__content">
-                                    <div class="blog-card__meta">
-                                        <span class="blog-card__date">Coming Soon</span>
-                                        <span class="blog-card__category">AI/ML</span>
+                            <article class="blog-card-new">
+                                <div class="blog-card-new__header">
+                                    <div class="blog-card-new__dots">
+                                        <span></span><span></span><span></span>
                                     </div>
-                                    <h3 class="blog-card__title">How I Built a Stock Forecasting Model with LSTM</h3>
-                                    <p class="blog-card__excerpt">Deep dive into building a time series forecasting
-                                        system using LSTM neural networks during my internship at Zidio Development.
-                                        Comparing performance with ARIMA and Prophet models.</p>
-                                    <div class="blog-card__tags">
-                                        <span>Python</span>
-                                        <span>LSTM</span>
-                                        <span>TensorFlow</span>
-                                        <span>Streamlit</span>
+                                    <div class="blog-card-new__number">NO.001</div>
+                                </div>
+                                <div class="blog-card-new__image">
+                                    <img src="pictures/internship project img.jpg" alt="Research Publication"
+                                        loading="lazy">
+                                </div>
+                                <div class="blog-card-new__content">
+                                    <span class="blog-card-new__category">Research</span>
+                                    <h3 class="blog-card-new__title">My First Research Publication Journey</h3>
+                                    <div class="blog-card-new__meta">
+                                        <span class="blog-card-new__author">by Akshad Makhana</span>
+                                        <span class="blog-card-new__divider">|</span>
+                                        <span class="blog-card-new__read">5 min read</span>
                                     </div>
                                 </div>
                             </article>
 
                             <!-- Blog Card 2 -->
-                            <article class="blog-card">
-                                <div class="blog-card__content">
-                                    <div class="blog-card__meta">
-                                        <span class="blog-card__date">Coming Soon</span>
-                                        <span class="blog-card__category">Computer Vision</span>
+                            <article class="blog-card-new">
+                                <div class="blog-card-new__header">
+                                    <div class="blog-card-new__dots">
+                                        <span></span><span></span><span></span>
                                     </div>
-                                    <h3 class="blog-card__title">Detecting Shoplifting with YOLO & OpenCV</h3>
-                                    <p class="blog-card__excerpt">Building a real-time AI-powered surveillance system
-                                        for retail theft detection. Technical walkthrough of YOLO object detection
-                                        implementation and accuracy optimization.</p>
-                                    <div class="blog-card__tags">
-                                        <span>YOLO</span>
-                                        <span>OpenCV</span>
-                                        <span>Python</span>
-                                        <span>AI</span>
+                                    <div class="blog-card-new__number">NO.002</div>
+                                </div>
+                                <div class="blog-card-new__image">
+                                    <img src="pictures/shoplift.jpg" alt="Stock Forecasting" loading="lazy">
+                                </div>
+                                <div class="blog-card-new__content">
+                                    <span class="blog-card-new__category">AI/ML</span>
+                                    <h3 class="blog-card-new__title">How I Built a Stock Forecasting Model with LSTM
+                                    </h3>
+                                    <div class="blog-card-new__meta">
+                                        <span class="blog-card-new__author">by Akshad Makhana</span>
+                                        <span class="blog-card-new__divider">|</span>
+                                        <span class="blog-card-new__read">4 min read</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Card 3 -->
+                            <article class="blog-card-new">
+                                <div class="blog-card-new__header">
+                                    <div class="blog-card-new__dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="blog-card-new__number">NO.003</div>
+                                </div>
+                                <div class="blog-card-new__image">
+                                    <img src="pictures/teamlogo.jpg" alt="Computer Vision" loading="lazy">
+                                </div>
+                                <div class="blog-card-new__content">
+                                    <span class="blog-card-new__category">Computer Vision</span>
+                                    <h3 class="blog-card-new__title">Detecting Shoplifting with YOLO & OpenCV</h3>
+                                    <div class="blog-card-new__meta">
+                                        <span class="blog-card-new__author">by Akshad Makhana</span>
+                                        <span class="blog-card-new__divider">|</span>
+                                        <span class="blog-card-new__read">3 min read</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Card 4 -->
+                            <article class="blog-card-new">
+                                <div class="blog-card-new__header">
+                                    <div class="blog-card-new__dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="blog-card-new__number">NO.004</div>
+                                </div>
+                                <div class="blog-card-new__image">
+                                    <img src="pictures/libmanagmnet.jpg" alt="DSA Project" loading="lazy">
+                                </div>
+                                <div class="blog-card-new__content">
+                                    <span class="blog-card-new__category">Data Structures</span>
+                                    <h3 class="blog-card-new__title">Building a Library Management System with C++</h3>
+                                    <div class="blog-card-new__meta">
+                                        <span class="blog-card-new__author">by Akshad Makhana</span>
+                                        <span class="blog-card-new__divider">|</span>
+                                        <span class="blog-card-new__read">4 min read</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Card 5 -->
+                            <article class="blog-card-new">
+                                <div class="blog-card-new__header">
+                                    <div class="blog-card-new__dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="blog-card-new__number">NO.005</div>
+                                </div>
+                                <div class="blog-card-new__image">
+                                    <img src="pictures/busify img.webp" alt="Design Thinking" loading="lazy">
+                                </div>
+                                <div class="blog-card-new__content">
+                                    <span class="blog-card-new__category">Design</span>
+                                    <h3 class="blog-card-new__title">Design Thinking: Creating Busify App</h3>
+                                    <div class="blog-card-new__meta">
+                                        <span class="blog-card-new__author">by Akshad Makhana</span>
+                                        <span class="blog-card-new__divider">|</span>
+                                        <span class="blog-card-new__read">3 min read</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Blog Card 6 -->
+                            <article class="blog-card-new">
+                                <div class="blog-card-new__header">
+                                    <div class="blog-card-new__dots">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="blog-card-new__number">NO.006</div>
+                                </div>
+                                <div class="blog-card-new__image">
+                                    <img src="pictures/expense tracker img.webp" alt="Python Project" loading="lazy">
+                                </div>
+                                <div class="blog-card-new__content">
+                                    <span class="blog-card-new__category">Python</span>
+                                    <h3 class="blog-card-new__title">Building an Expense Tracker with Tkinter</h3>
+                                    <div class="blog-card-new__meta">
+                                        <span class="blog-card-new__author">by Akshad Makhana</span>
+                                        <span class="blog-card-new__divider">|</span>
+                                        <span class="blog-card-new__read">2 min read</span>
                                     </div>
                                 </div>
                             </article>
@@ -2180,5 +2245,3 @@
     </script>
 
 </body>
-
-</html>
