@@ -2010,6 +2010,175 @@
         }
     </script>
 
+    <!-- Google Analytics Custom Event Tracking -->
+    <script>
+        // ========================================
+        // SECTION VIEW TRACKING (Scroll-based)
+        // ========================================
+        const sections = document.querySelectorAll('section[id]');
+        const trackedSections = new Set();
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !trackedSections.has(entry.target.id)) {
+                    trackedSections.add(entry.target.id);
+                    gtag('event', 'section_view', {
+                        'event_category': 'Section Engagement',
+                        'event_label': entry.target.id,
+                        'section_name': entry.target.id
+                    });
+                    console.log('📊 Analytics: Viewed section -', entry.target.id);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // ========================================
+        // NAVIGATION CLICK TRACKING
+        // ========================================
+        document.querySelectorAll('.main-nav a, .mobile-menu-toggle').forEach(link => {
+            link.addEventListener('click', function () {
+                const linkText = this.textContent.trim() || 'Menu Toggle';
+                gtag('event', 'navigation_click', {
+                    'event_category': 'Navigation',
+                    'event_label': linkText,
+                    'link_text': linkText
+                });
+                console.log('📊 Analytics: Nav click -', linkText);
+            });
+        });
+
+        // ========================================
+        // RESUME/CV DOWNLOAD TRACKING
+        // ========================================
+        document.querySelectorAll('a[href*="Resume"], a[href*="CV"], a[href*=".pdf"]').forEach(link => {
+            link.addEventListener('click', function () {
+                const fileName = this.href.split('/').pop();
+                gtag('event', 'file_download', {
+                    'event_category': 'Downloads',
+                    'event_label': fileName,
+                    'file_name': fileName
+                });
+                console.log('📊 Analytics: Download -', fileName);
+            });
+        });
+
+        // ========================================
+        // PROJECT LINK TRACKING
+        // ========================================
+        document.querySelectorAll('.folio-list__item a[href*="github"], .project-description a').forEach(link => {
+            link.addEventListener('click', function () {
+                const projectTitle = this.closest('.folio-list__item')?.querySelector('.folio-list__item-title')?.textContent.trim() || 'Unknown Project';
+                gtag('event', 'project_click', {
+                    'event_category': 'Projects',
+                    'event_label': projectTitle,
+                    'project_name': projectTitle,
+                    'link_url': this.href
+                });
+                console.log('📊 Analytics: Project click -', projectTitle);
+            });
+        });
+
+        // ========================================
+        // SOCIAL MEDIA LINK TRACKING
+        // ========================================
+        document.querySelectorAll('a[href*="linkedin"], a[href*="github.com"], a[href*="twitter"], a[href*="instagram"], a[href*="kaggle"]').forEach(link => {
+            link.addEventListener('click', function () {
+                const platform = this.href.includes('linkedin') ? 'LinkedIn' :
+                    this.href.includes('github') ? 'GitHub' :
+                        this.href.includes('twitter') ? 'Twitter' :
+                            this.href.includes('instagram') ? 'Instagram' :
+                                this.href.includes('kaggle') ? 'Kaggle' : 'Social';
+                gtag('event', 'social_click', {
+                    'event_category': 'Social Media',
+                    'event_label': platform,
+                    'platform': platform
+                });
+                console.log('📊 Analytics: Social click -', platform);
+            });
+        });
+
+        // ========================================
+        // CERTIFICATE/ACHIEVEMENT CLICK TRACKING
+        // ========================================
+        document.querySelectorAll('.achievement-item a').forEach(link => {
+            link.addEventListener('click', function () {
+                const certName = this.closest('.achievement-item')?.querySelector('h3')?.textContent.trim() || 'Certificate';
+                gtag('event', 'certificate_view', {
+                    'event_category': 'Achievements',
+                    'event_label': certName,
+                    'certificate_name': certName
+                });
+                console.log('📊 Analytics: Certificate click -', certName);
+            });
+        });
+
+        // ========================================
+        // CONTACT FORM TRACKING
+        // ========================================
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function () {
+                gtag('event', 'contact_form_submit', {
+                    'event_category': 'Contact',
+                    'event_label': 'Contact Form Submitted'
+                });
+                console.log('📊 Analytics: Contact form submitted');
+            });
+        }
+
+        // Track contact button click
+        document.querySelectorAll('a[href="#contact"], .contact-btn, [onclick*="openContactForm"]').forEach(btn => {
+            btn.addEventListener('click', function () {
+                gtag('event', 'contact_intent', {
+                    'event_category': 'Contact',
+                    'event_label': 'Contact Button Clicked'
+                });
+                console.log('📊 Analytics: Contact button clicked');
+            });
+        });
+
+        // ========================================
+        // BLOG/ARTICLE CLICK TRACKING
+        // ========================================
+        document.querySelectorAll('#blog a, .blog-card a').forEach(link => {
+            link.addEventListener('click', function () {
+                const blogTitle = this.closest('.blog-card')?.querySelector('h3, .title')?.textContent.trim() || 'Blog Article';
+                gtag('event', 'blog_click', {
+                    'event_category': 'Blog',
+                    'event_label': blogTitle,
+                    'article_title': blogTitle
+                });
+                console.log('📊 Analytics: Blog click -', blogTitle);
+            });
+        });
+
+        // ========================================
+        // SCROLL DEPTH TRACKING
+        // ========================================
+        let scrollDepths = [25, 50, 75, 100];
+        let trackedDepths = new Set();
+
+        window.addEventListener('scroll', function () {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+
+            scrollDepths.forEach(depth => {
+                if (scrollPercent >= depth && !trackedDepths.has(depth)) {
+                    trackedDepths.add(depth);
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'Engagement',
+                        'event_label': depth + '%',
+                        'scroll_percentage': depth
+                    });
+                    console.log('📊 Analytics: Scroll depth -', depth + '%');
+                }
+            });
+        });
+
+        console.log('✅ Google Analytics custom tracking initialized');
+    </script>
+
 </body>
 
 </html>
