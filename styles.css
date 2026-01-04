@@ -5788,57 +5788,97 @@ img.u-pull-left {
     color: var(--color-1);
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Blog */
 @media screen and (max-width: 900px) {
-    .blog-accordion__title {
-        font-size: 2rem;
+    .blog-accordion {
+        gap: 1.2rem;
     }
 
     .blog-accordion__header {
-        padding: 2rem 0;
+        padding: 1.8rem 2rem;
     }
 
-    .blog-accordion__header:hover {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
+    .blog-accordion__title {
+        font-size: 1.8rem;
     }
 
     .blog-accordion__icon {
-        font-size: 2.4rem;
-        margin-left: 2rem;
-    }
-
-    .blog-accordion__content {
-        margin: 0;
+        font-size: 2.2rem;
+        margin-left: 1.5rem;
     }
 
     .blog-accordion__item.active .blog-accordion__content {
-        padding: 1.5rem 0 2rem 0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .blog-accordion__title {
-        font-size: 1.7rem;
-    }
-
-    .blog-accordion__category {
-        font-size: 1.1rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .blog-accordion__meta {
-        font-size: 1.2rem;
-    }
-
-    .blog-accordion__icon {
-        font-size: 2rem;
-        margin-left: 1.5rem;
+        padding: 1.5rem 2rem 2rem 2rem;
     }
 
     .blog-accordion__content p {
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .blog-accordion {
+        margin-top: 3rem;
+        gap: 1rem;
+    }
+
+    .blog-accordion__header {
+        padding: 1.5rem 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .blog-accordion__info {
+        width: 100%;
+    }
+
+    .blog-accordion__title {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+
+    .blog-accordion__category {
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+    }
+
+    .blog-accordion__meta {
+        font-size: 1.1rem;
+    }
+
+    .blog-accordion__icon {
+        font-size: 2rem;
+        margin-left: 0;
+        align-self: flex-end;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .blog-accordion__item {
+        position: relative;
+    }
+
+    .blog-accordion__item.active .blog-accordion__content {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .blog-accordion__content {
+        padding: 0 1.5rem;
+    }
+
+    .blog-accordion__content p {
+        font-size: 1.4rem;
+        line-height: 1.7;
+    }
+
+    .blog-accordion__tags {
+        gap: 0.5rem;
+    }
+
+    .blog-accordion__tags span {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
     }
 }
