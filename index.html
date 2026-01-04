@@ -1207,151 +1207,153 @@
             <section id="blog" class="s-blog target-section">
                 <div class="row works-portfolio">
                     <div class="column lg-12" data-animate-block>
-                        <!-- Blog Header with View All Button -->
-                        <div class="blog-header" data-animate-el>
-                            <div class="blog-header__title">
-                                <h2 class="text-pretitle">Blog</h2>
-                                <p class="h1">Recent Blog Posts</p>
+
+                        <!-- Blog Header -->
+                        <h2 class="text-pretitle" data-animate-el>Blog</h2>
+                        <p class="h1" data-animate-el>Technical Insights & Stories</p>
+
+                        <!-- Accordion Blog List -->
+                        <div class="blog-accordion" data-animate-el>
+
+                            <!-- Blog Item 1 -->
+                            <div class="blog-accordion__item">
+                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
+                                    <div class="blog-accordion__info">
+                                        <span class="blog-accordion__category">Research</span>
+                                        <h3 class="blog-accordion__title">My First Research Publication Journey</h3>
+                                        <span class="blog-accordion__meta">5 min read • Coming Soon</span>
+                                    </div>
+                                    <span class="blog-accordion__icon">+</span>
+                                </button>
+                                <div class="blog-accordion__content">
+                                    <p>The complete journey of publishing "AnantaNetra: A Hybrid AI-Powered
+                                        Environmental Monitoring System" in JETIR journal as a first-year B.Tech
+                                        student. From concept to 92% accuracy model, dataset creation from 15+ sources,
+                                        and navigating the peer-review process.</p>
+                                    <p>This research involved the development of a custom-built LSTM+XGBoost ensemble
+                                        model for real-time Air Quality Index (AQI) monitoring and 24-hour forecasting
+                                        across all 732 districts in India. A significant undertaking was the creation of
+                                        a proprietary, unified dataset from environmental and meteorological data
+                                        sources.</p>
+                                    <div class="blog-accordion__tags">
+                                        <span>Research</span>
+                                        <span>JETIR</span>
+                                        <span>LSTM</span>
+                                        <span>XGBoost</span>
+                                        <span>AnantaNetra</span>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="blog-header__btn btn btn--stroke">View All Blogs</a>
+
+                            <!-- Blog Item 2 -->
+                            <div class="blog-accordion__item">
+                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
+                                    <div class="blog-accordion__info">
+                                        <span class="blog-accordion__category">AI/ML</span>
+                                        <h3 class="blog-accordion__title">How I Built a Stock Forecasting Model with
+                                            LSTM</h3>
+                                        <span class="blog-accordion__meta">4 min read • Coming Soon</span>
+                                    </div>
+                                    <span class="blog-accordion__icon">+</span>
+                                </button>
+                                <div class="blog-accordion__content">
+                                    <p>Deep dive into building a time series forecasting system using LSTM neural
+                                        networks during my internship at Zidio Development. The project integrates
+                                        classical time series models (ARIMA, SARIMA) and deep learning techniques
+                                        (Prophet, LSTM) into a unified platform.</p>
+                                    <p>Built an LSTM-based prediction pipeline with technical indicators (RSI, MACD,
+                                        Bollinger Bands), achieving 85% prediction accuracy on test data and
+                                        comprehensive model evaluation using RMSE, MAE, MAPE, and R² metrics.</p>
+                                    <div class="blog-accordion__tags">
+                                        <span>Python</span>
+                                        <span>LSTM</span>
+                                        <span>TensorFlow</span>
+                                        <span>Streamlit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blog Item 3 -->
+                            <div class="blog-accordion__item">
+                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
+                                    <div class="blog-accordion__info">
+                                        <span class="blog-accordion__category">Computer Vision</span>
+                                        <h3 class="blog-accordion__title">Detecting Shoplifting with YOLO & OpenCV</h3>
+                                        <span class="blog-accordion__meta">3 min read • Coming Soon</span>
+                                    </div>
+                                    <span class="blog-accordion__icon">+</span>
+                                </button>
+                                <div class="blog-accordion__content">
+                                    <p>Building a real-time AI-powered surveillance system for retail theft detection.
+                                        The system processes video streams to identify and track suspicious behavior
+                                        with 78% accuracy, processing 500+ video frames per second.</p>
+                                    <p>Features include real-time detection, customizable parameters for fine-tuning,
+                                        and support for both live camera feeds and video files, making it a
+                                        comprehensive solution for modern retail surveillance.</p>
+                                    <div class="blog-accordion__tags">
+                                        <span>YOLO</span>
+                                        <span>OpenCV</span>
+                                        <span>Python</span>
+                                        <span>Computer Vision</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blog Item 4 -->
+                            <div class="blog-accordion__item">
+                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
+                                    <div class="blog-accordion__info">
+                                        <span class="blog-accordion__category">Data Structures</span>
+                                        <h3 class="blog-accordion__title">Building a Library Management System with C++
+                                        </h3>
+                                        <span class="blog-accordion__meta">4 min read • Coming Soon</span>
+                                    </div>
+                                    <span class="blog-accordion__icon">+</span>
+                                </button>
+                                <div class="blog-accordion__content">
+                                    <p>A comprehensive library management system built using C++ to demonstrate core
+                                        Data Structures and Algorithms concepts. Handles 1,000+ book records efficiently
+                                        with search time reduced by 40% using optimized algorithms.</p>
+                                    <p>Implemented using Doubly Linked Lists for efficient book storage, with Bubble
+                                        Sort for alphabetical organization and Linear Search for book retrieval.
+                                        Features functionalities for adding, deleting, searching, issuing, and returning
+                                        books.</p>
+                                    <div class="blog-accordion__tags">
+                                        <span>C++</span>
+                                        <span>DSA</span>
+                                        <span>Linked Lists</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blog Item 5 -->
+                            <div class="blog-accordion__item">
+                                <button class="blog-accordion__header" onclick="toggleBlog(this)">
+                                    <div class="blog-accordion__info">
+                                        <span class="blog-accordion__category">Design</span>
+                                        <h3 class="blog-accordion__title">Design Thinking: Creating Busify App</h3>
+                                        <span class="blog-accordion__meta">3 min read • Coming Soon</span>
+                                    </div>
+                                    <span class="blog-accordion__icon">+</span>
+                                </button>
+                                <div class="blog-accordion__content">
+                                    <p>The Busify app was developed as part of a Design Thinking project to create a
+                                        real-time bus tracking app that enhances user convenience. Designed for 50+
+                                        daily users with 60% improvement in user satisfaction based on testing feedback.
+                                    </p>
+                                    <p>Following the Design Thinking process - empathizing with users, defining
+                                        problems, ideating solutions, prototyping, and testing. Used FlutterFlow for
+                                        development and Figma for UI/UX design.</p>
+                                    <div class="blog-accordion__tags">
+                                        <span>FlutterFlow</span>
+                                        <span>Figma</span>
+                                        <span>UI/UX</span>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <!-- Blog Cards Grid - 3 Column -->
-                        <div class="blog-grid-new" data-animate-el>
-                            <!-- Blog Card 1 -->
-                            <article class="blog-card-new">
-                                <div class="blog-card-new__header">
-                                    <div class="blog-card-new__dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                    <div class="blog-card-new__number">NO.001</div>
-                                </div>
-                                <div class="blog-card-new__image">
-                                    <img src="pictures/internship project img.jpg" alt="Research Publication"
-                                        loading="lazy">
-                                </div>
-                                <div class="blog-card-new__content">
-                                    <span class="blog-card-new__category">Research</span>
-                                    <h3 class="blog-card-new__title">My First Research Publication Journey</h3>
-                                    <div class="blog-card-new__meta">
-                                        <span class="blog-card-new__author">by Akshad Makhana</span>
-                                        <span class="blog-card-new__divider">|</span>
-                                        <span class="blog-card-new__read">5 min read</span>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 2 -->
-                            <article class="blog-card-new">
-                                <div class="blog-card-new__header">
-                                    <div class="blog-card-new__dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                    <div class="blog-card-new__number">NO.002</div>
-                                </div>
-                                <div class="blog-card-new__image">
-                                    <img src="pictures/shoplift.jpg" alt="Stock Forecasting" loading="lazy">
-                                </div>
-                                <div class="blog-card-new__content">
-                                    <span class="blog-card-new__category">AI/ML</span>
-                                    <h3 class="blog-card-new__title">How I Built a Stock Forecasting Model with LSTM
-                                    </h3>
-                                    <div class="blog-card-new__meta">
-                                        <span class="blog-card-new__author">by Akshad Makhana</span>
-                                        <span class="blog-card-new__divider">|</span>
-                                        <span class="blog-card-new__read">4 min read</span>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 3 -->
-                            <article class="blog-card-new">
-                                <div class="blog-card-new__header">
-                                    <div class="blog-card-new__dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                    <div class="blog-card-new__number">NO.003</div>
-                                </div>
-                                <div class="blog-card-new__image">
-                                    <img src="pictures/teamlogo.jpg" alt="Computer Vision" loading="lazy">
-                                </div>
-                                <div class="blog-card-new__content">
-                                    <span class="blog-card-new__category">Computer Vision</span>
-                                    <h3 class="blog-card-new__title">Detecting Shoplifting with YOLO & OpenCV</h3>
-                                    <div class="blog-card-new__meta">
-                                        <span class="blog-card-new__author">by Akshad Makhana</span>
-                                        <span class="blog-card-new__divider">|</span>
-                                        <span class="blog-card-new__read">3 min read</span>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 4 -->
-                            <article class="blog-card-new">
-                                <div class="blog-card-new__header">
-                                    <div class="blog-card-new__dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                    <div class="blog-card-new__number">NO.004</div>
-                                </div>
-                                <div class="blog-card-new__image">
-                                    <img src="pictures/libmanagmnet.jpg" alt="DSA Project" loading="lazy">
-                                </div>
-                                <div class="blog-card-new__content">
-                                    <span class="blog-card-new__category">Data Structures</span>
-                                    <h3 class="blog-card-new__title">Building a Library Management System with C++</h3>
-                                    <div class="blog-card-new__meta">
-                                        <span class="blog-card-new__author">by Akshad Makhana</span>
-                                        <span class="blog-card-new__divider">|</span>
-                                        <span class="blog-card-new__read">4 min read</span>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 5 -->
-                            <article class="blog-card-new">
-                                <div class="blog-card-new__header">
-                                    <div class="blog-card-new__dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                    <div class="blog-card-new__number">NO.005</div>
-                                </div>
-                                <div class="blog-card-new__image">
-                                    <img src="pictures/busify img.webp" alt="Design Thinking" loading="lazy">
-                                </div>
-                                <div class="blog-card-new__content">
-                                    <span class="blog-card-new__category">Design</span>
-                                    <h3 class="blog-card-new__title">Design Thinking: Creating Busify App</h3>
-                                    <div class="blog-card-new__meta">
-                                        <span class="blog-card-new__author">by Akshad Makhana</span>
-                                        <span class="blog-card-new__divider">|</span>
-                                        <span class="blog-card-new__read">3 min read</span>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 6 -->
-                            <article class="blog-card-new">
-                                <div class="blog-card-new__header">
-                                    <div class="blog-card-new__dots">
-                                        <span></span><span></span><span></span>
-                                    </div>
-                                    <div class="blog-card-new__number">NO.006</div>
-                                </div>
-                                <div class="blog-card-new__image">
-                                    <img src="pictures/expense tracker img.webp" alt="Python Project" loading="lazy">
-                                </div>
-                                <div class="blog-card-new__content">
-                                    <span class="blog-card-new__category">Python</span>
-                                    <h3 class="blog-card-new__title">Building an Expense Tracker with Tkinter</h3>
-                                    <div class="blog-card-new__meta">
-                                        <span class="blog-card-new__author">by Akshad Makhana</span>
-                                        <span class="blog-card-new__divider">|</span>
-                                        <span class="blog-card-new__read">2 min read</span>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
                     </div>
                 </div>
             </section> <!-- end blog section -->
@@ -2242,6 +2244,34 @@
         });
 
         console.log('✅ Google Analytics custom tracking initialized');
+    </script>
+
+    <!-- Blog Accordion Toggle Script -->
+    <script>
+        function toggleBlog(button) {
+            const item = button.closest('.blog-accordion__item');
+            const isActive = item.classList.contains('active');
+
+            // Close all other items first
+            document.querySelectorAll('.blog-accordion__item.active').forEach(activeItem => {
+                if (activeItem !== item) {
+                    activeItem.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked item
+            item.classList.toggle('active');
+
+            // Track with analytics if available
+            if (typeof gtag !== 'undefined') {
+                const blogTitle = item.querySelector('.blog-accordion__title').textContent.trim();
+                gtag('event', 'blog_accordion_toggle', {
+                    'event_category': 'Blog',
+                    'event_label': blogTitle,
+                    'action': isActive ? 'collapse' : 'expand'
+                });
+            }
+        }
     </script>
 
 </body>
