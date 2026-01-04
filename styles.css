@@ -5824,37 +5824,41 @@ img.u-pull-left {
 
     .blog-accordion__header {
         padding: 1.5rem 1.5rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        padding-right: 4.5rem;
     }
 
     .blog-accordion__info {
         width: 100%;
-        padding-right: 3rem;
     }
 
     .blog-accordion__title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         line-height: 1.4;
         color: var(--color-white);
+        word-wrap: break-word;
     }
 
     .blog-accordion__category {
         font-size: 1rem;
         letter-spacing: 0.15em;
+        margin-bottom: 0.5rem;
     }
 
     .blog-accordion__meta {
         font-size: 1.1rem;
+        margin-top: 0.5rem;
     }
 
     .blog-accordion__icon {
-        font-size: 2rem;
-        margin-left: 0;
+        font-size: 1.8rem;
         position: absolute;
-        top: 1.5rem;
+        top: 50%;
         right: 1.5rem;
+        transform: translateY(-50%);
+    }
+
+    .blog-accordion__item.active .blog-accordion__icon {
+        transform: translateY(-50%) rotate(45deg);
     }
 
     .blog-accordion__item {
