@@ -49,11 +49,9 @@
     <link rel="stylesheet" href="vendor.css">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Japanese Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Editorial Serif Font for Blog -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
     <!-- favicons
@@ -117,7 +115,6 @@
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#works" class="smoothscroll">Projects</a></li>
-                        <li><a href="#blog" class="smoothscroll">Blog</a></li>
                         <li><a href="#contact" class="smoothscroll">Contact</a></li>
                     </ul>
                 </nav>
@@ -178,7 +175,7 @@
                             <h2 class="text-pretitle with-line" data-animate-el>
                                 About
                             </h2>
-                            <p class="attention-getter" data-animate-el style="text-align: justify;">
+                            <p class="attention-getter" data-animate-el style="text-align: left;">
                                 I'm passionate about using AI and data science to solve real-world problems, from
                                 predicting financial markets to detecting security threats. My goal is to bridge the gap
                                 between cutting-edge technology and practical applications that benefit society.
@@ -242,29 +239,30 @@
                     <div class="column lg-12">
                         <h2 class="text-pretitle" data-animate-el>Libraries & Frameworks</h2>
 
-                        <div class="column lg-6 tab-12" style="float: left;">
-                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Data Science &
-                                ML Foundations</h3>
-                            <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
-                                <li>NumPy, Pandas</li>
-                                <li>Matplotlib, Seaborn</li>
-                                <li>Scikit-learn, XGBoost</li>
-                                <li>TensorFlow, Keras</li>
-                            </ul>
-                        </div>
+                        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                            <div style="flex: 1 1 300px;">
+                                <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Data Science
+                                    &
+                                    ML Foundations</h3>
+                                <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
+                                    <li>NumPy, Pandas</li>
+                                    <li>Matplotlib, Seaborn</li>
+                                    <li>Scikit-learn, XGBoost</li>
+                                    <li>TensorFlow, Keras</li>
+                                </ul>
+                            </div>
 
-                        <div class="column lg-6 tab-12" style="float: left;">
-                            <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Specialized
-                                Tools Foundations</h3>
-                            <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
-                                <li>OpenCV, YOLO</li>
-                                <li>ARIMA, SARIMA, Prophet</li>
-                                <li>Streamlit, Tkinter</li>
-                                <li>FlutterFlow, Git</li>
-                            </ul>
+                            <div style="flex: 1 1 300px;">
+                                <h3 style="color: var(--color-1); margin-top: 1rem; margin-bottom: 0.5rem;">Specialized
+                                    Tools Foundations</h3>
+                                <ul class="skills-list" data-animate-el style="font-size: 1.1rem; line-height: 1.8;">
+                                    <li>OpenCV, YOLO</li>
+                                    <li>ARIMA, SARIMA, Prophet</li>
+                                    <li>Streamlit, Tkinter</li>
+                                    <li>FlutterFlow, Git</li>
+                                </ul>
+                            </div>
                         </div>
-
-                        <div style="clear: both;"></div>
                     </div>
                 </div> <!-- end libraries-frameworks -->
 
@@ -299,7 +297,7 @@
                                     <p class="timeline__timeframe">May 2025 - July 2025</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p style="text-align: justify;">Completed a 3-month hybrid internship in Data
+                                    <p style="text-align: left;">Completed a 3-month hybrid internship in Data
                                         Science & Analytics at Zidio Development. Worked on a project titled "Stock
                                         Market Time Series Forecasting" using ARIMA, SARIMA, Prophet, and LSTM models.
                                         Built an LSTM-based prediction pipeline, developed interactive Streamlit
@@ -330,7 +328,7 @@
                                     <p class="timeline__timeframe">2024 to Present</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p style="text-align: justify;">Located in Kopergoan, Maharashtra, Sanjivani
+                                    <p style="text-align: left;">Located in Kopergoan, Maharashtra, Sanjivani
                                         University offers a comprehensive CSE in AI and Data Science program. The
                                         curriculum focuses on artificial intelligence, machine learning, and data
                                         analytics, combining theoretical knowledge with practical applications. With
@@ -348,7 +346,7 @@
                                     <p class="timeline__timeframe">2012 to 2024</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p style="text-align: justify;">I completed my SSC and HSC in Science from Shri
+                                    <p style="text-align: left;">I completed my SSC and HSC in Science from Shri
                                         Saibaba English Medium School and Junior College, Shirdi. The institution
                                         provided a solid academic foundation with a strong emphasis on Science,
                                         supported by excellent teaching methods and well-equipped laboratories. Its
@@ -503,7 +501,7 @@
                                         Factor:</strong> 7.95 | UGC-Approved, Peer-Reviewed International Journal
                                 </p>
 
-                                <p style="margin: 1rem 0; color: var(--color-text); text-align: justify;">
+                                <p style="margin: 1rem 0; color: var(--color-text); text-align: left;">
                                     Published research presenting "AnantaNetra," a novel hybrid AI framework designed to
                                     address India's critical air quality crisis. The research involved the development
                                     and deployment of a custom-built LSTM+XGBoost ensemble model, achieving 92% accuracy
@@ -513,7 +511,7 @@
                                     meteorological data sources to ensure comprehensive spatial and temporal coverage.
                                 </p>
 
-                                <p style="margin: 1rem 0; color: var(--color-text); text-align: justify;">
+                                <p style="margin: 1rem 0; color: var(--color-text); text-align: left;">
                                     The implemented system provides actionable, AI-powered health advisories and
                                     supports evidence-based policy making, directly aligning with the objectives of
                                     India's National Clean Air Programme (NCAP). The scalable microservices architecture
@@ -569,7 +567,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">An end-to-end stock market forecasting system
+                                    <p style="text-align: left;">An end-to-end stock market forecasting system
                                         developed during a one-month Data Science internship at Zidio Development. The
                                         project integrates classical time series models (ARIMA, SARIMA) and deep
                                         learning techniques (Prophet, LSTM) into a unified platform with interactive
@@ -611,7 +609,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">An AI-powered real-time shoplifting detection system
+                                    <p style="text-align: left;">An AI-powered real-time shoplifting detection system
                                         built using YOLO object detection and OpenCV. <strong>Detected suspicious
                                             behavior with 78% accuracy, processing 500+ video frames per second</strong>
                                         for real-time surveillance. The system processes video streams to identify and
@@ -651,7 +649,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">The AI Reflection project was developed for an
+                                    <p style="text-align: left;">The AI Reflection project was developed for an
                                         industry hackathon organized by Sanjivani University, focusing on emotion
                                         sentiment analysis using text and real-time facial expressions.
                                         <strong>Classified 5 emotions (happy, sad, neutral, angry, surprised) with 82%
@@ -694,7 +692,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">A comprehensive library management system built
+                                    <p style="text-align: left;">A comprehensive library management system built
                                         using C++ to demonstrate core Data Structures and Algorithms concepts.
                                         <strong>Handles 1,000+ book records efficiently with search time reduced by 40%
                                             using optimized algorithms.</strong> Implemented using Doubly Linked Lists
@@ -736,7 +734,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">The Busify app was developed as part of a Design
+                                    <p style="text-align: left;">The Busify app was developed as part of a Design
                                         Thinking project to understand and apply the principles of human-centered
                                         design. <strong>Designed for 50+ daily users with 60% improvement in user
                                             satisfaction</strong> based on user testing feedback. The goal was to create
@@ -777,7 +775,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">The Expenses Tracker is a Python-based program
+                                    <p style="text-align: left;">The Expenses Tracker is a Python-based program
                                         designed to track and visualize personal expenses. <strong>Tracks expenses
                                             across 100+ categories and visualizes data for 500+ transactions</strong>
                                         with interactive charts. Using Tkinter for the graphical user interface (GUI)
@@ -817,7 +815,7 @@
 
                                 <!-- Description and Project Link (Always visible below the heading) -->
                                 <div class="project-description" style="padding-top: 10px;">
-                                    <p style="text-align: justify;">An interactive Java application that demonstrates
+                                    <p style="text-align: left;">An interactive Java application that demonstrates
                                         the principles of sustainable growth through plant cultivation simulation. This
                                         educational tool illustrates the delicate balance between nurturing development
                                         and the consequences of excess, providing profound insights into personal and
@@ -1202,105 +1200,7 @@
                 </div>
             </section> <!-- end testimonials section -->
 
-            <!-- BLOG
-            ================================================== -->
-            <section id="blog" class="s-blog target-section">
-                <div class="row works-portfolio">
-                    <div class="column lg-12" data-animate-block>
 
-                        <!-- Blog Header -->
-                        <h2 class="text-pretitle" data-animate-el>Blog</h2>
-                        <p class="h1" data-animate-el>Technical Insights & Stories</p>
-
-                        <!-- Blog Cards Grid -->
-                        <div class="blog-cards" data-animate-el>
-
-                            <!-- Blog Card 1 -->
-                            <article class="blog-card" onclick="toggleBlogCard(this)">
-                                <div class="blog-card__hero"
-                                    style="background-image: url('pictures/internship project img.jpg');">
-                                    <div class="blog-card__overlay">
-                                        <div class="blog-card__top">
-                                            <span class="blog-card__category">Research</span>
-                                            <span class="blog-card__date">Jan 2025</span>
-                                        </div>
-                                        <div class="blog-card__bottom">
-                                            <h3 class="blog-card__title">My First Research Publication Journey</h3>
-                                            <p class="blog-card__excerpt">Publishing "AnantaNetra: A Hybrid AI-Powered
-                                                Environmental Monitoring System" in JETIR journal as a first-year B.Tech
-                                                student.</p>
-                                            <button class="blog-card__btn">Read More</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card__content">
-                                    <p>The complete journey of publishing my research paper in JETIR journal. From
-                                        concept to 92% accuracy model, dataset creation from 15+ sources, and navigating
-                                        the peer-review process.</p>
-                                    <img src="pictures/internship project img.jpg" alt="Research Publication"
-                                        loading="lazy">
-                                    <p>This research involved the development of a custom-built LSTM+XGBoost ensemble
-                                        model for real-time Air Quality Index (AQI) monitoring and 24-hour forecasting
-                                        across all 732 districts in India.</p>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 2 -->
-                            <article class="blog-card" onclick="toggleBlogCard(this)">
-                                <div class="blog-card__hero" style="background-image: url('pictures/shoplift.jpg');">
-                                    <div class="blog-card__overlay">
-                                        <div class="blog-card__top">
-                                            <span class="blog-card__category">AI/ML</span>
-                                            <span class="blog-card__date">Dec 2024</span>
-                                        </div>
-                                        <div class="blog-card__bottom">
-                                            <h3 class="blog-card__title">Building a Stock Forecasting Model with LSTM
-                                            </h3>
-                                            <p class="blog-card__excerpt">Deep dive into building a time series
-                                                forecasting system using LSTM neural networks during my internship.</p>
-                                            <button class="blog-card__btn">Read More</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card__content">
-                                    <p>The project integrates classical time series models (ARIMA, SARIMA) and deep
-                                        learning techniques (Prophet, LSTM) into a unified platform.</p>
-                                    <img src="pictures/shoplift.jpg" alt="Stock Forecasting" loading="lazy">
-                                    <p>Built an LSTM-based prediction pipeline with technical indicators (RSI, MACD,
-                                        Bollinger Bands), achieving 85% prediction accuracy on test data.</p>
-                                </div>
-                            </article>
-
-                            <!-- Blog Card 3 -->
-                            <article class="blog-card" onclick="toggleBlogCard(this)">
-                                <div class="blog-card__hero" style="background-image: url('pictures/teamlogo.jpg');">
-                                    <div class="blog-card__overlay">
-                                        <div class="blog-card__top">
-                                            <span class="blog-card__category">Computer Vision</span>
-                                            <span class="blog-card__date">Nov 2024</span>
-                                        </div>
-                                        <div class="blog-card__bottom">
-                                            <h3 class="blog-card__title">Detecting Shoplifting with YOLO & OpenCV</h3>
-                                            <p class="blog-card__excerpt">Building a real-time AI-powered surveillance
-                                                system for retail theft detection.</p>
-                                            <button class="blog-card__btn">Read More</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-card__content">
-                                    <p>The system processes video streams to identify and track suspicious behavior with
-                                        78% accuracy, processing 500+ video frames per second.</p>
-                                    <img src="pictures/teamlogo.jpg" alt="Shoplifting Detection" loading="lazy">
-                                    <p>Features include real-time detection, customizable parameters for fine-tuning,
-                                        and support for both live camera feeds and video files.</p>
-                                </div>
-                            </article>
-
-                        </div> <!-- end blog-cards -->
-
-                    </div>
-                </div>
-            </section> <!-- end blog section -->
 
             <!-- CONTACT
             ================================================== -->
@@ -2150,20 +2050,7 @@
             });
         });
 
-        // ========================================
-        // BLOG/ARTICLE CLICK TRACKING
-        // ========================================
-        document.querySelectorAll('#blog a, .blog-card a').forEach(link => {
-            link.addEventListener('click', function () {
-                const blogTitle = this.closest('.blog-card')?.querySelector('h3, .title')?.textContent.trim() || 'Blog Article';
-                gtag('event', 'blog_click', {
-                    'event_category': 'Blog',
-                    'event_label': blogTitle,
-                    'article_title': blogTitle
-                });
-                console.log('📊 Analytics: Blog click -', blogTitle);
-            });
-        });
+
 
         // ========================================
         // SCROLL DEPTH TRACKING
@@ -2190,38 +2077,6 @@
         console.log('✅ Google Analytics custom tracking initialized');
     </script>
 
-    <!-- Blog Card Toggle Script -->
-    <script>
-        function toggleBlogCard(card) {
-            const isActive = card.classList.contains('active');
 
-            // Close all other cards first
-            document.querySelectorAll('.blog-card.active').forEach(activeCard => {
-                if (activeCard !== card) {
-                    activeCard.classList.remove('active');
-                }
-            });
-
-            // Toggle the clicked card
-            card.classList.toggle('active');
-
-            // If opening, scroll to show content
-            if (!isActive) {
-                setTimeout(() => {
-                    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
-            }
-
-            // Track with analytics if available
-            if (typeof gtag !== 'undefined') {
-                const blogTitle = card.querySelector('.blog-card__title').textContent.trim();
-                gtag('event', 'blog_card_toggle', {
-                    'event_category': 'Blog',
-                    'event_label': blogTitle,
-                    'action': isActive ? 'collapse' : 'expand'
-                });
-            }
-        }
-    </script>
 
 </body>
