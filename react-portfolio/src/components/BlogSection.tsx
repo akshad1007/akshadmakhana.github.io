@@ -119,7 +119,7 @@ export function BlogSection() {
             >
               <ArrowRight className="w-5 h-5" />
             </button>
-            <div className="ml-4 font-mono text-lambo-iron text-[14px]">
+            <div className="ml-4 font-mono text-lambo-ash text-[14px]">
               <span className="text-lambo-gold">{currentPage + 1}</span> / {totalPages}
             </div>
           </div>
@@ -146,12 +146,12 @@ export function BlogSection() {
                   <div className="absolute inset-0 bg-gradient-to-r from-lambo-gold/0 via-lambo-gold/5 to-lambo-gold/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
                   
                   <div className="flex items-center gap-6 z-10">
-                    <span className="text-lambo-iron font-mono text-[11px] group-hover:text-lambo-gold transition-colors">{post.id}</span>
+                    <span className="text-lambo-ash font-mono text-[11px] group-hover:text-lambo-gold transition-colors">{post.id}</span>
                     <div className="flex flex-col">
                       <span className="text-lambo-white text-[18px] md:text-[22px] uppercase font-bold tracking-tight group-hover:text-lambo-gold transition-colors">{post.title}</span>
                       <div className="flex gap-4 mt-1">
                         <span className="text-lambo-ash text-[9px] uppercase tracking-widest">{post.tag}</span>
-                        <span className="text-lambo-iron text-[9px] uppercase tracking-widest">{post.date}</span>
+                        <span className="text-lambo-ash text-[9px] uppercase tracking-widest">{post.date}</span>
                       </div>
                     </div>
                   </div>
@@ -225,15 +225,15 @@ export function BlogSection() {
                   {/* Left Column: Metadata */}
                   <div className="md:col-span-4 flex flex-col gap-8 font-mono">
                     <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-gold">
-                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">PUBLISHED_ON</span>
+                      <span className="text-lambo-ash text-[10px] uppercase mb-1 block">PUBLISHED_ON</span>
                       <span className="text-lambo-white text-[16px]">{selectedPost.date}.2026</span>
                     </div>
                     <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-ash">
-                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">CATEGORY</span>
+                      <span className="text-lambo-ash text-[10px] uppercase mb-1 block">CATEGORY</span>
                       <span className="text-lambo-ash text-[16px] tracking-[0.2em]">{selectedPost.tag}</span>
                     </div>
                     <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-gold/50">
-                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">ARTICLE_STATUS</span>
+                      <span className="text-lambo-ash text-[10px] uppercase mb-1 block">ARTICLE_STATUS</span>
                       <span className="text-lambo-gold text-[16px]">{selectedPost.status}</span>
                     </div>
                   </div>
@@ -256,11 +256,11 @@ export function BlogSection() {
                       {/* Secondary Technical Text */}
                       <div className="mt-8 grid grid-cols-2 gap-8 border-t border-lambo-iron/10 pt-8 font-mono">
                         <div className="flex flex-col">
-                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Read_Time</span>
+                          <span className="text-lambo-ash text-[9px] uppercase tracking-widest mb-2">Read_Time</span>
                           <span className="text-lambo-white text-[13px]">~4 min</span>
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Document_ID</span>
+                          <span className="text-lambo-ash text-[9px] uppercase tracking-widest mb-2">Document_ID</span>
                           <span className="text-lambo-white text-[13px]">AM-2026-{selectedPost.id}</span>
                         </div>
                       </div>
