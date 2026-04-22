@@ -138,12 +138,12 @@ export function BlogSection() {
         </div>
       </div>
 
-      {/* Simplified & Balanced Detailed View Modal */}
+      {/* Light Glass Detailed View Modal */}
       <AnimatePresence>
         {selectedPost && (
           <div className="fixed inset-0 flex items-center justify-center p-4 md:p-12 z-[100]">
             <motion.div 
-              className="absolute inset-0 bg-lambo-black/80 backdrop-blur-md"
+              className="absolute inset-0 bg-lambo-black/40 backdrop-blur-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -151,14 +151,14 @@ export function BlogSection() {
             />
             
             <motion.div 
-              className="relative w-full max-w-4xl bg-[#0a0a0a] border border-lambo-gold/10 flex flex-col max-h-[85vh] overflow-hidden shadow-2xl"
+              className="relative w-full max-w-4xl bg-lambo-black/40 border border-lambo-white/10 backdrop-blur-2xl flex flex-col max-h-[85vh] overflow-hidden shadow-2xl"
               initial={{ opacity: 0, scale: 0.98, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98, y: 10 }}
             >
               <div className="flex-1 overflow-y-auto p-8 md:p-12 flex flex-col gap-8 custom-scrollbar">
                 {/* ID & Title Section */}
-                <div className="flex flex-col gap-3 border-b border-lambo-iron/10 pb-6">
+                <div className="flex flex-col gap-3 border-b border-lambo-white/10 pb-6">
                   <div className="flex items-center justify-between">
                     <span className="text-lambo-gold font-mono text-[13px] tracking-widest uppercase">Post No. {selectedPost.id}</span>
                     <span className="text-lambo-ash font-mono text-[11px] uppercase tracking-widest">{selectedPost.date}.2026</span>
@@ -179,19 +179,19 @@ export function BlogSection() {
                 </div>
 
                 {/* Conclusion Section */}
-                <div className="bg-lambo-iron/5 border-l-2 border-lambo-gold p-6 flex flex-col gap-3">
+                <div className="bg-lambo-white/5 border-l-2 border-lambo-gold p-6 flex flex-col gap-3">
                   <span className="text-lambo-gold uppercase text-[11px] tracking-[0.3em] font-bold">Conclusion</span>
-                  <p className="text-lambo-ash text-[15px] md:text-[16px] font-normal leading-relaxed italic">
+                  <p className="text-lambo-white text-[15px] md:text-[16px] font-normal leading-relaxed italic opacity-80">
                     "{selectedPost.conclusion}"
                   </p>
                 </div>
               </div>
 
               {/* Action Footer */}
-              <div className="p-6 border-t border-lambo-iron/10 bg-lambo-black flex justify-center md:justify-end">
+              <div className="p-6 border-t border-lambo-white/10 bg-transparent flex justify-center md:justify-end">
                 <button 
                   onClick={() => setSelectedPost(null)}
-                  className="px-10 py-3 border border-lambo-gold/30 text-lambo-gold hover:bg-lambo-gold hover:text-lambo-black transition-all font-bold uppercase tracking-widest text-[12px]"
+                  className="px-10 py-3 border border-lambo-gold/50 text-lambo-gold hover:bg-lambo-gold hover:text-lambo-black transition-all font-bold uppercase tracking-widest text-[12px]"
                 >
                   Close Blog
                 </button>
@@ -217,7 +217,7 @@ export function BlogSection() {
           background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #FFC000;
+          background: rgba(255, 192, 0, 0.5);
         }
       `}} />
     </div>
