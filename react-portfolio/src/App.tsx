@@ -9,6 +9,7 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { ExpertiseSection } from './components/ExpertiseSection';
 import { BlogSection } from './components/BlogSection';
 import { GallerySection } from './components/GallerySection';
+import { HLSVideo } from './components/HLSVideo';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <div id="about" className="relative w-full border-t border-lambo-iron">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4" muted autoPlay loop playsInline className="w-full h-full object-cover opacity-30 mix-blend-screen" />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <AboutSection />
         </div>
@@ -37,7 +38,7 @@ function App() {
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[2] contrast-[1.2]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <ExpertiseSection />
         </div>
@@ -46,7 +47,7 @@ function App() {
         <div id="research" className="relative w-full border-t border-lambo-iron bg-lambo-black">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260329_050842_be71947f-f16e-4a14-810c-06e83d23ddb5.mp4" muted autoPlay loop playsInline className="w-full h-full object-cover opacity-30 mix-blend-screen" />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <ResearchSection />
         </div>
@@ -59,7 +60,7 @@ function App() {
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[2] contrast-[1.2]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <ProjectsSection />
         </div>
@@ -72,7 +73,7 @@ function App() {
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[2] contrast-[1.2]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <ExperienceSection />
         </div>
@@ -81,11 +82,11 @@ function App() {
         <div id="gallery" className="relative w-full border-t border-lambo-iron bg-lambo-black">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <video
-              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4"
+              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4"
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[1.5]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <GallerySection />
         </div>
@@ -98,7 +99,7 @@ function App() {
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[2] contrast-[1.2]"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <CertificationsSection />
         </div>
@@ -107,15 +108,15 @@ function App() {
         <div id="education" className="relative w-full border-t border-lambo-iron bg-lambo-black">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <video src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_015952_e1deeb12-8fb7-4071-a42a-60779fc64ab6.mp4" muted autoPlay loop playsInline className="w-full h-full object-cover opacity-30 mix-blend-screen" />
-            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/50 to-lambo-black"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-lambo-black via-lambo-black/65 to-lambo-black"></div>
           </div>
           <EducationSection />
         </div>
         {/* Blog Section */}
         <div id="blog" className="relative w-full border-t border-lambo-iron bg-lambo-black">
           <div className="absolute inset-0 z-0 overflow-hidden">
-            <video
-              src="https://res.cloudinary.com/dfonotyfb/video/upload/v1775585556/dds3_1_rqhg7x.mp4"
+            <HLSVideo
+              src="https://stream.mux.com/jPyJ2YM6Nlly7U6EyfxM01tz4D4uPE3gyJ4PYuvY62Wg.m3u8"
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen"
             />
