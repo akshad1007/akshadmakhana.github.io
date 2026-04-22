@@ -17,9 +17,17 @@ export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
+    const playVideo = async () => {
+      if (videoRef.current) {
+        try {
+          videoRef.current.muted = true;
+          await videoRef.current.play();
+        } catch (error) {
+          console.log("Video auto-play failed, attempting retry...");
+        }
+      }
+    };
+    playVideo();
   }, [currentIdx]);
 
   const handleEnded = () => {
@@ -36,6 +44,7 @@ export function HeroSection() {
           src={PLAYLIST[(currentIdx + 1) % PLAYLIST.length]} 
           preload="auto" 
           muted 
+          playsInline
           className="hidden" 
         />
         
@@ -47,6 +56,7 @@ export function HeroSection() {
             muted
             autoPlay
             playsInline
+            webkit-playsinline="true"
             onEnded={handleEnded}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
