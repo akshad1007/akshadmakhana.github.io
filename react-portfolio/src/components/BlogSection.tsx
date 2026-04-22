@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { ArrowRight, ArrowLeft, X } from 'lucide-react';
+import { ArrowRight, ArrowLeft, X, Terminal } from 'lucide-react';
 
 const BLOG_POSTS = [
   { 
@@ -140,9 +140,12 @@ export function BlogSection() {
                 <motion.div 
                   key={`${post.id}-${i}`}
                   onClick={() => setSelectedPost(post)}
-                  className="group flex items-center justify-between py-8 border-b border-lambo-iron/20 hover:bg-lambo-iron/5 transition-all px-4 cursor-pointer"
+                  className="group flex items-center justify-between py-8 border-b border-lambo-iron/20 hover:bg-lambo-iron/5 transition-all px-4 cursor-pointer relative overflow-hidden"
                 >
-                  <div className="flex items-center gap-6">
+                  {/* Subtle Scanline Hover Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-lambo-gold/0 via-lambo-gold/5 to-lambo-gold/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+                  
+                  <div className="flex items-center gap-6 z-10">
                     <span className="text-lambo-iron font-mono text-[11px] group-hover:text-lambo-gold transition-colors">{post.id}</span>
                     <div className="flex flex-col">
                       <span className="text-lambo-white text-[18px] md:text-[22px] uppercase font-bold tracking-tight group-hover:text-lambo-gold transition-colors">{post.title}</span>
@@ -153,8 +156,10 @@ export function BlogSection() {
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-8">
-                    <span className="hidden sm:block text-lambo-gold font-mono text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">Read Brief →</span>
+                  <div className="flex items-center gap-8 z-10">
+                    <div className="hidden sm:flex items-center gap-2 text-lambo-gold font-mono text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-x-4 group-hover:translate-x-0">
+                      <Terminal className="w-3 h-3" /> Initialize_Brief
+                    </div>
                     <div className={`px-2 py-0.5 border text-[9px] font-mono ${post.status === 'BETA' ? 'border-lambo-ash text-lambo-ash' : 'border-lambo-gold/50 text-lambo-gold'}`}>
                       {post.status}
                     </div>
@@ -166,89 +171,118 @@ export function BlogSection() {
         </div>
       </div>
 
-      {/* Modal - Post Brief Overlay */}
+      {/* Modal - Centered Technical Data Interface */}
       <AnimatePresence>
         {selectedPost && (
-          <>
-            {/* Backdrop */}
+          <div className="fixed inset-0 flex items-center justify-center p-4 md:p-8 z-[100]">
+            {/* Cinematic Backdrop */}
             <motion.div 
-              className="fixed inset-0 bg-lambo-black/90 backdrop-blur-md z-[100]"
+              className="absolute inset-0 bg-lambo-black/95 backdrop-blur-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedPost(null)}
             />
             
-            {/* Content Sidebar */}
+            {/* Technical Interface Card */}
             <motion.div 
-              className="fixed inset-y-0 right-0 w-full md:w-[600px] bg-lambo-black border-l border-lambo-gold/30 z-[101] shadow-2xl flex flex-col"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="relative w-full max-w-4xl bg-lambo-black border border-lambo-gold/40 shadow-[0_0_50px_rgba(255,192,0,0.1)] overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
             >
-              {/* Modal Header */}
-              <div className="p-8 border-b border-lambo-iron/20 flex justify-between items-center">
-                <div className="flex flex-col">
-                  <span className="text-lambo-gold font-mono text-[10px] tracking-widest">LOG_DATA_ENTRY_{selectedPost.id}</span>
-                  <h3 className="text-lambo-white text-[24px] uppercase font-bold tracking-tight mt-1">{selectedPost.title}</h3>
-                </div>
-                <button 
-                  onClick={() => setSelectedPost(null)}
-                  className="w-10 h-10 flex items-center justify-center text-lambo-iron hover:text-lambo-gold hover:bg-lambo-iron/10 transition-all"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
+              {/* Corner Accents */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-lambo-gold" />
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-lambo-gold" />
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-lambo-gold" />
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-lambo-gold" />
 
-              {/* Modal Body */}
-              <div className="flex-1 overflow-y-auto p-12 flex flex-col gap-12">
-                <div className="flex flex-wrap gap-8 font-mono">
+              {/* Grid Background Overlay */}
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,192,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,192,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)] pointer-events-none" />
+
+              <div className="relative p-8 md:p-12">
+                {/* Modal Header */}
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-lambo-iron/20 pb-8">
                   <div className="flex flex-col">
-                    <span className="text-lambo-iron text-[10px] uppercase mb-1">Entry Date</span>
-                    <span className="text-lambo-white text-[14px]">{selectedPost.date}.2026</span>
+                    <div className="flex items-center gap-3 text-lambo-gold font-mono text-[10px] tracking-[0.3em]">
+                      <Terminal className="w-4 h-4 animate-pulse" /> SYSTEM_DECODING_FILE_{selectedPost.id}
+                    </div>
+                    <h3 className="text-lambo-white text-[32px] md:text-[40px] uppercase font-bold tracking-tight mt-2 leading-none">
+                      {selectedPost.title}
+                    </h3>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-lambo-iron text-[10px] uppercase mb-1">Core Tech</span>
-                    <span className="text-lambo-gold text-[14px]">{selectedPost.tag}</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-lambo-iron text-[10px] uppercase mb-1">Status</span>
-                    <span className="text-lambo-white text-[14px] tracking-wider">{selectedPost.status}</span>
-                  </div>
+                  <button 
+                    onClick={() => setSelectedPost(null)}
+                    className="w-12 h-12 flex items-center justify-center border border-lambo-iron/50 text-lambo-white hover:bg-lambo-gold hover:text-lambo-black hover:border-lambo-gold transition-all group"
+                  >
+                    <X className="w-6 h-6 transition-transform group-hover:rotate-90" />
+                  </button>
                 </div>
 
-                <div className="flex flex-col gap-6">
-                  <span className="text-lambo-iron text-[10px] uppercase tracking-widest border-b border-lambo-iron/10 pb-2">Technical Brief</span>
-                  <p className="text-lambo-ash text-[18px] leading-relaxed font-light">
-                    {selectedPost.content}
-                  </p>
+                {/* Main Content Grid */}
+                <div className="grid md:grid-cols-12 gap-12">
+                  {/* Left Column: Metadata */}
+                  <div className="md:col-span-4 flex flex-col gap-8 font-mono">
+                    <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-gold">
+                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">LOG_TIMESTAMP</span>
+                      <span className="text-lambo-white text-[16px]">{selectedPost.date}.2026.UTC</span>
+                    </div>
+                    <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-ash">
+                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">CLASSIFICATION</span>
+                      <span className="text-lambo-ash text-[16px] tracking-[0.2em]">{selectedPost.tag}_SYSTEM</span>
+                    </div>
+                    <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-gold/50">
+                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">INTEGRITY_STATUS</span>
+                      <span className="text-lambo-gold text-[16px]">{selectedPost.status}</span>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Narrative */}
+                  <div className="md:col-span-8">
+                    <div className="flex flex-col gap-6">
+                      <span className="text-lambo-gold font-mono text-[11px] tracking-widest uppercase flex items-center gap-2">
+                        <div className="w-8 h-[1px] bg-lambo-gold" /> Data_Payload_Brief
+                      </span>
+                      <motion.p 
+                        className="text-lambo-ash text-[20px] md:text-[22px] leading-relaxed font-light italic"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        "{selectedPost.content}"
+                      </motion.p>
+                      
+                      {/* Secondary Technical Text */}
+                      <div className="mt-8 grid grid-cols-2 gap-8 border-t border-lambo-iron/10 pt-8 font-mono">
+                        <div className="flex flex-col">
+                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Computational_Cost</span>
+                          <span className="text-lambo-white text-[13px]">O(log n) + 40ms</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Encryption_Method</span>
+                          <span className="text-lambo-white text-[13px]">SHA-256_STRICT</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Decorative Tech Specs */}
-                <div className="grid grid-cols-2 gap-4 p-6 bg-lambo-iron/5 border border-lambo-iron/10">
-                  <div className="flex flex-col">
-                    <span className="text-lambo-iron text-[9px] uppercase">Processing Delay</span>
-                    <span className="text-lambo-white text-[12px] font-mono">0.042ms</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-lambo-iron text-[9px] uppercase">System Reliability</span>
-                    <span className="text-lambo-white text-[12px] font-mono">99.98%</span>
-                  </div>
+                {/* Footer Action */}
+                <div className="mt-12 flex justify-end">
+                  <button 
+                    onClick={() => setSelectedPost(null)}
+                    className="group relative px-12 py-4 bg-transparent border border-lambo-gold text-lambo-gold font-bold uppercase text-[12px] tracking-[0.2em] overflow-hidden hover:text-lambo-black transition-colors duration-300"
+                  >
+                    <div className="absolute inset-0 bg-lambo-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+                    <span className="relative z-10 flex items-center gap-3">
+                      Terminal_Exit <X className="w-4 h-4" />
+                    </span>
+                  </button>
                 </div>
-              </div>
-
-              {/* Modal Footer */}
-              <div className="p-8 border-t border-lambo-iron/20 bg-lambo-iron/5 flex justify-end">
-                <button 
-                  onClick={() => setSelectedPost(null)}
-                  className="flex items-center gap-3 px-8 py-3 bg-lambo-gold text-lambo-black font-bold uppercase text-[12px] hover:bg-lambo-white transition-all"
-                >
-                  Close Log <X className="w-4 h-4" />
-                </button>
               </div>
             </motion.div>
-          </>
+          </div>
         )}
       </AnimatePresence>
     </div>
