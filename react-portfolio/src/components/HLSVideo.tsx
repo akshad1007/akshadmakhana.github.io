@@ -14,13 +14,33 @@ export function HLSVideo({ src, ...props }: HLSVideoProps) {
 
     let hls: Hls | null = null;
 
-    if (Hls.isSupported()) {
-      hls = new Hls();
-      hls.loadSource(src);
-      hls.attachMedia(video);
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      // For Safari, which has native HLS support
+    const startPlayback = async () => {
+      try {
+        video.muted = true;
+        await video.play();
+      } catch (err) {
+        // Autoplay might be blocked, handled by muted attribute usually
+      }
+    };
+
+    if (src.endsWith('.m3u8')) {
+      if (Hls.isSupported()) {
+        hls = new Hls();
+        hls.loadSource(src);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          startPlayback();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = src;
+        video.addEventListener('loadedmetadata', () => {
+          startPlayback();
+        });
+      }
+    } else {
+      // Regular MP4 fallback
       video.src = src;
+      startPlayback();
     }
 
     return () => {

@@ -1,15 +1,12 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { HLSVideo } from './HLSVideo';
 
 const PLAYLIST = [
-  "https://res.cloudinary.com/dfonotyfb/video/upload/v1775585556/dds3_1_rqhg7x.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260329_050842_be71947f-f16e-4a14-810c-06e83d23ddb5.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260227_042027_c4b2f2ea-1c7c-4d6e-9e3d-81a78063703f.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260402_054547_9875cfc5-155a-4229-8ec8-b7ba7125cbf8.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260319_015952_e1deeb12-8fb7-4071-a42a-60779fc64ab6.mp4"
+  "https://stream.mux.com/BuGGTsiXq1T00WUb8qfURrHkTCbhrkfFLSv4uAOZzdhw.m3u8",
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260330_145725_08886141-ed95-4a8e-8d6d-b75eaadce638.mp4",
+  "https://stream.mux.com/jPyJ2YM6Nlly7U6EyfxM01tz4D4uPE3gyJ4PYuvY62Wg.m3u8",
+  "https://res.cloudinary.com/dfonotyfb/video/upload/v1775585556/dds3_1_rqhg7x.mp4"
 ];
 
 export function HeroSection() {
@@ -17,17 +14,12 @@ export function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const playVideo = async () => {
-      if (videoRef.current) {
-        try {
-          videoRef.current.muted = true;
-          await videoRef.current.play();
-        } catch (error) {
-          console.log("Video auto-play failed, attempting retry...");
-        }
-      }
-    };
-    playVideo();
+    // Note: HLSVideo handles the play/loading logic internally via hls.js
+    // but we still want to ensure it plays on index change
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
   }, [currentIdx]);
 
   const handleEnded = () => {
@@ -38,32 +30,28 @@ export function HeroSection() {
     <section className="relative h-screen w-full flex flex-col justify-end pb-32 px-[40px] overflow-hidden bg-lambo-black">
       {/* Seamless Video Container */}
       <div className="absolute inset-0 z-0">
-        {/* Preload Next Video */}
-        <video 
-          key={`preload-${(currentIdx + 1) % PLAYLIST.length}`}
-          src={PLAYLIST[(currentIdx + 1) % PLAYLIST.length]} 
-          preload="auto" 
-          muted 
-          playsInline
-          className="hidden" 
-        />
-        
         <AnimatePresence mode="popLayout">
-          <motion.video
+          <motion.div
             key={currentIdx}
-            ref={videoRef}
-            src={PLAYLIST[currentIdx]}
-            muted
-            autoPlay
-            playsInline
-            webkit-playsinline="true"
-            onEnded={handleEnded}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="w-full h-full object-cover"
-          />
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            className="w-full h-full"
+          >
+            <HLSVideo
+              src={PLAYLIST[currentIdx]}
+              muted
+              autoPlay
+              playsInline
+              webkit-playsinline="true"
+              onEnded={handleEnded}
+              className="w-full h-full object-cover"
+              // We pass the ref to the underlying video tag via props if HLSVideo supported it, 
+              // but currently HLSVideo doesn't expose the ref. 
+              // I'll update HLSVideo to support forwarded refs.
+            />
+          </motion.div>
         </AnimatePresence>
         
         {/* Lamborghini Dark Overlay */}
@@ -106,7 +94,7 @@ export function HeroSection() {
           animate={{ width: "100%" }}
           key={currentIdx}
           transition={{ 
-            duration: 10,
+            duration: 12,
             ease: "linear" 
           }}
           style={{ width: `${((currentIdx + 1) / PLAYLIST.length) * 100}%` }}

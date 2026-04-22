@@ -33,8 +33,8 @@ function App() {
         {/* Expertise Section (Redesigned) */}
         <div id="expertise" className="relative w-full border-t border-lambo-iron bg-lambo-black">
           <div className="absolute inset-0 z-0 overflow-hidden">
-            <video
-              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4"
+            <HLSVideo
+              src="https://stream.mux.com/BuGGTsiXq1T00WUb8qfURrHkTCbhrkfFLSv4uAOZzdhw.m3u8"
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[2] contrast-[1.2]"
             />
