@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { ArrowRight, ArrowLeft, X, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 
 const BLOG_POSTS = [
   { 
