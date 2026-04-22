@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { ArrowRight, ArrowLeft, X, Terminal } from 'lucide-react';
+import { ArrowRight, ArrowLeft, X, BookOpen } from 'lucide-react';
 
 const BLOG_POSTS = [
   { 
@@ -101,7 +101,7 @@ export function BlogSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              Digital <span className="text-lambo-gold italic">Log</span>
+              Professional <span className="text-lambo-gold italic">Blog</span>
             </motion.h2>
           </div>
 
@@ -142,7 +142,7 @@ export function BlogSection() {
                   onClick={() => setSelectedPost(post)}
                   className="group flex items-center justify-between py-8 border-b border-lambo-iron/20 hover:bg-lambo-iron/5 transition-all px-4 cursor-pointer relative overflow-hidden"
                 >
-                  {/* Subtle Scanline Hover Effect */}
+                  {/* Subtle Sweep Hover Effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-lambo-gold/0 via-lambo-gold/5 to-lambo-gold/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
                   
                   <div className="flex items-center gap-6 z-10">
@@ -158,7 +158,7 @@ export function BlogSection() {
                   
                   <div className="flex items-center gap-8 z-10">
                     <div className="hidden sm:flex items-center gap-2 text-lambo-gold font-mono text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all transform translate-x-4 group-hover:translate-x-0">
-                      <Terminal className="w-3 h-3" /> Initialize_Brief
+                      View Post <ArrowRight className="w-3 h-3" />
                     </div>
                     <div className={`px-2 py-0.5 border text-[9px] font-mono ${post.status === 'BETA' ? 'border-lambo-ash text-lambo-ash' : 'border-lambo-gold/50 text-lambo-gold'}`}>
                       {post.status}
@@ -206,7 +206,7 @@ export function BlogSection() {
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-lambo-iron/20 pb-8">
                   <div className="flex flex-col">
                     <div className="flex items-center gap-3 text-lambo-gold font-mono text-[10px] tracking-[0.3em]">
-                      <Terminal className="w-4 h-4 animate-pulse" /> SYSTEM_DECODING_FILE_{selectedPost.id}
+                      <BookOpen className="w-4 h-4" /> BLOG_ENTRY_{selectedPost.id}
                     </div>
                     <h3 className="text-lambo-white text-[32px] md:text-[40px] uppercase font-bold tracking-tight mt-2 leading-none">
                       {selectedPost.title}
@@ -225,15 +225,15 @@ export function BlogSection() {
                   {/* Left Column: Metadata */}
                   <div className="md:col-span-4 flex flex-col gap-8 font-mono">
                     <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-gold">
-                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">LOG_TIMESTAMP</span>
-                      <span className="text-lambo-white text-[16px]">{selectedPost.date}.2026.UTC</span>
+                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">PUBLISHED_ON</span>
+                      <span className="text-lambo-white text-[16px]">{selectedPost.date}.2026</span>
                     </div>
                     <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-ash">
-                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">CLASSIFICATION</span>
-                      <span className="text-lambo-ash text-[16px] tracking-[0.2em]">{selectedPost.tag}_SYSTEM</span>
+                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">CATEGORY</span>
+                      <span className="text-lambo-ash text-[16px] tracking-[0.2em]">{selectedPost.tag}</span>
                     </div>
                     <div className="p-4 bg-lambo-iron/5 border-l-2 border-lambo-gold/50">
-                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">INTEGRITY_STATUS</span>
+                      <span className="text-lambo-iron text-[10px] uppercase mb-1 block">ARTICLE_STATUS</span>
                       <span className="text-lambo-gold text-[16px]">{selectedPost.status}</span>
                     </div>
                   </div>
@@ -242,26 +242,26 @@ export function BlogSection() {
                   <div className="md:col-span-8">
                     <div className="flex flex-col gap-6">
                       <span className="text-lambo-gold font-mono text-[11px] tracking-widest uppercase flex items-center gap-2">
-                        <div className="w-8 h-[1px] bg-lambo-gold" /> Data_Payload_Brief
+                        <div className="w-8 h-[1px] bg-lambo-gold" /> Brief_Overview
                       </span>
                       <motion.p 
-                        className="text-lambo-ash text-[20px] md:text-[22px] leading-relaxed font-light italic"
+                        className="text-lambo-ash text-[20px] md:text-[22px] leading-relaxed font-light"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
                       >
-                        "{selectedPost.content}"
+                        {selectedPost.content}
                       </motion.p>
                       
                       {/* Secondary Technical Text */}
                       <div className="mt-8 grid grid-cols-2 gap-8 border-t border-lambo-iron/10 pt-8 font-mono">
                         <div className="flex flex-col">
-                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Computational_Cost</span>
-                          <span className="text-lambo-white text-[13px]">O(log n) + 40ms</span>
+                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Read_Time</span>
+                          <span className="text-lambo-white text-[13px]">~4 min</span>
                         </div>
                         <div className="flex flex-col">
-                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Encryption_Method</span>
-                          <span className="text-lambo-white text-[13px]">SHA-256_STRICT</span>
+                          <span className="text-lambo-iron text-[9px] uppercase tracking-widest mb-2">Document_ID</span>
+                          <span className="text-lambo-white text-[13px]">AM-2026-{selectedPost.id}</span>
                         </div>
                       </div>
                     </div>
@@ -276,7 +276,7 @@ export function BlogSection() {
                   >
                     <div className="absolute inset-0 bg-lambo-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                     <span className="relative z-10 flex items-center gap-3">
-                      Terminal_Exit <X className="w-4 h-4" />
+                      Close Article <X className="w-4 h-4" />
                     </span>
                   </button>
                 </div>
