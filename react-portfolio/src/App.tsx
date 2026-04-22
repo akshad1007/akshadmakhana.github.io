@@ -82,7 +82,7 @@ function App() {
         <div id="gallery" className="relative w-full border-t border-lambo-iron bg-lambo-black">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <video
-              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4"
+              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260330_145725_08886141-ed95-4a8e-8d6d-b75eaadce638.mp4"
               muted autoPlay loop playsInline
               className="w-full h-full object-cover opacity-30 mix-blend-screen brightness-[1.5]"
             />
