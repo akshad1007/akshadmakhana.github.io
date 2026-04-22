@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-lambo-black text-lambo-white antialiased font-sans m-0 p-0;
+  }
+}
+
+@layer components {
+  /* No custom liquid glass or noise layers needed for Lamborghini design system */
+}
+
+@layer utilities {
+  /* Any future utility classes specific to animation can go here */
+}
