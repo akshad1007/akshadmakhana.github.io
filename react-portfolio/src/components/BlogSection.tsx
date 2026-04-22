@@ -109,13 +109,13 @@ export function BlogSection() {
           <div className="flex items-center gap-4">
             <button 
               onClick={prevPage}
-              className="w-14 h-14 flex items-center justify-center border border-lambo-iron text-lambo-white hover:bg-lambo-gold hover:border-lambo-gold hover:text-lambo-black transition-all duration-300"
+              className="w-14 h-14 flex items-center justify-center border border-lambo-iron text-lambo-white hover:bg-lambo-gold hover:border-lambo-gold hover:text-white transition-all duration-300"
             >
               <ArrowLeft className="w-5 h-5" />
             </button>
             <button 
               onClick={nextPage}
-              className="w-14 h-14 flex items-center justify-center border border-lambo-iron text-lambo-white hover:bg-lambo-gold hover:border-lambo-gold hover:text-lambo-black transition-all duration-300"
+              className="w-14 h-14 flex items-center justify-center border border-lambo-iron text-lambo-white hover:bg-lambo-gold hover:border-lambo-gold hover:text-white transition-all duration-300"
             >
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -214,7 +214,7 @@ export function BlogSection() {
                   </div>
                   <button 
                     onClick={() => setSelectedPost(null)}
-                    className="w-12 h-12 flex items-center justify-center border border-lambo-iron/50 text-lambo-white hover:bg-lambo-gold hover:text-lambo-black hover:border-lambo-gold transition-all group"
+                    className="w-12 h-12 flex items-center justify-center border border-lambo-iron/50 text-lambo-white hover:bg-lambo-gold hover:text-white hover:border-lambo-gold transition-all group"
                   >
                     <X className="w-6 h-6 transition-transform group-hover:rotate-90" />
                   </button>
@@ -272,7 +272,7 @@ export function BlogSection() {
                 <div className="mt-12 flex justify-end">
                   <button 
                     onClick={() => setSelectedPost(null)}
-                    className="group relative px-12 py-4 bg-transparent border border-lambo-gold text-lambo-gold font-bold uppercase text-[12px] tracking-[0.2em] overflow-hidden hover:text-lambo-black transition-colors duration-300"
+                    className="group relative px-12 py-4 bg-transparent border border-lambo-gold text-lambo-gold font-bold uppercase text-[12px] tracking-[0.2em] overflow-hidden hover:text-white transition-colors duration-300"
                   >
                     <div className="absolute inset-0 bg-lambo-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
                     <span className="relative z-10 flex items-center gap-3">
